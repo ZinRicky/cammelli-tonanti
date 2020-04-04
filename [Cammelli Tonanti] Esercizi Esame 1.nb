@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6361,        183]
-NotebookOptionsPosition[      4360,        137]
-NotebookOutlinePosition[      5302,        165]
-CellTagsIndexPosition[      5259,        162]
+NotebookDataLength[      6639,        189]
+NotebookOptionsPosition[      4619,        143]
+NotebookOutlinePosition[      5578,        171]
+CellTagsIndexPosition[      5535,        168]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -40,14 +40,20 @@ Cell["Esercizi 1. Grafica e teoria dei numeri", "Title",
 
 Cell[TextData[{
  "Notebook del gruppo ",
- StyleBox["Cammelli Tonanti",
+ StyleBox["Cammelli Tonanti.",
   FontSlant->"Plain"],
  "\nComponenti del gruppo:",
- StyleBox[" Francesco Tognetti, Riccardo Cazzin",
-  FontSlant->"Plain"]
+ StyleBox[" Francesco Tognetti, Riccardo Cazzin.",
+  FontSlant->"Plain"],
+ "\n",
+ StyleBox["Se ci sono stati collaborazioni o aiuti al di fuori del gruppo, \
+dichiararli.\n",
+  FontSize->10],
+ "In collaborazione con\nAiutati da"
 }], "Author",
- CellChangeTimes->{{3.794994269687989*^9, 
-  3.7949942998707647`*^9}},ExpressionUUID->"c4e4cdbb-8eec-41e8-8b8f-\
+ CellChangeTimes->{{3.794994269687989*^9, 3.7949942998707647`*^9}, {
+  3.7949946561398306`*^9, 3.7949946773934655`*^9}, {3.7949947543436556`*^9, 
+  3.794994807461353*^9}},ExpressionUUID->"c4e4cdbb-8eec-41e8-8b8f-\
 a7c7f4f4fd8f"],
 
 Cell[CellGroupData[{
@@ -137,7 +143,7 @@ Cell[BoxData[
 },
 WindowToolbars->"EditBar",
 WindowSize->{571.8, 524.4},
-WindowMargins->{{Automatic, 84}, {Automatic, 22.8}},
+WindowMargins->{{Automatic, 16.200000000000045`}, {Automatic, 19.8}},
 FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
 StyleDefinitions->Notebook[{
    Cell[
@@ -168,19 +174,19 @@ Cell[558, 20, 279, 6, 33, "Department",ExpressionUUID->"3eb017ba-e06a-4d74-abeb-
 Cell[840, 28, 171, 3, 44, "Date",ExpressionUUID->"b7dce26e-c11a-4a0c-a268-dee03f4b6a07"],
 Cell[CellGroupData[{
 Cell[1036, 35, 184, 3, 156, "Title",ExpressionUUID->"298b6fa7-51ff-420e-b21b-42fdc10d61d8"],
-Cell[1223, 40, 336, 10, 64, "Author",ExpressionUUID->"c4e4cdbb-8eec-41e8-8b8f-a7c7f4f4fd8f"],
+Cell[1223, 40, 595, 16, 122, "Author",ExpressionUUID->"c4e4cdbb-8eec-41e8-8b8f-a7c7f4f4fd8f"],
 Cell[CellGroupData[{
-Cell[1584, 54, 231, 5, 107, "Section",ExpressionUUID->"70400fd6-8a10-4177-aa87-cf1038b0f6c7"],
+Cell[1843, 60, 231, 5, 107, "Section",ExpressionUUID->"70400fd6-8a10-4177-aa87-cf1038b0f6c7"],
 Cell[CellGroupData[{
-Cell[1840, 63, 187, 3, 34, "Subsection",ExpressionUUID->"23f916a7-fd18-4946-b554-831259f1db43"],
-Cell[2030, 68, 643, 19, 61, "Text",ExpressionUUID->"551ebd03-2c29-45ac-90cf-c98e7064cbb8"]
+Cell[2099, 69, 187, 3, 34, "Subsection",ExpressionUUID->"23f916a7-fd18-4946-b554-831259f1db43"],
+Cell[2289, 74, 643, 19, 61, "Text",ExpressionUUID->"551ebd03-2c29-45ac-90cf-c98e7064cbb8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2710, 92, 159, 3, 34, "Subsection",ExpressionUUID->"8469c99f-23ea-47d2-87d0-61db1addc8d6"],
-Cell[2872, 97, 155, 3, 34, "Text",ExpressionUUID->"8adc8853-6571-455f-944a-763382b52306"],
+Cell[2969, 98, 159, 3, 34, "Subsection",ExpressionUUID->"8469c99f-23ea-47d2-87d0-61db1addc8d6"],
+Cell[3131, 103, 155, 3, 34, "Text",ExpressionUUID->"8adc8853-6571-455f-944a-763382b52306"],
 Cell[CellGroupData[{
-Cell[3052, 104, 235, 4, 39, "Input",ExpressionUUID->"9ac31e22-7db3-4271-bd78-3dcbd17f58d4"],
-Cell[3290, 110, 1018, 21, 443, "Output",ExpressionUUID->"5f1828c0-e33c-4c93-b93a-80571a7702cf"]
+Cell[3311, 110, 235, 4, 39, "Input",ExpressionUUID->"9ac31e22-7db3-4271-bd78-3dcbd17f58d4"],
+Cell[3549, 116, 1018, 21, 414, "Output",ExpressionUUID->"5f1828c0-e33c-4c93-b93a-80571a7702cf"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
