@@ -1,0 +1,1016 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     41590,       1008]
+NotebookOptionsPosition[     36049,        907]
+NotebookOutlinePosition[     36654,        930]
+CellTagsIndexPosition[     36611,        927]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Corso di Laboratorio Computazionale, Corso di Laurea in Matematica,  \
+Universita` di Padova.        
+A.A. 2019-2020\
+\>", "Text",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellChangeTimes->{{3.6030403380477047`*^9, 3.6030403496377206`*^9}, {
+  3.6042342921245947`*^9, 3.604234293844597*^9}, {3.6659842250605717`*^9, 
+  3.665984234810585*^9}, {3.665988776604652*^9, 3.6659887774046535`*^9}, {
+  3.666106805730517*^9, 3.666106807983646*^9}, {3.686715090311494*^9, 
+  3.68671511399888*^9}, {3.6973875672817383`*^9, 3.6973875784126663`*^9}, {
+  3.697434883527854*^9, 3.697434886700633*^9}, {3.697998051529482*^9, 
+  3.697998057171163*^9}, {3.6987578361186147`*^9, 3.6987578804703298`*^9}, {
+  3.7303756463057995`*^9, 3.7303756495463*^9}, {3.7617178271179724`*^9, 
+  3.761717830630767*^9}, {3.794982450902438*^9, 3.794982454111483*^9}},
+ FontSize->12,
+ Background->None,ExpressionUUID->"5c74e917-93d0-449e-a554-5e1bfaad892b"],
+
+Cell[CellGroupData[{
+
+Cell["Esercizi 1: Grafica e teoria dei numeri ", "Title",
+ CellChangeTimes->{{3.6051594074986267`*^9, 3.6051594078186274`*^9}, {
+  3.6672381732378488`*^9, 3.667238184687865*^9}, {3.6987578071655054`*^9, 
+  3.6987578251533327`*^9}, {3.7303816918773403`*^9, 3.7303817015789948`*^9}, {
+  3.7303818411418023`*^9, 3.7303818536137104`*^9}, {3.7303818840836196`*^9, 
+  3.7303819027351675`*^9}, {3.730381935238287*^9, 3.730381942859914*^9}, {
+  3.730979833785277*^9, 
+  3.7309798348262067`*^9}},ExpressionUUID->"c60506d6-8361-4316-b956-\
+ed13c2b257f4"],
+
+Cell["Notebook del gruppo:", "Text",
+ CellChangeTimes->{{3.6051654520044003`*^9, 3.6051654548044043`*^9}},
+ FontSize->14,ExpressionUUID->"56a7e9d0-8773-4667-a639-febabb910378"],
+
+Cell["Componenti del gruppo:", "Text",
+ CellChangeTimes->{{3.6051654520044003`*^9, 3.6051654548044043`*^9}, {
+  3.667324612567563*^9, 3.667324615177567*^9}},
+ FontSize->14,ExpressionUUID->"5f6c6ac6-ad3a-48ae-8e78-dd5f5bdefa60"],
+
+Cell["\<\
+Se ci sono state collaborazioni e/o aiuti al di fuori del gruppo, dichiararli:
+In collaborazione con: 
+Aiutato da: \
+\>", "Text",
+ CellChangeTimes->{{3.6051654600844116`*^9, 3.6051654836344447`*^9}, {
+  3.794982522075444*^9, 3.79498252778261*^9}},
+ FontSize->14,ExpressionUUID->"76a329ad-0dee-405a-88cd-29bb1eedbc49"],
+
+Cell["Consegna entro: 15/4/20", "Text",
+ CellChangeTimes->{{3.794982459599351*^9, 3.794982493114044*^9}},
+ FontSize->14,ExpressionUUID->"0f1ca574-7907-4762-b2d3-44b951752603"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Istruzioni per la consegna di tutti gli esercizi per l\[CloseCurlyQuote]esame \
+(questi ed i successivi)\
+\>", "Section 1",
+ CellChangeTimes->{{3.667188822640417*^9, 3.6671888235704184`*^9}, {
+  3.6671889229405575`*^9, 3.6671889300105677`*^9}, {3.667320808064062*^9, 
+  3.667320808264063*^9}, {3.6673268974717627`*^9, 3.667326897831763*^9}, {
+  3.7618105027242365`*^9, 3.7618105039827375`*^9}, {3.762490084699257*^9, 
+  3.762490089931858*^9}, {3.762490257671144*^9, 3.762490302399861*^9}, {
+  3.7949825623555193`*^9, 
+  3.794982606681661*^9}},ExpressionUUID->"452494a4-36a0-4bd0-a2c1-\
+6d253e8aec22"],
+
+Cell[TextData[{
+ "Per la consegna potete usare questo notebook,\np",
+ StyleBox["reparandolo cos\[IGrave]:\n",
+  FontWeight->"Bold"],
+ "\n1. Cancellate questa sezione di istruzioni.\n\n2. Lasciate le sezioni con \
+i titoli e i testi (ma non indicazioni, suggerimenti etc) dei singoli \
+esercizi.\nInserite la vostra soluzione in una o pi\[UGrave] sottosezioni \
+dopo il testo dell\[CloseCurlyQuote]esercizio.\n\n3. Potete cambiare a \
+piacimento lo stile etc di questo notebook, ma lasciate invariate le celle \
+con i titoli dei singoli esercizi.\n\nSe preferite potete utilizzare un \
+vostro notebook, ma in tal caso copiate (o ricreate)\n- Le celle qui sopra \
+con il titolo e con nomi e collaborazioni\n- Le celle con il titolo e il \
+testo dei singoli esercizi"
+}], "Text",
+ CellChangeTimes->{{3.6051594482786837`*^9, 3.605159463468705*^9}, {
+  3.605165499714467*^9, 3.6051655227944994`*^9}, {3.667324702107689*^9, 
+  3.66732470332769*^9}, {3.7624320673966637`*^9, 3.7624322517674284`*^9}, {
+  3.7624901006353903`*^9, 3.7624901017594676`*^9}, {3.7949928233298283`*^9, 
+  3.7949930272186627`*^9}, {3.7949931021639953`*^9, 3.7949932268251934`*^9}},
+ FontSize->14,
+ Background->RGBColor[
+  0, 1, 1],ExpressionUUID->"e24e603e-f5f4-4bc0-983c-dede2868c2fe"],
+
+Cell[TextData[{
+ StyleBox["Consegna:\n\n",
+  FontWeight->"Bold"],
+ "Inviate il notebook per email a \n     fasso@math.unipd.it\ncon subject \n  \
+   LC - NomeGruppo - Esercizi n\n(ove n e` il numero progressivo degli \
+esercizi \[LongDash] questo \[EGrave] il numero 1)"
+}], "Text",
+ CellChangeTimes->{{3.6051594482786837`*^9, 3.605159463468705*^9}, {
+  3.605165499714467*^9, 3.6051655227944994`*^9}, {3.667324702107689*^9, 
+  3.667324863067914*^9}, {3.667324952389039*^9, 3.6673250467491713`*^9}, {
+  3.6673250835792227`*^9, 3.6673251459493103`*^9}, {3.6673251797893577`*^9, 
+  3.6673251810993595`*^9}, {3.667328842124485*^9, 3.6673288589945087`*^9}, {
+  3.698757217189062*^9, 3.6987572255836515`*^9}, {3.6987574078554397`*^9, 
+  3.698757460240104*^9}, {3.730375686781573*^9, 3.730375688513708*^9}, {
+  3.7303757279611635`*^9, 3.7303757301787252`*^9}, {3.7617178884124637`*^9, 
+  3.7617178907734566`*^9}, {3.7624320810151567`*^9, 3.7624320823441563`*^9}, {
+  3.762490134218345*^9, 3.7624902023217173`*^9}, {3.794982558028722*^9, 
+  3.7949825589649897`*^9}, {3.7949930341004114`*^9, 3.7949930944550486`*^9}},
+ FontSize->14,
+ Background->RGBColor[
+  0, 1, 1],ExpressionUUID->"c149a858-78f3-45aa-b615-b04c4ac8eeee"],
+
+Cell[TextData[{
+ StyleBox["Raccomandazioni:\n\n",
+  FontWeight->"Bold"],
+ "Spiegate almeno brevemente quello che fate, e se usate del codice \
+complesso, o non ovvio, o che vi pare interessante e/o bello, spiegatelo \
+brevemente.\n\nAnche se nello svolgimento degli esercizi potreste dover fare \
+molte prove ed otterrete risultati intermedi, preparate il notebook finale in \
+modo che contenga solo quello che ritenete necessario ci sia. \n\nCome regola \
+generale, non mostrate due volte una stessa cosa, per es. un grafico (a meno, \
+ovviamente, che ci sia un motivo per farlo). \n\nDecidete quale idea volete \
+comunicare e poi chiedetevi se quello che avete preparato la comunica. "
+}], "Text",
+ CellChangeTimes->{{3.6051594482786837`*^9, 3.605159463468705*^9}, {
+  3.605165499714467*^9, 3.6051655227944994`*^9}, {3.667324702107689*^9, 
+  3.667324863067914*^9}, {3.667324952389039*^9, 3.6673250467491713`*^9}, {
+  3.6673250835792227`*^9, 3.6673251459493103`*^9}, {3.6673251797893577`*^9, 
+  3.6673251810993595`*^9}, {3.66732738164244*^9, 3.6673276260727825`*^9}, {
+  3.667328885834546*^9, 3.667328905254573*^9}, {3.6673304734167686`*^9, 
+  3.66733047420677*^9}, {3.6987574795134287`*^9, 3.698757491870006*^9}, {
+  3.7617179169564075`*^9, 3.761717949299649*^9}, {3.7949932416079817`*^9, 
+  3.794993244747145*^9}},
+ FontSize->14,
+ Background->RGBColor[
+  0, 1, 1],ExpressionUUID->"9f212a7e-6320-4b7d-bb68-ebf835742619"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Esercizio 1.1: Approssimazione di funzione con suo sviluppo di Taylor\
+\>", "Section 1",
+ CellChangeTimes->{{3.667188822640417*^9, 3.6671888235704184`*^9}, {
+  3.6671889229405575`*^9, 3.6671889300105677`*^9}, {3.667320808064062*^9, 
+  3.667320808264063*^9}, {3.6673268974717627`*^9, 3.667326897831763*^9}, {
+  3.7618105027242365`*^9, 
+  3.7618105039827375`*^9}},ExpressionUUID->"f34ee496-3980-4154-8757-\
+298d82f6f2f8"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.667324682717662*^9, 
+  3.6673246884576693`*^9}},ExpressionUUID->"aebe9cc8-a470-429d-b3ae-\
+9561e95ea04e"],
+
+Cell[TextData[{
+ "Come sono approssimate le funzioni    ",
+ StyleBox["sin(x)",
+  FontSlant->"Italic"],
+ "  e   ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox["1", 
+     RowBox[{"1", "+", 
+      SuperscriptBox["x", "2"]}]],
+    FontSlant->"Italic"], TraditionalForm]],
+  FontSize->16,ExpressionUUID->"17f433bd-3af1-45f7-a56d-8e4dd4b6c69e"],
+ "  dai loro polinomi di Taylor di ordine crescente?"
+}], "Text",
+ CellFrame->True,
+ CellChangeTimes->{{3.6673263325609713`*^9, 3.6673263723210273`*^9}, 
+   3.6673266669214396`*^9, {3.667328928034605*^9, 3.6673289356446157`*^9}, 
+   3.667330324996561*^9},
+ FontSize->14,
+ Background->RGBColor[
+  0, 1, 0],ExpressionUUID->"88837edb-1036-4b13-b20b-b1fc74fa2e0d"],
+
+Cell[CellGroupData[{
+
+Cell["Indicazioni :", "Subsubsection",
+ CellChangeTimes->{{3.6673252838195033`*^9, 3.6673252981095233`*^9}, 
+   3.667325435839716*^9},
+ FontSize->14,ExpressionUUID->"0dd89b50-cde2-4cc6-81c9-a8d218ad2aa1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"Sia", "     ", 
+    StyleBox[
+     SubscriptBox["S", "n"],
+     FontSlant->"Italic"], 
+    StyleBox[
+     RowBox[{"(", "x", ")"}],
+     FontSlant->"Italic"], 
+    StyleBox[
+     RowBox[{
+      StyleBox[" ",
+       FontSlant->"Italic"], "   "}]], "il", " ", "polinomio", " ", "di", " ",
+     "Taylor", " ", "di", " ", "ordine", "  ", 
+    StyleBox["n",
+     FontSlant->"Italic"], "   ", "di", 
+    StyleBox[
+     RowBox[{"   ", 
+      StyleBox[" ",
+       FontSlant->"Italic"]}]], 
+    StyleBox["sin",
+     FontSlant->"Italic"], 
+    StyleBox[
+     RowBox[{"(", "x", ")"}],
+     FontSlant->"Italic"]}],
+   FontFamily->"Times New Roman"]],
+  CellChangeTimes->{{3.603729976436512*^9, 3.6037300071765547`*^9}, {
+   3.667320831324095*^9, 3.66732084923412*^9}},
+  FontSize->14,ExpressionUUID->"2c7be53e-6126-4415-b4bc-60da6e5db3e8"],
+ ".\n",
+ StyleBox["Fare, per diversi valori di ",
+  FontSize->14],
+ StyleBox["n",
+  FontSize->14,
+  FontSlant->"Italic"],
+ StyleBox[", un grafico che mostra",
+  FontSize->14],
+ StyleBox[" assieme",
+  FontSize->14,
+  FontWeight->"Bold"],
+ StyleBox[" le due funzioni",
+  FontSize->14],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{
+    StyleBox["sin",
+     FontSlant->"Italic"], 
+    StyleBox[
+     RowBox[{"(", "x", ")"}],
+     FontSlant->"Italic"], 
+    StyleBox["  ",
+     FontSlant->"Plain"], 
+    StyleBox["e",
+     FontSlant->"Plain"], 
+    StyleBox["  ",
+     FontSlant->"Plain"], 
+    StyleBox[
+     SubscriptBox["S", "n"],
+     FontSlant->"Italic"], 
+    StyleBox[
+     RowBox[{
+      RowBox[{"(", "x", ")"}], "."}],
+     FontSlant->"Italic"]}],
+   FontFamily->"Times New Roman"]],
+  CellChangeTimes->{{3.603729976436512*^9, 3.6037300071765547`*^9}, {
+   3.667320831324095*^9, 3.66732084923412*^9}},
+  FontSize->14,ExpressionUUID->"6c9823cd-d131-4c94-b23c-e3fe040c04c5"],
+ "\n",
+ StyleBox["Scegliere in modo significativo il range e gli ordini (per \
+esempio, n=5,10,....,75,80).\nMostrare tutti i grafici in \
+un\[CloseCurlyQuote]unica figura e dimensionarla in modo che stia interamente \
+dentro lo schermo.",
+  FontSize->14]
+}], "Text",
+ CellChangeTimes->{{3.6673252111894016`*^9, 3.6673252690894823`*^9}, {
+   3.667325318929552*^9, 3.667325398239663*^9}, 3.6673260518105783`*^9, 
+   3.6987575212477045`*^9, 3.7617180085140653`*^9, {3.7949826356562147`*^9, 
+   3.794982664529891*^9}},
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"c9ebb7f2-e465-4895-bf9c-f811bb96a944"],
+
+Cell[TextData[{
+ "Fare lo stesso per ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"1", "+", 
+     SuperscriptBox["x", "2"]}]], TraditionalForm]],ExpressionUUID->
+  "3b93a227-65b2-4cb4-a79d-921ec9f4c38a"],
+ ", scegliendo in modo significativo gli ordini."
+}], "Text",
+ CellChangeTimes->{{3.6673289679046607`*^9, 3.6673289728146677`*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"28bc1b08-59a4-4327-a729-30765bff9a4f"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Suggerimenti ed osservazioni:", "Subsubsection",
+ CellChangeTimes->{{3.6673254396597214`*^9, 3.6673254447397285`*^9}},
+ FontSize->14,ExpressionUUID->"f4c0a573-3dd5-4117-ba3b-2b10dcc6857b"],
+
+Cell[TextData[{
+ "1. Sviluppo in serie di Taylor all'ordine   ",
+ StyleBox["n",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ "    di   f[x]  con punto iniziale  ",
+ StyleBox["xin",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ ": \n\n",
+ StyleBox["      ",
+  FontFamily->"Terminal"],
+ StyleBox["Series[f[x],{x,",
+  FontFamily->"Terminal",
+  FontSize->12,
+  FontWeight->"Bold"],
+ StyleBox["xin,n",
+  FontFamily->"Terminal",
+  FontSize->12,
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["}] ",
+  FontFamily->"Terminal",
+  FontSize->12,
+  FontWeight->"Bold"],
+ StyleBox["// Normal",
+  FontFamily->"Terminal",
+  FontSize->12,
+  FontWeight->"Bold",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["\n",
+  FontFamily->"Terminal",
+  FontSize->12,
+  FontWeight->"Bold"],
+ StyleBox["\n",
+  FontFamily->"Terminal",
+  FontWeight->"Bold"],
+ StyleBox["(",
+  FontWeight->"Bold"],
+ "Il comando Series",
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ "produce un oggetto con Head \"SeriesData\". Normal lo trasforma in un\
+\[CloseCurlyQuote]espressione normale",
+ StyleBox[")",
+  FontFamily->"Terminal",
+  FontWeight->"Bold",
+  FontColor->GrayLevel[0]],
+ StyleBox[" ",
+  FontFamily->"Terminal",
+  FontWeight->"Bold",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.667325472149767*^9, 3.667325473619769*^9}, {
+  3.6673255640498953`*^9, 3.667325564279896*^9}, {3.667325638129999*^9, 
+  3.667325651370018*^9}, {3.667326079390617*^9, 3.667326125920682*^9}, {
+  3.6673290173547297`*^9, 3.6673290213247356`*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"61d7e285-69cf-451e-9c6b-8e965a1689eb"],
+
+Cell[TextData[{
+ "2. Il comando Plot non funziona sulla funzione \n\n          Series[ f[x] , \
+ {x,  xin, n} ]  // Normal  \n\nQuesto non e` un errore, ma dipende dal modo \
+in cui ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " valuta le funzioni delle quali deve fare un plot. Per informazioni, vedere \
+l\[CloseCurlyQuote]help. In pratica, si risolve eseguendo il plot della \
+funzione\n\n           Series[ f[x] ,  {x, xin, n} ]  // Normal  ",
+ StyleBox["// Evaluate ",
+  FontColor->RGBColor[1, 0, 0]],
+ "\n\noppure della funzione\n\n            (Series[ Sin[y] ,  {y,  0, n} ]  \
+// Normal )  ",
+ StyleBox["/. y \[Rule] x",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.6037301727477865`*^9, 3.6037301809277983`*^9}, {
+   3.6673256118999624`*^9, 3.6673256285399857`*^9}, {3.6673256668900394`*^9, 
+   3.6673256853200655`*^9}, {3.6673257288101263`*^9, 
+   3.6673257413101435`*^9}, {3.6673258305602684`*^9, 3.667325922170397*^9}, {
+   3.6673290461447706`*^9, 3.6673290498847756`*^9}, 3.698757560987735*^9, {
+   3.7949826999630604`*^9, 3.7949827069092045`*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"0f83f479-9e2d-4d5e-8951-bc6689c7e644"],
+
+Cell["\<\
+3. Disegnare il grafico della funzione in un colore e quello del troncamento \
+della serie in un altro, in modo che si veda bene la differenza.
+NB: Se si usa Evaluate, va messo fuori dalla lista di funzioni da plottare: \
+Plot[{Sin[x],Series[...]}//Evaluate, ...]\
+\>", "Text",
+ CellChangeTimes->{{3.6673259292504067`*^9, 3.6673259297004075`*^9}, {
+  3.6673261540207214`*^9, 3.667326154570722*^9}, {3.667329069384803*^9, 
+  3.667329072274807*^9}, {3.698757570817156*^9, 3.6987575741078663`*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"c6277dc2-b738-4f80-97c6-b72a918ab1ba"],
+
+Cell[TextData[{
+ "4. Per mostrare varii grafici in un'unica figura, usare GraphicsGrid.\nPer \
+fare una grid 2-dimensionale NxM serve \n                 GraphicsGrid[  \
+oggettografico[n,m], {n,N}, {m,M} ]\noppure create una lista di profondita` 1 \
+lunga NxM e poi la partizionate (",
+ StyleBox["Partition[... , ...]",
+  FontWeight->"Bold"],
+ ") in sottoliste di lunghezza N"
+}], "Text",
+ CellChangeTimes->{{3.6037302191078515`*^9, 3.603730232777871*^9}, {
+  3.667325968560462*^9, 3.6673259689504623`*^9}, {3.6673264477811327`*^9, 
+  3.6673265061112146`*^9}, {3.6987576033538895`*^9, 3.6987576726743145`*^9}, {
+  3.7949827355526023`*^9, 3.794982752894396*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"aaae4afa-1767-4c9d-a0d5-6610ff1c06cb"],
+
+Cell["\<\
+5. Scrivere una singola funzione che produce direttamente la tabella di \
+grafici. Evitare che i grafici prodotti siano mostrati via via durante l\
+\[CloseCurlyQuote]esecuzione del notebook consegnato. Fare in modo che \
+appaiono solo nella graphicsgrid finale.\
+\>", "Text",
+ CellChangeTimes->{{3.6673259782404757`*^9, 3.6673260196405334`*^9}, {
+  3.7949827789112687`*^9, 3.7949827870060625`*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"e987a98c-c4fc-4382-b3d4-0474c070975b"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Interpretazione del risultato", "Subsubsection",
+ CellChangeTimes->{{3.6673254396597214`*^9, 3.6673254447397285`*^9}, {
+  3.794983036808247*^9, 3.7949830475493174`*^9}},
+ FontSize->14,ExpressionUUID->"53e082bf-d4d5-40ba-816f-a9220680582a"],
+
+Cell[TextData[{
+ "Bisogna sapere due cose di analisi complessa:\n\n1. Nel piano complesso, l\
+\[CloseCurlyQuote]insieme di convergenza di una serie di potenze \[EGrave]\n- \
+ o tutto il piano complesso\n- o un insieme costituito da un disco aperto di \
+un qualche raggio positivo (\[OpenCurlyDoubleQuote]raggio di convergenza\
+\[CloseCurlyDoubleQuote]) e da un sottoinsieme (proprio o improprio) della \
+sua frontiera.\n\n2. Se una funzione f:",
+ Cell[BoxData[
+  TemplateBox[{},
+   "Complexes"]],ExpressionUUID->"c9dbb3bd-7a59-483f-9e0a-bd1f8265800a"],
+ "\[Rule]",
+ Cell[BoxData[
+  TemplateBox[{},
+   "Complexes"]],ExpressionUUID->"c33f8c7e-e8f3-41da-8b4f-d9d3dbaac097"],
+ " \[EGrave] olomorfa (differenziabile come funziona complessa) all\
+\[CloseCurlyQuote]interno del disco di raggio r<\[Infinity] e ha una \
+singolarit\[AGrave] a distanza r dall\[CloseCurlyQuote]origine, allora la sua \
+serie di Taylor ha raggio di convergenza r."
+}], "Text",
+ CellChangeTimes->{{3.6673259782404757`*^9, 3.6673260196405334`*^9}, {
+   3.7949827789112687`*^9, 3.7949827870060625`*^9}, {3.794983049747219*^9, 
+   3.7949833328321295`*^9}, {3.794984089209407*^9, 3.794984158681779*^9}, {
+   3.7949849813875*^9, 3.7949850615913997`*^9}, {3.7949851434335284`*^9, 
+   3.794985308725663*^9}, {3.79498652494713*^9, 3.7949867358421884`*^9}, {
+   3.794986799447259*^9, 3.794986846628411*^9}, 3.7949869914799*^9, {
+   3.794987041799011*^9, 3.7949870851417346`*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"da9d9c94-d5fa-4023-a19b-1bb063cdd1f5"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Esercizio 1.2: Algebra & Coreografie", "Section 1",
+ CellChangeTimes->{{3.6051594130686345`*^9, 3.6051594132586346`*^9}, {
+  3.6673261732907486`*^9, 3.667326173720749*^9}, {3.66732690258177*^9, 
+  3.66732690283177*^9}, {3.730381870329111*^9, 3.730381880243785*^9}, {
+  3.730381915795393*^9, 3.730381929764055*^9}, {3.7309715250403786`*^9, 
+  3.7309715291628933`*^9}, {3.730979535912187*^9, 3.730979554164671*^9}, {
+  3.730980419671417*^9, 3.7309804198589725`*^9}, {3.7617194072745047`*^9, 
+  3.7617194077225676`*^9}},ExpressionUUID->"e2e07ce0-5289-4e12-b5eb-\
+2d37a2c74926"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.667324682717662*^9, 
+  3.6673246884576693`*^9}},ExpressionUUID->"25de8d25-2e51-41df-ba75-\
+dfd32b09b972"],
+
+Cell[TextData[{
+ "Le tre radici del polinomio ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "3"], "+", 
+    RowBox[{"b", " ", "x"}], "+", "c"}], TraditionalForm]],ExpressionUUID->
+  "8feb0879-e635-4de6-8bfd-4ee8496f276c"],
+ " dipendono dai coefficienti ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " e ",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ " e sono genericamente complesse (e distinte, ma per speciali valori di ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " e ",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ " una o tutte possono essere reali e due o tutte possono coincidere).\nPer \
+ogni scelta di ",
+ StyleBox["b",
+  FontSlant->"Italic"],
+ " e ",
+ StyleBox["c, ",
+  FontSlant->"Italic"],
+ "le radici sono dunque 3 (o 2 o 1) punti nel piano complesso. \nSe si fa \
+muovere il punto (",
+ StyleBox["b,c",
+  FontSlant->"Italic"],
+ ")\[Epsilon]",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["R", "2"], TraditionalForm]],ExpressionUUID->
+  "be7786a8-183b-4b56-8e00-d41695085f9f"],
+ " lungo una curva \[CapitalGamma] in ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[DoubleStruckCapitalR]", "2"], TraditionalForm]],
+  ExpressionUUID->"20da4427-c62f-4126-ae18-eed4febedda2"],
+ ", le radici si muovono lungo tre curve (che possono avere delle \
+intersezioni) nel piano complesso \[DoubleStruckCapitalC].\nSi chiede di \
+generare un filmato che mostra, affiancati, il moto del punto (",
+ StyleBox["b,c",
+  FontSlant->"Italic"],
+ ") \[Epsilon] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    FormBox[
+     SuperscriptBox["\[DoubleStruckCapitalR]", "2"],
+     TraditionalForm]}], TraditionalForm]],ExpressionUUID->
+  "568e9c21-a673-4ebf-8a64-7d22d9ac44a7"],
+ " lungo una curva e il corrispondente moto (o `danza\[CloseCurlyQuote]) \
+delle radici in C \[DoubleStruckCapitalC]."
+}], "Text",
+ CellFrame->True,
+ CellChangeTimes->{{3.6673263325609713`*^9, 3.6673263723210273`*^9}, 
+   3.667326719941514*^9, {3.730971130360298*^9, 3.7309714825701785`*^9}, {
+   3.730977149913822*^9, 3.730977151534418*^9}, {3.7617195183831854`*^9, 
+   3.761719580129344*^9}},
+ FontSize->14,
+ Background->RGBColor[
+  0, 1, 0],ExpressionUUID->"19e5ac14-4332-493c-89f8-dba588aa4152"],
+
+Cell[CellGroupData[{
+
+Cell["Indicazioni :", "Subsubsection",
+ CellChangeTimes->{{3.6673252838195033`*^9, 3.6673252981095233`*^9}, 
+   3.667325435839716*^9},
+ FontSize->14,ExpressionUUID->"5bd92d05-ffcc-4fbd-86b8-f5e84c45f28b"],
+
+Cell["\<\
+Scegliendo opportunamente la curva \[CapitalGamma] nello spazio dei \
+coefficienti si pu\[OGrave] fare s\[IGrave] che le tre radici `danzino\
+\[CloseCurlyQuote] in modo elegante nel piano complesso.\
+\>", "Text",
+ CellChangeTimes->{{3.6673267113215017`*^9, 3.6673267490015545`*^9}, {
+   3.6673291235348787`*^9, 3.667329125894882*^9}, {3.6673291880349693`*^9, 
+   3.6673291921249747`*^9}, 3.730971468615527*^9, 3.73097154566464*^9, {
+   3.79498716985937*^9, 3.794987173166853*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"290b601b-e91e-44bc-8e81-177c3939138d"],
+
+Cell["E` opportuno colorare i tre punti in modo diverso.", "Text",
+ CellChangeTimes->{{3.6673267113215017`*^9, 3.6673267490015545`*^9}, {
+   3.6673291235348787`*^9, 3.667329125894882*^9}, {3.6673291880349693`*^9, 
+   3.6673291921249747`*^9}, 3.730971468615527*^9, 3.73097154566464*^9, {
+   3.7309771741957498`*^9, 3.7309771970901346`*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"5f589b00-76bf-4e5c-a654-e97000b1b0cc"],
+
+Cell["\<\
+Volendo potete tracciare anche le traiettorie descritte dai tre punti (come \
+`scie\[CloseCurlyQuote] che si lasciano indietro)\
+\>", "Text",
+ CellChangeTimes->{{3.6673267113215017`*^9, 3.6673267490015545`*^9}, {
+   3.6673291235348787`*^9, 3.667329125894882*^9}, {3.6673291880349693`*^9, 
+   3.6673291921249747`*^9}, 3.730971468615527*^9, 3.73097154566464*^9, {
+   3.7309771741957498`*^9, 3.730977241594368*^9}, {3.7949871901116734`*^9, 
+   3.794987216291184*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"0e28a8ce-7502-4835-811e-2abf00f5bb38"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Suggerimenti ed osservazioni:", "Subsubsection",
+ CellChangeTimes->{{3.6673254396597214`*^9, 3.6673254447397285`*^9}},
+ FontSize->14,ExpressionUUID->"0d67cad4-b69f-4212-8294-d5fa77e19275"],
+
+Cell[TextData[{
+ "1. Per plottare un numero complesso ",
+ StyleBox["z",
+  FontSlant->"Italic"],
+ " nel piano complesso si plottano (Re[",
+ StyleBox["z",
+  FontSlant->"Italic"],
+ "],Im[",
+ StyleBox["z",
+  FontSlant->"Italic"],
+ "]) in  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["R", "2"], TraditionalForm]],ExpressionUUID->
+  "f9ed9049-c6e6-4e94-910b-1c165a9a3f4b"],
+ " con ListPlot.\n\nPer plottare piu` numeri complessi: ListPlot[ { ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Re", "[", 
+      SubscriptBox[
+       StyleBox["z",
+        FontSlant->"Plain"], "1"], "]"}], ",", 
+     RowBox[{"Im", "[", 
+      SubscriptBox["z", "1"]}]}]}], TraditionalForm]],ExpressionUUID->
+  "919ec4b0-33b0-4c8e-b6a6-899cb645b133"],
+ "]} , ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Re", "[", 
+      SubscriptBox["z", "2"], "]"}], ",", 
+     RowBox[{"Im", "[", 
+      SubscriptBox["z", "2"]}]}]}], TraditionalForm]],ExpressionUUID->
+  "6592611a-bfd3-46c3-a838-69d9fe957340"],
+ "]} , ....  }\n\nPer plottarli con colori/dimensioni diverse ListPlot[ ..... \
+ ,   PlotStyle\[Rule]{ {direttive x punto 1}, {direttive x punto 2}, ....} ]"
+}], "Text",
+ CellChangeTimes->{{3.667326384341044*^9, 3.667326402011069*^9}, 
+   3.6673267553715634`*^9, {3.667329109534859*^9, 3.6673291100648603`*^9}, {
+   3.730971551456749*^9, 3.730971703752019*^9}, {3.7309718134027805`*^9, 
+   3.7309719797506137`*^9}, {3.7309759818915*^9, 3.7309760619279137`*^9}, {
+   3.7949872229048843`*^9, 3.794987339040417*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"6275682e-858f-4568-8add-faa99b69c39c"],
+
+Cell[TextData[{
+ "2. Scegliere una parametrizzazione\n     t\[Rule](b[t],c[t])\ndella curva \
+desiderata. \n\nPer ogni t, \n    ",
+ Cell[BoxData[
+  RowBox[{"NSolve", "[", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "3"], "+", 
+      RowBox[{
+       RowBox[{"b", "[", "t", "]"}], " ", "x"}], " ", "+", " ", 
+      RowBox[{"c", "[", "t", "]"}]}], "\[Equal]", "0"}], ",", "x"}], "]"}]],
+  CellChangeTimes->{{3.730969407179971*^9, 3.730969454031433*^9}, {
+   3.730969500385294*^9, 3.7309695618340383`*^9}, {3.7309696104922295`*^9, 
+   3.730969615146797*^9}, {3.7309699681901484`*^9, 3.730969987883792*^9}},
+  ExpressionUUID->"934fbf26-1988-4f75-8467-10100f957025"],
+ "\nproduce la lista delle regole di sostituzione alle tre radici. Per \
+plottarle:\n    ListPlot[  {{Re[x],Im[x]}} /. ........ ]\nPoi\n    ListPlot[  \
+{b[t],c[t]} ]\nplotta il punto (b,c) nel piano dei coefficienti.\n\nSi \
+possono disporre i due grafici l\[CloseCurlyQuote]uno affianco all\
+\[CloseCurlyQuote]altro con ....."
+}], "Text",
+ CellChangeTimes->{{3.667326384341044*^9, 3.667326402011069*^9}, 
+   3.6673267553715634`*^9, {3.667329109534859*^9, 3.6673291100648603`*^9}, {
+   3.730971551456749*^9, 3.730971703752019*^9}, {3.7309718134027805`*^9, 
+   3.730971982860345*^9}, {3.730972029631466*^9, 3.7309720860236087`*^9}, {
+   3.7309721357472286`*^9, 3.7309722034568963`*^9}, {3.794987336185413*^9, 
+   3.794987395206501*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"7d95f3bd-47c9-4c6b-8fcf-3dfc7fca2b63"],
+
+Cell["\<\
+3. Per creare l\[CloseCurlyQuote]animazione si puo` usare 
+         Manipulate[  ......  , {t, .....} ]
+oppure
+         Animate[  ......  , {t, .....} ] 
+Decidete voi (come vi sembra meglio/piu` bello) se lasciare gli assi etc.
+Scegliete la durata dell\[CloseCurlyQuote]animazione come vi sembra meglio.\
+\>", "Text",
+ CellChangeTimes->{{3.667326384341044*^9, 3.667326402011069*^9}, 
+   3.6673267553715634`*^9, {3.667329109534859*^9, 3.6673291100648603`*^9}, {
+   3.730971551456749*^9, 3.730971703752019*^9}, {3.7309718134027805`*^9, 
+   3.730971982860345*^9}, {3.730972029631466*^9, 3.7309720860236087`*^9}, {
+   3.7309721357472286`*^9, 3.7309723291187563`*^9}, {3.73097595200646*^9, 
+   3.730975973499509*^9}, {3.730976102555431*^9, 3.730976128200919*^9}, {
+   3.761719607211467*^9, 3.7617196649067383`*^9}, {3.7617197228037033`*^9, 
+   3.76171977460606*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"8fe30c2c-a10a-4a7c-833e-871b1f27bce5"],
+
+Cell["\<\
+4. Infine, per creare il filmato (apprezzato, ma non obbligatorio) conviene \
+creare la lista delle immagini \[OpenCurlyDoubleQuote]fotogrammi\
+\[CloseCurlyDoubleQuote]
+       Table[ .....]
+e poi esportarla in un opportuno formato grafico.
+
+Attenzione: provate prima creazione ed esportazione con POCHI fotogrammi.    
+
+      Export[  \[OpenCurlyDoubleQuote]nome del file\[CloseCurlyDoubleQuote] , \
+ Resolution \[Rule] ..... , ImageSize \[Rule] ..... ]
+      
+Nota: Io non sono un esperto di formati grafici. Mi sembra pero` che, almeno \
+per immagini semplici come quelle create in questo esercizio, l\
+\[CloseCurlyQuote]Animated GIF sia di gran lunga preferibile all\
+\[CloseCurlyQuote]AVI. Export e` molto piu` rapido e i files generati molto \
+piu` piccoli. \
+\>", "Text",
+ CellChangeTimes->{{3.667326384341044*^9, 3.667326402011069*^9}, 
+   3.6673267553715634`*^9, {3.667329109534859*^9, 3.6673291100648603`*^9}, {
+   3.730971551456749*^9, 3.730971703752019*^9}, {3.7309718134027805`*^9, 
+   3.730971982860345*^9}, {3.730972029631466*^9, 3.7309720860236087`*^9}, {
+   3.7309721357472286`*^9, 3.730972471676132*^9}, {3.7309760815473547`*^9, 
+   3.730976097382814*^9}, {3.730976133003894*^9, 3.7309761392124496`*^9}, {
+   3.730979572025957*^9, 3.7309797966675406`*^9}, {3.761719698356255*^9, 
+   3.7617197055336523`*^9}, {3.7949874302565126`*^9, 3.794987439203472*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"fc5199f4-40c1-4165-afee-af1a7302864f"],
+
+Cell[TextData[{
+ "5. Siete liberi di fare diversamente, se vi sembra meglio o prefereribile, \
+e anche di fare pi\[UGrave] cose (a vostra scelta, purche` ",
+ StyleBox["pertinenti",
+  FontSlant->"Italic"],
+ ": cioe`, che aiutino o espandano la comprensione \
+dell\[CloseCurlyQuote]esercizio da svolgere)."
+}], "Text",
+ CellChangeTimes->{{3.667326384341044*^9, 3.667326402011069*^9}, 
+   3.6673267553715634`*^9, {3.667329109534859*^9, 3.6673291100648603`*^9}, {
+   3.730971551456749*^9, 3.730971703752019*^9}, {3.7309718134027805`*^9, 
+   3.730971982860345*^9}, {3.730972029631466*^9, 3.7309720860236087`*^9}, {
+   3.7309721357472286`*^9, 3.730972471676132*^9}, {3.7309760815473547`*^9, 
+   3.730976097382814*^9}, {3.730976133003894*^9, 3.7309761392124496`*^9}, {
+   3.730979572025957*^9, 3.7309797966675406`*^9}, {3.761719698356255*^9, 
+   3.7617197055336523`*^9}, {3.7617198226340113`*^9, 
+   3.7617199251427536`*^9}, {3.7949874482480736`*^9, 3.794987449334354*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"686368d8-071a-433b-b916-716475fb1c0b"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Esercizio 1.3: Teorema dei numeri primi", "Section 1",
+ CellChangeTimes->{{3.6051594130686345`*^9, 3.6051594132586346`*^9}, {
+  3.6673261732907486`*^9, 3.667326173720749*^9}, {3.66732690258177*^9, 
+  3.66732690283177*^9}, {3.7617194118557444`*^9, 3.7617194120341215`*^9}, {
+  3.7618104757110367`*^9, 3.7618104992116165`*^9}, {3.7624319764128017`*^9, 
+  3.762431981203933*^9}},ExpressionUUID->"04a77cb1-0a2d-41e4-a0ed-\
+9c794931f212"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.667324682717662*^9, 
+  3.6673246884576693`*^9}},ExpressionUUID->"aef77c6e-276d-4382-a197-\
+82c76e40973d"],
+
+Cell["\<\
+Il teorema dei numeri primi afferma che le funzioni    \[Pi](n)   ,   \
+n/log(n)  ,   li(n)   sono asintotiche per   n\[Rule]\[Infinity] .
+Investigare numericamente questa affermazione.\
+\>", "Text",
+ CellFrame->True,
+ CellChangeTimes->{{3.6673263325609713`*^9, 3.6673263723210273`*^9}, 
+   3.6673266669214396`*^9, {3.667328928034605*^9, 3.6673289356446157`*^9}, 
+   3.667330324996561*^9, {3.762489064747591*^9, 3.762489172505555*^9}},
+ FontSize->14,
+ Background->RGBColor[
+  0, 1, 0],ExpressionUUID->"d2c17d2d-49d1-45a8-949d-3ee14fdbda65"],
+
+Cell[CellGroupData[{
+
+Cell["Indicazioni :", "Subsubsection",
+ CellChangeTimes->{{3.6673252838195033`*^9, 3.6673252981095233`*^9}, 
+   3.667325435839716*^9},
+ FontSize->14,ExpressionUUID->"5c081ae6-212b-4540-b46b-37ad7cb6c5bc"],
+
+Cell["\<\
+Produrre dei grafici che mettono in evidenza 
+
+1. se   n/log(n) - \[Pi](n)   e   li(n) - \[Pi](n)  \[Rule]  0 per n\[Rule]\
+\[Infinity]
+
+2. se   n/log(n),   li(n)  e  \[Pi](n)  sono asintotiche per n\[Rule]\
+\[Infinity]. 
+
+Se necessario, produrre un\[CloseCurlyQuote]evidenza (utilizzando se \
+opportuno un opportuno grafico log o log-log) del fatto che certe appropriate \
+funzioni \[Rule]0  \
+\>", "Text",
+ CellChangeTimes->{{3.6037302191078515`*^9, 3.603730232777871*^9}, {
+  3.667325968560462*^9, 3.6673259689504623`*^9}, {3.6673264477811327`*^9, 
+  3.6673265061112146`*^9}, {3.6987576033538895`*^9, 3.6987576726743145`*^9}, {
+  3.762489222931452*^9, 3.7624892569636517`*^9}, {3.7624892901545906`*^9, 
+  3.762489500236885*^9}, {3.762489610249488*^9, 3.7624896642635937`*^9}, {
+  3.7949874659844785`*^9, 3.7949875029557953`*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.85],ExpressionUUID->"04c7ef9c-256d-4a3c-91ec-4470a5bd4517"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Esercizio 1.4: Catenaria", "Section 1",
+ CellChangeTimes->{{3.6051594130686345`*^9, 3.6051594132586346`*^9}, {
+  3.6673261732907486`*^9, 3.667326173720749*^9}, {3.66732690258177*^9, 
+  3.66732690283177*^9}, {3.7617194118557444`*^9, 3.7617194120341215`*^9}, {
+  3.762431616794235*^9, 3.762431617010632*^9}, {3.76249048681878*^9, 
+  3.7624904874072084`*^9}, {3.7949875267431517`*^9, 
+  3.7949875294322987`*^9}},ExpressionUUID->"b0131856-0722-48f6-be92-\
+ac5e6447f0e5"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.667324682717662*^9, 
+  3.6673246884576693`*^9}},ExpressionUUID->"f2d15b18-f753-4ffb-980a-\
+26f34a20ba65"],
+
+Cell[TextData[{
+ "Se, nel piano ",
+ StyleBox["xy",
+  FontSlant->"Italic"],
+ ", un cerchio di raggio ",
+ StyleBox["r",
+  FontSlant->"Italic"],
+ " rotola senza strisciare sull\[CloseCurlyQuote]asse ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ ", un punto P del cerchio descrive, nel piano ",
+ StyleBox["xy",
+  FontSlant->"Italic"],
+ ", una curva chiamata catenaria, di equazioni parametriche\n   t \[Rule] (rt \
+- r sin(t) , r - r cos(t) )\nProdurre un\[CloseCurlyQuote]animazione (e \
+magari un filmato) che mostra il cerchio (o un disco) che  rotola, il punto P \
+su di essa, e la curva descritta da P nel piano"
+}], "Text",
+ CellFrame->True,
+ CellChangeTimes->{{3.6673263325609713`*^9, 3.6673263723210273`*^9}, 
+   3.667326719941514*^9, {3.79498827090831*^9, 3.794988293420176*^9}, {
+   3.7949883243125277`*^9, 3.794988629941946*^9}},
+ FontSize->14,
+ Background->RGBColor[
+  0, 1, 0],ExpressionUUID->"aeedfed2-0ce8-4dea-a40a-21ba5887cc5a"],
+
+Cell[CellGroupData[{
+
+Cell["Suggerimenti ed osservazioni:", "Subsubsection",
+ CellChangeTimes->{{3.6673254396597214`*^9, 3.6673254447397285`*^9}},
+ FontSize->14,ExpressionUUID->"1552dfab-4574-497b-88c9-ba885dd5eb29"],
+
+Cell["\<\
+1. Se il cerchio (o il disco) \[EGrave] graficamente omogeneo, la sua \
+roto-traslazione pu\[OGrave] essere sostituita dalla sua traslazione e dalla \
+rotazione lungo il suo bordo del punto P. Volendo si pu\[OGrave] anche far \
+rotolare davvero il cerchio (o il disco)  ma per far apprezzare la rotazione \
+bisogna allora colorarlo o mettere dei raggi come se fosse una ruota, etc.
+
+2. Forse \[EGrave] pi\[UGrave] bello se la catenaria si `svolge \
+\[OpenCurlyQuote] dietro al punto P, come fosse una scia, ma vedete voi.\
+\>", "Text",
+ CellChangeTimes->{{3.667326384341044*^9, 3.667326402011069*^9}, 
+   3.6673267553715634`*^9, {3.667329109534859*^9, 3.6673291100648603`*^9}, 
+   3.79498867345527*^9, {3.794991171496826*^9, 3.794991227004975*^9}, {
+   3.7949913827435527`*^9, 3.7949917056598268`*^9}, {3.7949917933428383`*^9, 
+   3.7949917975905037`*^9}},
+ FontSize->14,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"dc65f069-3962-4d5d-a62c-2514c7df65fd"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+WindowToolbars->{},
+WindowSize->{1902, 976},
+WindowMargins->{{-9, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+PrintingOptions->{"PrintCellBrackets"->False,
+"PrintMultipleHorizontalPages"->False,
+"PrintRegistrationMarks"->False,
+"PrintingMargins"->{{72, 72}, {54, 54}}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Report.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 922, 16, 74, "Text",ExpressionUUID->"5c74e917-93d0-449e-a554-5e1bfaad892b"],
+Cell[CellGroupData[{
+Cell[1505, 40, 544, 8, 103, "Title",ExpressionUUID->"c60506d6-8361-4316-b956-ed13c2b257f4"],
+Cell[2052, 50, 176, 2, 41, "Text",ExpressionUUID->"56a7e9d0-8773-4667-a639-febabb910378"],
+Cell[2231, 54, 227, 3, 41, "Text",ExpressionUUID->"5f6c6ac6-ad3a-48ae-8e78-dd5f5bdefa60"],
+Cell[2461, 59, 327, 7, 93, "Text",ExpressionUUID->"76a329ad-0dee-405a-88cd-29bb1eedbc49"],
+Cell[2791, 68, 175, 2, 41, "Text",ExpressionUUID->"0f1ca574-7907-4762-b2d3-44b951752603"],
+Cell[CellGroupData[{
+Cell[2991, 74, 610, 11, 103, "Section 1",ExpressionUUID->"452494a4-36a0-4bd0-a2c1-6d253e8aec22"],
+Cell[3604, 87, 1254, 21, 378, "Text",ExpressionUUID->"e24e603e-f5f4-4bc0-983c-dede2868c2fe"],
+Cell[4861, 110, 1213, 20, 223, "Text",ExpressionUUID->"c149a858-78f3-45aa-b615-b04c4ac8eeee"],
+Cell[6077, 132, 1422, 23, 301, "Text",ExpressionUUID->"9f212a7e-6320-4b7d-bb68-ebf835742619"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7536, 160, 429, 8, 62, "Section 1",ExpressionUUID->"f34ee496-3980-4154-8757-298d82f6f2f8"],
+Cell[CellGroupData[{
+Cell[7990, 172, 187, 3, 57, "Subsection",ExpressionUUID->"aebe9cc8-a470-429d-b3ae-9561e95ea04e"],
+Cell[8180, 177, 711, 21, 79, "Text",ExpressionUUID->"88837edb-1036-4b13-b20b-b1fc74fa2e0d"],
+Cell[CellGroupData[{
+Cell[8916, 202, 204, 3, 45, "Subsubsection",ExpressionUUID->"0dd89b50-cde2-4cc6-81c9-a8d218ad2aa1"],
+Cell[9123, 207, 2464, 81, 144, "Text",ExpressionUUID->"c9ebb7f2-e465-4895-bf9c-f811bb96a944"],
+Cell[11590, 290, 456, 13, 76, "Text",ExpressionUUID->"28bc1b08-59a4-4327-a729-30765bff9a4f"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[12083, 308, 194, 2, 45, "Subsubsection",ExpressionUUID->"f4c0a573-3dd5-4117-ba3b-2b10dcc6857b"],
+Cell[12280, 312, 1639, 59, 172, "Text",ExpressionUUID->"61d7e285-69cf-451e-9c6b-8e965a1689eb"],
+Cell[13922, 373, 1193, 24, 351, "Text",ExpressionUUID->"0f83f479-9e2d-4d5e-8951-bc6689c7e644"],
+Cell[15118, 399, 608, 11, 91, "Text",ExpressionUUID->"c6277dc2-b738-4f80-97c6-b72a918ab1ba"],
+Cell[15729, 412, 764, 15, 144, "Text",ExpressionUUID->"aaae4afa-1767-4c9d-a0d5-6610ff1c06cb"],
+Cell[16496, 429, 511, 10, 91, "Text",ExpressionUUID->"e987a98c-c4fc-4382-b3d4-0474c070975b"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[17044, 444, 245, 3, 45, "Subsubsection",ExpressionUUID->"53e082bf-d4d5-40ba-816f-a9220680582a"],
+Cell[17292, 449, 1544, 28, 275, "Text",ExpressionUUID->"da9d9c94-d5fa-4023-a19b-1bb063cdd1f5"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[18897, 484, 580, 8, 62, "Section 1",ExpressionUUID->"e2e07ce0-5289-4e12-b5eb-2d37a2c74926"],
+Cell[CellGroupData[{
+Cell[19502, 496, 187, 3, 57, "Subsection",ExpressionUUID->"25de8d25-2e51-41df-ba75-dfd32b09b972"],
+Cell[19692, 501, 2169, 64, 171, "Text",ExpressionUUID->"19e5ac14-4332-493c-89f8-dba588aa4152"],
+Cell[CellGroupData[{
+Cell[21886, 569, 204, 3, 45, "Subsubsection",ExpressionUUID->"5bd92d05-ffcc-4fbd-86b8-f5e84c45f28b"],
+Cell[22093, 574, 593, 11, 65, "Text",ExpressionUUID->"290b601b-e91e-44bc-8e81-177c3939138d"],
+Cell[22689, 587, 442, 7, 65, "Text",ExpressionUUID->"5f589b00-76bf-4e5c-a654-e97000b1b0cc"],
+Cell[23134, 596, 577, 11, 65, "Text",ExpressionUUID->"0e28a8ce-7502-4835-811e-2abf00f5bb38"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[23748, 612, 194, 2, 45, "Subsubsection",ExpressionUUID->"0d67cad4-b69f-4212-8294-d5fa77e19275"],
+Cell[23945, 616, 1644, 47, 169, "Text",ExpressionUUID->"6275682e-858f-4568-8add-faa99b69c39c"],
+Cell[25592, 665, 1532, 30, 378, "Text",ExpressionUUID->"7d95f3bd-47c9-4c6b-8fcf-3dfc7fca2b63"],
+Cell[27127, 697, 978, 18, 195, "Text",ExpressionUUID->"8fe30c2c-a10a-4a7c-833e-871b1f27bce5"],
+Cell[28108, 717, 1490, 28, 299, "Text",ExpressionUUID->"fc5199f4-40c1-4165-afee-af1a7302864f"],
+Cell[29601, 747, 1073, 19, 91, "Text",ExpressionUUID->"686368d8-071a-433b-b916-716475fb1c0b"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[30735, 773, 439, 6, 62, "Section 1",ExpressionUUID->"04a77cb1-0a2d-41e4-a0ed-9c794931f212"],
+Cell[CellGroupData[{
+Cell[31199, 783, 187, 3, 57, "Subsection",ExpressionUUID->"aef77c6e-276d-4382-a197-82c76e40973d"],
+Cell[31389, 788, 550, 11, 93, "Text",ExpressionUUID->"d2c17d2d-49d1-45a8-949d-3ee14fdbda65"],
+Cell[CellGroupData[{
+Cell[31964, 803, 204, 3, 45, "Subsubsection",ExpressionUUID->"5c081ae6-212b-4540-b46b-37ad7cb6c5bc"],
+Cell[32171, 808, 945, 21, 221, "Text",ExpressionUUID->"04c7ef9c-256d-4a3c-91ec-4470a5bd4517"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[33177, 836, 472, 7, 62, "Section 1",ExpressionUUID->"b0131856-0722-48f6-be92-ac5e6447f0e5"],
+Cell[CellGroupData[{
+Cell[33674, 847, 187, 3, 57, "Subsection",ExpressionUUID->"f2d15b18-f753-4ffb-980a-26f34a20ba65"],
+Cell[33864, 852, 938, 24, 145, "Text",ExpressionUUID->"aeedfed2-0ce8-4dea-a40a-21ba5887cc5a"],
+Cell[CellGroupData[{
+Cell[34827, 880, 194, 2, 45, "Subsubsection",ExpressionUUID->"1552dfab-4574-497b-88c9-ba885dd5eb29"],
+Cell[35024, 884, 973, 17, 169, "Text",ExpressionUUID->"dc65f069-3962-4d5d-a62c-2514c7df65fd"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
