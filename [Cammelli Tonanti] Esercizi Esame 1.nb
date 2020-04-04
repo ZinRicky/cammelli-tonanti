@@ -1,0 +1,191 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6361,        183]
+NotebookOptionsPosition[      4360,        137]
+NotebookOutlinePosition[      5302,        165]
+CellTagsIndexPosition[      5259,        162]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Corso di Laboratorio Computazionale \[LongDash] Corso di Laurea in Matematica \
+\[LongDash] Universit\[AGrave] di Padova.\
+\>", "Department",
+ CellChangeTimes->{{3.794994124658628*^9, 
+  3.7949941850996037`*^9}},ExpressionUUID->"3eb017ba-e06a-4d74-abeb-\
+07dffea0747d"],
+
+Cell["Anno Accademico 2019-2020", "Date",
+ CellChangeTimes->{{3.7949941902012987`*^9, 
+  3.7949942089217854`*^9}},ExpressionUUID->"b7dce26e-c11a-4a0c-a268-\
+dee03f4b6a07"],
+
+Cell[CellGroupData[{
+
+Cell["Esercizi 1. Grafica e teoria dei numeri", "Title",
+ CellChangeTimes->{{3.794994215766157*^9, 
+  3.7949942326650686`*^9}},ExpressionUUID->"298b6fa7-51ff-420e-b21b-\
+42fdc10d61d8"],
+
+Cell[TextData[{
+ "Notebook del gruppo ",
+ StyleBox["Cammelli Tonanti",
+  FontSlant->"Plain"],
+ "\nComponenti del gruppo:",
+ StyleBox[" Francesco Tognetti, Riccardo Cazzin",
+  FontSlant->"Plain"]
+}], "Author",
+ CellChangeTimes->{{3.794994269687989*^9, 
+  3.7949942998707647`*^9}},ExpressionUUID->"c4e4cdbb-8eec-41e8-8b8f-\
+a7c7f4f4fd8f"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Esercizio 1.1 (Approssimazione di funzione con il suo sviluppo di Taylor).\
+\>", "Section",
+ CellChangeTimes->{{3.7949943102992196`*^9, 
+  3.7949943351693068`*^9}},ExpressionUUID->"70400fd6-8a10-4177-aa87-\
+cf1038b0f6c7"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.7949943866385655`*^9, 
+  3.794994390691738*^9}},ExpressionUUID->"23f916a7-fd18-4946-b554-\
+831259f1db43"],
+
+Cell[TextData[{
+ "Come sono approssimate le funzioni ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "a268fcd1-a28f-41a4-a796-f7b36bc8de27"],
+ " e ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", 
+    RowBox[{"1", "+", 
+     SuperscriptBox["x", "2"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e0f1b38e-5f60-4f64-b0bc-71406e877f49"],
+ " dai loro polinomi di Taylor di ordine crescente?"
+}], "Text",
+ CellChangeTimes->{{3.7949944586941924`*^9, 
+  3.794994494827001*^9}},ExpressionUUID->"551ebd03-2c29-45ac-90cf-\
+c98e7064cbb8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Svolgimento", "Subsection",
+ CellChangeTimes->{{3.794994512577824*^9, 
+  3.794994514319416*^9}},ExpressionUUID->"8469c99f-23ea-47d2-87d0-\
+61db1addc8d6"],
+
+Cell["Bla bla bla", "Text",
+ CellChangeTimes->{{3.7949945197243156`*^9, 
+  3.794994522629857*^9}},ExpressionUUID->"8adc8853-6571-455f-944a-\
+763382b52306"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{"Cube", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7949945259014025`*^9, 3.794994532214241*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"9ac31e22-7db3-4271-bd78-3dcbd17f58d4"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  InterpretationBox[
+   TagBox[
+    GraphicsComplex3DBox[
+     NCache[{{Rational[-1, 2], Rational[1, 2], Rational[-1, 2]}, {
+       Rational[1, 2], Rational[1, 2], Rational[-1, 2]}, {
+       Rational[1, 2], Rational[-1, 2], Rational[-1, 2]}, {
+       Rational[-1, 2], Rational[-1, 2], Rational[-1, 2]}, {
+       Rational[-1, 2], Rational[1, 2], Rational[1, 2]}, {
+       Rational[1, 2], Rational[1, 2], Rational[1, 2]}, {
+       Rational[1, 2], Rational[-1, 2], Rational[1, 2]}, {
+       Rational[-1, 2], Rational[-1, 2], Rational[1, 2]}}, {{-0.5, 
+      0.5, -0.5}, {0.5, 0.5, -0.5}, {
+      0.5, -0.5, -0.5}, {-0.5, -0.5, -0.5}, {-0.5, 0.5, 0.5}, {0.5, 0.5, 
+      0.5}, {0.5, -0.5, 0.5}, {-0.5, -0.5, 0.5}}], 
+     Polygon3DBox[{{1, 2, 3, 4}, {5, 6, 2, 1}, {6, 7, 3, 2}, {7, 8, 4, 3}, {8,
+       5, 1, 4}, {8, 7, 6, 5}}]],
+    "Polyhedron"],
+   Cube[]]]], "Output",
+ CellChangeTimes->{3.794994532801319*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"5f1828c0-e33c-4c93-b93a-80571a7702cf"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{571.8, 524.4},
+WindowMargins->{{Automatic, 84}, {Automatic, 22.8}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"Report"}, "StandardReport.nb", CharacterEncoding -> 
+       "UTF-8"]]], 
+   Cell[
+    StyleData["Text"], TextAlignment -> Left, TextJustification -> 1.]}, 
+  WindowToolbars -> "EditBar", WindowSize -> {582.6, 493.79999999999995`}, 
+  WindowMargins -> {{0, Automatic}, {Automatic, 0}}, Visible -> False, 
+  FrontEndVersion -> "12.1 for Microsoft Windows (64-bit) (March 14, 2020)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"70277079-39c7-4e2d-a274-9a49dc29975f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 279, 6, 33, "Department",ExpressionUUID->"3eb017ba-e06a-4d74-abeb-07dffea0747d"],
+Cell[840, 28, 171, 3, 44, "Date",ExpressionUUID->"b7dce26e-c11a-4a0c-a268-dee03f4b6a07"],
+Cell[CellGroupData[{
+Cell[1036, 35, 184, 3, 156, "Title",ExpressionUUID->"298b6fa7-51ff-420e-b21b-42fdc10d61d8"],
+Cell[1223, 40, 336, 10, 64, "Author",ExpressionUUID->"c4e4cdbb-8eec-41e8-8b8f-a7c7f4f4fd8f"],
+Cell[CellGroupData[{
+Cell[1584, 54, 231, 5, 107, "Section",ExpressionUUID->"70400fd6-8a10-4177-aa87-cf1038b0f6c7"],
+Cell[CellGroupData[{
+Cell[1840, 63, 187, 3, 34, "Subsection",ExpressionUUID->"23f916a7-fd18-4946-b554-831259f1db43"],
+Cell[2030, 68, 643, 19, 61, "Text",ExpressionUUID->"551ebd03-2c29-45ac-90cf-c98e7064cbb8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2710, 92, 159, 3, 34, "Subsection",ExpressionUUID->"8469c99f-23ea-47d2-87d0-61db1addc8d6"],
+Cell[2872, 97, 155, 3, 34, "Text",ExpressionUUID->"8adc8853-6571-455f-944a-763382b52306"],
+Cell[CellGroupData[{
+Cell[3052, 104, 235, 4, 39, "Input",ExpressionUUID->"9ac31e22-7db3-4271-bd78-3dcbd17f58d4"],
+Cell[3290, 110, 1018, 21, 443, "Output",ExpressionUUID->"5f1828c0-e33c-4c93-b93a-80571a7702cf"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
