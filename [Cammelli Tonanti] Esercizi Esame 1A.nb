@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1801008,      31660]
+NotebookDataLength[   1801009,      31660]
 NotebookOptionsPosition[   1783554,      31394]
-NotebookOutlinePosition[   1784336,      31421]
-CellTagsIndexPosition[   1784293,      31418]
+NotebookOutlinePosition[   1784337,      31421]
+CellTagsIndexPosition[   1784294,      31418]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31312,7 +31312,7 @@ Cell["Sembrano sovrapporsi, cercher\[OGrave] di dimostrare questo fatto", \
   3.7950779208664737`*^9, 
   3.7950779273520117`*^9}},ExpressionUUID->"1b00f041-c7bc-44d1-81d4-\
 43cf773286eb"]
-}, Closed]]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -31393,8 +31393,8 @@ Cell["Svolgimento:", "Subsection",
 }, Open  ]]
 },
 WindowToolbars->"EditBar",
-WindowSize->{1904, 997},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+WindowSize->{1920, 997},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 Magnification:>1.25 Inherited,
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
 StyleDefinitions->Notebook[{
@@ -31643,7 +31643,7 @@ Cell[1750647, 30771, 489, 10, 49, "Input",ExpressionUUID->"4dcd875e-4a15-4511-ba
 Cell[1751139, 30783, 29687, 522, 477, "Output",ExpressionUUID->"425d05db-103a-459e-b751-537ab17b03a7"]
 }, Open  ]],
 Cell[1780841, 31308, 266, 5, 42, "Text",ExpressionUUID->"1b00f041-c7bc-44d1-81d4-43cf773286eb"]
-}, Closed]]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[1781156, 31319, 241, 4, 86, "Section",ExpressionUUID->"07d75309-786b-4689-bd3b-2d71ca0fde5a"],
