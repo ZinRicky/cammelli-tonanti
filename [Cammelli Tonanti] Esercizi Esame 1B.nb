@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     75989,       1683]
-NotebookOptionsPosition[     71117,       1602]
-NotebookOutlinePosition[     71944,       1629]
-CellTagsIndexPosition[     71901,       1626]
+NotebookDataLength[     76035,       1684]
+NotebookOptionsPosition[     71163,       1603]
+NotebookOutlinePosition[     71990,       1630]
+CellTagsIndexPosition[     71947,       1627]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1544,11 +1544,12 @@ Cell[BoxData[
 
 Cell["\<\
 Possiamo collezionare un numero sufficiente di immagini per creare una GIF \
-fluida: utilizzando uno standard abbastanza consolidato, scegliamo di \
-chiedere 30 fotogrammi al secondo.\
+fluida: utilizzando uno standard video consolidato, scegliamo di mostrare 30 \
+fotogrammi al secondo.\
 \>", "Text",
- CellChangeTimes->{{3.7950843061864853`*^9, 
-  3.795084378272347*^9}},ExpressionUUID->"a20d5236-1793-472a-9cf9-\
+ CellChangeTimes->{{3.7950843061864853`*^9, 3.795084378272347*^9}, {
+  3.7950847658941207`*^9, 
+  3.795084780399983*^9}},ExpressionUUID->"a20d5236-1793-472a-9cf9-\
 c8b40ef7d8c7"],
 
 Cell[BoxData[
@@ -1679,9 +1680,9 @@ Cell[65030, 1465, 280, 5, 54, "Input",ExpressionUUID->"dc5c97b9-f72a-40c4-b109-a
 Cell[65313, 1472, 329, 7, 57, "Text",ExpressionUUID->"52539e2b-c759-4da8-bcfe-861dac1757ad"],
 Cell[65645, 1481, 2639, 46, 99, "Input",ExpressionUUID->"45652264-28cc-4aec-ab84-4c06f308c81b"],
 Cell[68287, 1529, 816, 13, 54, "Input",ExpressionUUID->"759322d5-a95b-4487-9bc9-49b0aeee4975"],
-Cell[69106, 1544, 335, 7, 80, "Text",ExpressionUUID->"a20d5236-1793-472a-9cf9-c8b40ef7d8c7"],
-Cell[69444, 1553, 1299, 36, 164, "Input",ExpressionUUID->"c60a6ec3-b036-48f3-a991-19d024cda39a"],
-Cell[70746, 1591, 331, 6, 54, "Input",ExpressionUUID->"544d0bc0-2194-46be-bfde-4541f7133057"]
+Cell[69106, 1544, 381, 8, 80, "Text",ExpressionUUID->"a20d5236-1793-472a-9cf9-c8b40ef7d8c7"],
+Cell[69490, 1554, 1299, 36, 164, "Input",ExpressionUUID->"c60a6ec3-b036-48f3-a991-19d024cda39a"],
+Cell[70792, 1592, 331, 6, 54, "Input",ExpressionUUID->"544d0bc0-2194-46be-bfde-4541f7133057"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
