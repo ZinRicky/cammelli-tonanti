@@ -1,0 +1,274 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10784,        266]
+NotebookOptionsPosition[      9460,        237]
+NotebookOutlinePosition[      9894,        254]
+CellTagsIndexPosition[      9851,        251]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+F. Fasso`.    Universita` di Padova.   Corso di Laurea in Matematica.    \
+Notebooks per il corso di Laboratorio Computazionale, a.a. 2019-20120.\
+\>", "Text",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellChangeTimes->{{3.543295567280873*^9, 3.5432955702916784`*^9}, {
+   3.543908447796471*^9, 3.543908456189286*^9}, {3.545726674066561*^9, 
+   3.545726681367374*^9}, {3.605711900966011*^9, 3.605711908726022*^9}, {
+   3.669096093445307*^9, 3.66909609564531*^9}, {3.669649165119878*^9, 
+   3.6696491652446785`*^9}, {3.66972092178139*^9, 3.6697209220153904`*^9}, {
+   3.670388488272203*^9, 3.670388491882208*^9}, {3.701051306870087*^9, 
+   3.701051318954707*^9}, {3.7011685172045727`*^9, 3.7011685342378035`*^9}, {
+   3.7011687819339156`*^9, 3.7011687862775784`*^9}, {3.7331089774992666`*^9, 
+   3.733108996189293*^9}, {3.733501056943877*^9, 3.7335010648379884`*^9}, 
+   3.7335017818753247`*^9, {3.796655406169279*^9, 3.7966554319194355`*^9}, 
+   3.7966555519156857`*^9},
+ FontSize->12,
+ Background->None,ExpressionUUID->"c7303fe6-96d0-4c79-98bd-8ef005aeeb59"],
+
+Cell[CellGroupData[{
+
+Cell["Funzione per creare copie di backup", "Subsubsection",
+ CellChangeTimes->{{3.606715229627287*^9, 
+  3.606715237137297*^9}},ExpressionUUID->"98e55be5-bddc-40fd-b03c-\
+9bbb456535ae"],
+
+Cell["\<\
+Inserire questi comandi nel notebook ed esegurli una volta.
+Poi dare il comando \[OpenCurlyDoubleQuote]salva\[CloseCurlyDoubleQuote] per \
+creare una copia del notebook.\
+\>", "Text",
+ CellChangeTimes->{{3.6067152387972994`*^9, 
+  3.606715279197356*^9}},ExpressionUUID->"e9252f9a-29ba-4487-b3d8-\
+723325eb43f4"],
+
+Cell["\<\
+Dettagli:\[LineSeparator]Il comando \[OpenCurlyDoubleQuote]salva\
+\[CloseCurlyDoubleQuote] crea, se non esiste, una sottodirectory ./BackUp \
+della directory nella quale si trova il notebook corrente ed in essa crea due \
+copie del notebook, chiamate  notebook.nb.1 e notebook.nb.2.
+Ad ogni esecuzione del comando,  notebook.nb.1 viene copiato su  \
+notebook.nb.2, notebook.nb  viene copiato su notebook.nb.1  ed infine il \
+notebook corrente viene salvato  su  notebook.nb.\".
+Alla prima esecuzione viene creata una sola copia.\
+\>", "Text",
+ InitializationCell->True,
+ CellChangeTimes->{{3.6067152847673635`*^9, 3.6067153377974377`*^9}, {
+  3.6702077652112417`*^9, 
+  3.670207777491259*^9}},ExpressionUUID->"9d5322a9-a01f-4d14-8081-\
+2bc262275508"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Backup", "[", "file_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", "  ", 
+      RowBox[{
+       RowBox[{"dir", "=", 
+        RowBox[{"ToFileName", "[", 
+         RowBox[{"Extract", "[", 
+          RowBox[{
+           RowBox[{"\"\<FileName\>\"", "/.", 
+            RowBox[{"NotebookInformation", "[", 
+             RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]}], ",", 
+           RowBox[{"{", "1", "}"}], ",", "FrontEnd`FileName"}], "]"}], 
+         "]"}]}], ";", "\n", 
+       "                                                                      \
+                        ", 
+       StyleBox[
+        RowBox[{"(*", "  ", 
+         RowBox[{"the", " ", "current", " ", "directory"}], "  ", "*)"}],
+        FontWeight->"Plain"], "\[IndentingNewLine]", "  ", 
+       RowBox[{"budir", "=", 
+        RowBox[{"ToFileName", "[", 
+         RowBox[{"dir", ",", 
+          RowBox[{"ToFileName", "[", "\"\<BackUp\>\"", "]"}]}], "]"}]}], ";", 
+       "    ", 
+       StyleBox[
+        RowBox[{"(*", "  ", 
+         RowBox[{"the", " ", "backup", " ", "directory"}], "  ", "*)"}],
+        FontWeight->"Plain"], "\[IndentingNewLine]", "  ", 
+       RowBox[{"namefile", "=", 
+        RowBox[{"ToFileName", "[", 
+         RowBox[{"dir", ",", "file"}], "]"}]}], ";", "         ", 
+       StyleBox[
+        RowBox[{"(*", " ", 
+         RowBox[{"complete", " ", "path", " ", "of", " ", "file"}], " ", 
+         "*)"}],
+        FontWeight->"Plain"], "\[IndentingNewLine]", "  ", 
+       RowBox[{"bufile1", "=", 
+        RowBox[{"ToFileName", "[", 
+         RowBox[{"budir", ",", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{"file", ",", "\"\<.1\>\""}], "]"}]}], "]"}]}], ";", "  ", 
+       StyleBox[
+        RowBox[{"(*", " ", 
+         RowBox[{"first", " ", "copy", " ", "of", " ", "file"}], " ", "*)"}],
+        FontWeight->"Plain"], "\[IndentingNewLine]", "  ", 
+       RowBox[{"bufile2", "=", 
+        RowBox[{"ToFileName", "[", 
+         RowBox[{"budir", ",", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{"file", ",", "\"\<.2\>\""}], "]"}]}], "]"}]}], ";", "    ", 
+       StyleBox[
+        RowBox[{"(*", " ", 
+         RowBox[{"second", " ", "copy", " ", "of", " ", "file"}], " ", "*)"}],
+        FontWeight->"Plain"], "\[IndentingNewLine]", "  ", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", 
+            RowBox[{"FileNames", "[", 
+             RowBox[{"\"\<BackUp\>\"", ",", "dir"}], "]"}], "]"}], " ", 
+           "\[Equal]", "0"}], "  ", "||", "   ", 
+          RowBox[{
+           RowBox[{"FileType", "[", "budir", "]"}], "!=", "Directory"}]}], 
+         ",", " ", "\[IndentingNewLine]", "           ", 
+         RowBox[{"CreateDirectory", "[", "budir", "]"}]}], "]"}], ";", "    ", 
+       StyleBox[
+        RowBox[{"(*", " ", 
+         RowBox[{
+          RowBox[{
+          "If", " ", "backup", " ", "directory", " ", "does", " ", "not", " ",
+            "exist"}], ",", " ", 
+          RowBox[{"create", " ", "it"}]}], "  ", "**)"}],
+        FontWeight->"Plain"], "\[IndentingNewLine]", "  ", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", " ", 
+           RowBox[{"FileNames", "[", "bufile2", "]"}], "]"}], "\[Equal]", 
+          "1"}], ",", "    ", 
+         RowBox[{"DeleteFile", "[", "bufile2", "]"}]}], "  ", "]"}], ";", 
+       "  ", 
+       StyleBox[
+        RowBox[{"(*", " ", 
+         RowBox[{
+          RowBox[{"if", " ", "file", " ", "2", " ", "exists"}], ",", " ", 
+          RowBox[{"delete", " ", "it"}]}], " ", "*)"}],
+        FontWeight->"Plain"], "\n", "       ", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", " ", 
+           RowBox[{"FileNames", "[", "bufile1", "]"}], "]"}], "\[Equal]", 
+          "1"}], ",", "    ", 
+         RowBox[{
+          RowBox[{"CopyFile", "[", 
+           RowBox[{"bufile1", ",", "bufile2"}], "]"}], ";", "   ", 
+          RowBox[{"DeleteFile", "[", "bufile1", "]"}]}]}], " ", "]"}], ";", 
+       "\[IndentingNewLine]", "                ", 
+       RowBox[{"CopyFile", "[", 
+        RowBox[{"namefile", ",", "bufile1"}], "]"}], ";", "  ", 
+       StyleBox[
+        RowBox[{"(*", " ", 
+         RowBox[{
+          RowBox[{"if", " ", "file", " ", "1", " ", "exists"}], ",", " ", 
+          RowBox[{"substitute", " ", "with", " ", "file"}]}], " ", "*)"}],
+        FontWeight->"Plain"], "\n", "       ", 
+       RowBox[{"NotebookSave", "[", 
+        RowBox[{
+         RowBox[{"EvaluationNotebook", "[", "]"}], ",", "namefile"}], 
+        "]"}]}]}], "]"}]}], " ", ";"}], "  ", 
+  StyleBox[
+   RowBox[{"(*", " ", 
+    RowBox[{"save", " ", "file"}], " ", "*)"}],
+   FontWeight->"Plain"]}], "\n", 
+ RowBox[{"salva", ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"NotebookInformation", "[", 
+     RowBox[{"EvaluationNotebook", "[", "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "2", ",", "2"}], "]"}], "]"}], "//", "  ", 
+   "Backup"}]}]}], "Input",
+ CellChangeTimes->{{3.606714649066474*^9, 3.6067146517464776`*^9}, 
+   3.606714790256672*^9, 3.6702097067815976`*^9, 
+   3.7331091136893263`*^9},ExpressionUUID->"3ab6e118-d249-47a7-a6be-\
+bbe56361f437"],
+
+Cell[BoxData["salva"], "Input",
+ CellChangeTimes->{{3.7331091202369*^9, 
+  3.733109120862609*^9}},ExpressionUUID->"83111875-9065-4f75-bf1d-\
+667f27604ed8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<backup\>\"", ",", 
+    RowBox[{"DateString", "[", "\"\<ISODateTime\>\"", "]"}]}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7968857032349763`*^9, 3.7968857090842023`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"91850cd8-cc66-41eb-b8fb-bb15c25e002e"],
+
+Cell[BoxData["\<\"D:\\\\backup\\\\2020-04-26T12:28:29\"\>"], "Output",
+ CellChangeTimes->{3.796885644216494*^9, 3.7968857093664417`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"904f9372-749e-4410-a30e-b8194b6821fc"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"<<", "\"\<salva.wl\>\""}]], "Input",
+ CellChangeTimes->{{3.79688684907098*^9, 3.796886856605817*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"b80a4d02-7739-48bc-af08-421cb8f5d0c1"],
+
+Cell[BoxData[
+ RowBox[{"backup", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.796886858082669*^9, 3.796886872297043*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"fa501ef4-e513-49b6-a577-04bb12bbbdd7"]
+}, Open  ]]
+},
+WindowSize->{556.1999999999999, 582.6},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e2155127-74a4-4fcf-9faa-5a74a7d4aedc"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1060, 17, 56, "Text",ExpressionUUID->"c7303fe6-96d0-4c79-98bd-8ef005aeeb59"],
+Cell[CellGroupData[{
+Cell[1643, 41, 186, 3, 45, "Subsubsection",ExpressionUUID->"98e55be5-bddc-40fd-b03c-9bbb456535ae"],
+Cell[1832, 46, 321, 7, 58, "Text",ExpressionUUID->"e9252f9a-29ba-4487-b3d8-723325eb43f4"],
+Cell[2156, 55, 760, 14, 196, "Text",ExpressionUUID->"9d5322a9-a01f-4d14-8081-2bc262275508",
+ InitializationCell->True],
+Cell[2919, 71, 5322, 131, 614, "Input",ExpressionUUID->"3ab6e118-d249-47a7-a6be-bbe56361f437"],
+Cell[8244, 204, 155, 3, 28, "Input",ExpressionUUID->"83111875-9065-4f75-bf1d-667f27604ed8"],
+Cell[CellGroupData[{
+Cell[8424, 211, 384, 8, 49, "Input",ExpressionUUID->"91850cd8-cc66-41eb-b8fb-bb15c25e002e"],
+Cell[8811, 221, 214, 2, 32, "Output",ExpressionUUID->"904f9372-749e-4410-a30e-b8194b6821fc"]
+}, Open  ]],
+Cell[9040, 226, 203, 3, 28, "Input",ExpressionUUID->"b80a4d02-7739-48bc-af08-421cb8f5d0c1"],
+Cell[9246, 231, 198, 3, 28, "Input",ExpressionUUID->"fa501ef4-e513-49b6-a577-04bb12bbbdd7"]
+}, Open  ]]
+}
+]
+*)
+
