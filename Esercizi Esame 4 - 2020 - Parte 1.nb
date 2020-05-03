@@ -1,0 +1,259 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11053,        251]
+NotebookOptionsPosition[      8950,        207]
+NotebookOutlinePosition[      9557,        230]
+CellTagsIndexPosition[      9514,        227]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Corso di Laboratorio Computazionale, Corso di Laurea in Matematica,  \
+Universita` di Padova.        
+A.A. 2019-2020\
+\>", "Text",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellChangeTimes->{{3.6030403380477047`*^9, 3.6030403496377206`*^9}, {
+  3.6042342921245947`*^9, 3.604234293844597*^9}, {3.6659842250605717`*^9, 
+  3.665984234810585*^9}, {3.665988776604652*^9, 3.6659887774046535`*^9}, {
+  3.666106805730517*^9, 3.666106807983646*^9}, {3.686715090311494*^9, 
+  3.68671511399888*^9}, {3.6973875672817383`*^9, 3.6973875784126663`*^9}, {
+  3.697434883527854*^9, 3.697434886700633*^9}, {3.697998051529482*^9, 
+  3.697998057171163*^9}, {3.6987578361186147`*^9, 3.6987578804703298`*^9}, {
+  3.7335014807696733`*^9, 3.733501483237917*^9}, {3.764521701389124*^9, 
+  3.7645217047108793`*^9}, {3.7966505737126565`*^9, 3.796650577487564*^9}},
+ FontSize->12,
+ Background->None,ExpressionUUID->"838ff745-ca8a-4694-84c1-96722830562d"],
+
+Cell[CellGroupData[{
+
+Cell["Esercizi 4: Julia e Mandelbrot sets, paesaggi frattali", "Title",
+ CellChangeTimes->{{3.6051594074986267`*^9, 3.6051594078186274`*^9}, {
+   3.6061231843457747`*^9, 3.606123189685782*^9}, {3.700632021049402*^9, 
+   3.7006320287689543`*^9}, 
+   3.797232901871482*^9},ExpressionUUID->"501a57f7-f6b2-4eca-8597-\
+a5f011d3c4df"],
+
+Cell["Notebook del gruppo:", "Text",
+ CellChangeTimes->{{3.6051654520044003`*^9, 3.6051654548044043`*^9}},
+ FontSize->14,ExpressionUUID->"30a09ea0-053b-4802-94b7-76ef7501aa45"],
+
+Cell["Componenti del gruppo:", "Text",
+ CellChangeTimes->{{3.6051654520044003`*^9, 3.6051654548044043`*^9}, {
+  3.667324612567563*^9, 3.667324615177567*^9}},
+ FontSize->14,ExpressionUUID->"4646078c-f9bd-441a-a344-bc7476db858c"],
+
+Cell["\<\
+Se ci sono state collaborazioni e/o aiuti, dichiararli:
+In collaborazione con: 
+Aiutato da: \
+\>", "Text",
+ CellChangeTimes->{{3.6051654600844116`*^9, 3.6051654836344447`*^9}},
+ FontSize->14,ExpressionUUID->"fc4798dc-f682-40c2-8dd9-56dbb6c33438"],
+
+Cell["Consegna entro: 20/5 ", "Text",
+ CellChangeTimes->{{3.794982459599351*^9, 3.794982493114044*^9}, {
+  3.7967385732833433`*^9, 3.796738575672991*^9}, {3.797233561770916*^9, 
+  3.7972335630185804`*^9}, {3.797235943961645*^9, 3.797235945024599*^9}, {
+  3.79723601178318*^9, 3.797236012343687*^9}, {3.797236069760417*^9, 
+  3.7972360875126476`*^9}, {3.7972361185903544`*^9, 3.7972361343762627`*^9}, {
+  3.7972362047278657`*^9, 3.797236211119582*^9}},
+ FontSize->14,ExpressionUUID->"0cf0e74b-e9df-4b02-a52b-4b2042bd9292"],
+
+Cell["\<\
+Vedere istruzioni e raccomandazioni nel notebook degli Esercizi 1\
+\>", "Text",
+ CellChangeTimes->{{3.6051594482786837`*^9, 3.605159463468705*^9}, {
+  3.605165499714467*^9, 3.6051655227944994`*^9}, {3.667324702107689*^9, 
+  3.66732470332769*^9}, {3.7966507307858553`*^9, 3.7966507820419292`*^9}},
+ FontSize->14,
+ Background->RGBColor[
+  0, 1, 1],ExpressionUUID->"e25d5928-8aa4-4124-9e8f-f616fe56730e"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Esercizio 4.1: Autosimilarit\[AGrave] (approssimata) degli insiemi di Julia \
+e/o di Mandelbrot\
+\>", "Section 1",
+ CellChangeTimes->{{3.605158728587676*^9, 3.605158728717676*^9}, {
+   3.6051593963886113`*^9, 3.6051594028186207`*^9}, {3.6051596052989035`*^9, 
+   3.605159612848914*^9}, {3.6051618379420295`*^9, 3.605161863342065*^9}, {
+   3.6060502807140913`*^9, 3.606050281194092*^9}, {3.60612365239643*^9, 
+   3.6061236922664857`*^9}, {3.6697317939617033`*^9, 3.6697318070657263`*^9}, 
+   3.6697318448645926`*^9, 3.7972330663821306`*^9, {3.7972360612966995`*^9, 
+   3.797236062232751*^9}},ExpressionUUID->"34c3d314-395e-4b32-bef9-\
+460880c78b2e"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.667324682717662*^9, 3.6673246884576693`*^9}},
+ FontSize->16,ExpressionUUID->"b44cc96b-ae75-4425-8fe5-80468715ba83"],
+
+Cell["\<\
+Investigare la auto-similarit\[AGrave] (approssimata) degli insiemi di Julia \
+e/o dell\[CloseCurlyQuote]insieme di Mandelbrot. 
+Creare una successione di ingradimenti successivi di uno (o due, o tre, ma \
+non di pi\[UGrave]: \[EGrave] meglio la qualit\[AGrave] della \
+quantit\[AGrave]) Julia sets e/o dell\[CloseCurlyQuote]insieme di Mandlebrot, \
+a  scelta, che ne mostrino nel modo pi\[UGrave] chiaro possibile, secondo i \
+vostri gusti, l'approssimata autosimilarit\[AGrave].\
+\>", "Text",
+ CellChangeTimes->{{3.6093153569438796`*^9, 3.609315482590066*^9}, {
+   3.609316457555831*^9, 3.6093164591719236`*^9}, {3.6715380947086773`*^9, 
+   3.671538095738679*^9}, 3.7346899614430523`*^9, {3.797233104886216*^9, 
+   3.7972331471825037`*^9}, {3.7972363695827837`*^9, 3.7972363706070747`*^9}},
+ FontSize->16,
+ Background->RGBColor[
+  0, 1, 0],ExpressionUUID->"f497ec93-96e5-461b-8a4d-37d7a86d4563"],
+
+Cell[CellGroupData[{
+
+Cell["Suggerimenti ed osservazioni:", "Subsubsection",
+ CellChangeTimes->{{3.6673254396597214`*^9, 3.6673254447397285`*^9}},
+ FontSize->16,ExpressionUUID->"27323b9f-ad39-4b25-bf24-d12fff1a5c17"],
+
+Cell["\<\
+Usare la finestrella e mostrare il risultato o in una graphics grid oppure in \
+un'animazione.
+
+Cercate di curare il risultato, creando delle immagini che diano un'idea \
+quanto pi\[UGrave] immediata e convincente possibile dell'autosimilari\
+\[AGrave]. 
+
+Se lo desiderate potete usare una colorazione di vostra scelta.
+
+Saranno ovviamente apprezzati disegni che utilizzino effetti cromatici \
+particolarmente belli, anche se questo non \[EGrave] essenziale per \
+evidenziare la autosimilarit\[AGrave].\
+\>", "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.60931549559481*^9, 3.609315500262077*^9}, {
+  3.6093156775002146`*^9, 3.609315677891237*^9}, {3.79723318127234*^9, 
+  3.7972331969536343`*^9}, {3.797233429501091*^9, 3.7972334449881897`*^9}, {
+  3.797236398279087*^9, 3.7972364203023863`*^9}},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"22a325bc-23aa-4f46-a1b5-26010c9cdc48"],
+
+Cell[TextData[{
+ "NB: Regola generale: ",
+ StyleBox["Meglio poche immagini chiare e curate che tante disorganizzate.",
+  FontSlant->"Italic"]
+}], "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.60931549559481*^9, 3.609315500262077*^9}, {
+  3.6093156775002146`*^9, 3.609315677891237*^9}, {3.79723318127234*^9, 
+  3.7972331969536343`*^9}, {3.797233429501091*^9, 3.7972334535900965`*^9}},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"6ce47b41-a2b0-4b20-9c6a-7012b5eeba1c"],
+
+Cell[TextData[{
+ "Importante:\n",
+ StyleBox["Prima della consegna cancellate tutti gli output dal notebook",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ ". Le immagini verranno ricreate al momento della correzione. Nel caso la \
+creazione delle immagini richieda tempi lunghi (superiore a una decina di \
+minuti) scrivetelo nel notebook e contattatemi."
+}], "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.6093155411144133`*^9, 3.6093156395970464`*^9}, {
+   3.6715383363590155`*^9, 3.6715383426790247`*^9}, {3.7346899868336697`*^9, 
+   3.7346900014976435`*^9}, {3.7346900607739325`*^9, 3.7346900615694265`*^9}, 
+   3.7972332314586344`*^9},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"51929520-c371-4005-b3e3-d61cc42771b2"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell["Esercizio 4.2: verr\[AGrave] assegnato", "Section 1",
+ CellChangeTimes->{{3.605158728587676*^9, 3.605158728717676*^9}, {
+   3.6051593963886113`*^9, 3.6051594028186207`*^9}, {3.6051596052989035`*^9, 
+   3.605159612848914*^9}, {3.6051618379420295`*^9, 3.605161863342065*^9}, {
+   3.6060502807140913`*^9, 3.606050281194092*^9}, {3.60612365239643*^9, 
+   3.6061236922664857`*^9}, {3.6697317939617033`*^9, 
+   3.6697318248809576`*^9}, {3.6697366381511245`*^9, 3.6697366395083265`*^9}, 
+   3.7972335143184004`*^9, {3.797235972440277*^9, 
+   3.7972359858546205`*^9}},ExpressionUUID->"fcc5b9e8-a358-4739-b196-\
+ee1af7ef93e7"],
+
+Cell["Esercizio 4.3:  verr\[AGrave] assegnato", "Section 1",
+ CellChangeTimes->{{3.605158728587676*^9, 3.605158728717676*^9}, {
+   3.6051593963886113`*^9, 3.6051594028186207`*^9}, {3.6051596052989035`*^9, 
+   3.605159612848914*^9}, {3.6051618379420295`*^9, 3.605161863342065*^9}, {
+   3.6060502807140913`*^9, 3.606050281194092*^9}, {3.60612365239643*^9, 
+   3.6061236922664857`*^9}, {3.6697317939617033`*^9, 3.6697318070657263`*^9}, 
+   3.6697318448645926`*^9, {3.6697319211019263`*^9, 3.669731927482338*^9}, 
+   3.7972333140150676`*^9, 
+   3.797235991757003*^9},ExpressionUUID->"09272956-0d10-48f8-b14b-\
+ac30b918e8a0"]
+}, Open  ]]
+},
+WindowToolbars->{},
+WindowSize->{1494, 926},
+WindowMargins->{{Automatic, 83}, {-29, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+PrintingOptions->{"PrintCellBrackets"->False,
+"PrintMultipleHorizontalPages"->False,
+"PrintRegistrationMarks"->False,
+"PrintingMargins"->{{72, 72}, {54, 54}}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Report.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 926, 16, 74, "Text",ExpressionUUID->"838ff745-ca8a-4694-84c1-96722830562d"],
+Cell[CellGroupData[{
+Cell[1509, 40, 328, 5, 103, "Title",ExpressionUUID->"501a57f7-f6b2-4eca-8597-a5f011d3c4df"],
+Cell[1840, 47, 176, 2, 41, "Text",ExpressionUUID->"30a09ea0-053b-4802-94b7-76ef7501aa45"],
+Cell[2019, 51, 227, 3, 41, "Text",ExpressionUUID->"4646078c-f9bd-441a-a344-bc7476db858c"],
+Cell[2249, 56, 256, 6, 93, "Text",ExpressionUUID->"fc4798dc-f682-40c2-8dd9-56dbb6c33438"],
+Cell[2508, 64, 521, 7, 41, "Text",ExpressionUUID->"0cf0e74b-e9df-4b02-a52b-4b2042bd9292"],
+Cell[3032, 73, 411, 8, 65, "Text",ExpressionUUID->"e25d5928-8aa4-4124-9e8f-f616fe56730e"],
+Cell[CellGroupData[{
+Cell[3468, 85, 658, 11, 103, "Section 1",ExpressionUUID->"34c3d314-395e-4b32-bef9-460880c78b2e"],
+Cell[CellGroupData[{
+Cell[4151, 100, 197, 2, 59, "Subsection",ExpressionUUID->"b44cc96b-ae75-4425-8fe5-80468715ba83"],
+Cell[4351, 104, 907, 15, 129, "Text",ExpressionUUID->"f497ec93-96e5-461b-8a4d-37d7a86d4563"],
+Cell[CellGroupData[{
+Cell[5283, 123, 194, 2, 47, "Subsubsection",ExpressionUUID->"27323b9f-ad39-4b25-bf24-d12fff1a5c17"],
+Cell[5480, 127, 918, 21, 279, "Text",ExpressionUUID->"22a325bc-23aa-4f46-a1b5-26010c9cdc48"],
+Cell[6401, 150, 494, 11, 69, "Text",ExpressionUUID->"6ce47b41-a2b0-4b20-9c6a-7012b5eeba1c"],
+Cell[6898, 163, 751, 16, 130, "Text",ExpressionUUID->"51929520-c371-4005-b3e3-d61cc42771b2"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[7688, 184, 623, 9, 62, "Section 1",ExpressionUUID->"fcc5b9e8-a358-4739-b196-ee1af7ef93e7"],
+Cell[8314, 195, 620, 9, 62, "Section 1",ExpressionUUID->"09272956-0d10-48f8-b14b-ac30b918e8a0"]
+}, Open  ]]
+}
+]
+*)
+
