@@ -1,0 +1,2074 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     58518,       2066]
+NotebookOptionsPosition[     55137,       2001]
+NotebookOutlinePosition[     55745,       2024]
+CellTagsIndexPosition[     55702,       2021]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Corso di Laboratorio Computazionale, Corso di Laurea in Matematica,  \
+Universit\[AGrave] di Padova.        
+A.A. 2019-2020\
+\>", "Text",
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellChangeTimes->{{3.6030403380477047`*^9, 3.6030403496377206`*^9}, {
+  3.6042342921245947`*^9, 3.604234293844597*^9}, {3.6659842250605717`*^9, 
+  3.665984234810585*^9}, {3.665988776604652*^9, 3.6659887774046535`*^9}, {
+  3.666106805730517*^9, 3.666106807983646*^9}, {3.686715090311494*^9, 
+  3.68671511399888*^9}, {3.6973875672817383`*^9, 3.6973875784126663`*^9}, {
+  3.697434883527854*^9, 3.697434886700633*^9}, {3.697998051529482*^9, 
+  3.697998057171163*^9}, {3.6987578361186147`*^9, 3.6987578804703298`*^9}, {
+  3.7335014807696733`*^9, 3.733501483237917*^9}, {3.764521701389124*^9, 
+  3.7645217047108793`*^9}, {3.7966505737126565`*^9, 3.796650577487564*^9}, {
+  3.7985241060214043`*^9, 3.798524106820655*^9}},
+ FontSize->12,
+ Background->None,ExpressionUUID->"838ff745-ca8a-4694-84c1-96722830562d"],
+
+Cell[CellGroupData[{
+
+Cell["Esercizi 4: Julia e Mandelbrot sets, paesaggi frattali", "Title",
+ CellChangeTimes->{{3.6051594074986267`*^9, 3.6051594078186274`*^9}, {
+   3.6061231843457747`*^9, 3.606123189685782*^9}, {3.700632021049402*^9, 
+   3.7006320287689543`*^9}, 
+   3.797232901871482*^9},ExpressionUUID->"501a57f7-f6b2-4eca-8597-\
+a5f011d3c4df"],
+
+Cell["Notebook del gruppo:", "Text",
+ CellChangeTimes->{{3.6051654520044003`*^9, 3.6051654548044043`*^9}},
+ FontSize->14,ExpressionUUID->"30a09ea0-053b-4802-94b7-76ef7501aa45"],
+
+Cell["Componenti del gruppo:", "Text",
+ CellChangeTimes->{{3.6051654520044003`*^9, 3.6051654548044043`*^9}, {
+  3.667324612567563*^9, 3.667324615177567*^9}},
+ FontSize->14,ExpressionUUID->"4646078c-f9bd-441a-a344-bc7476db858c"],
+
+Cell["\<\
+Se ci sono state collaborazioni e/o aiuti, dichiararli:
+In collaborazione con: 
+Aiutato da: \
+\>", "Text",
+ CellChangeTimes->{{3.6051654600844116`*^9, 3.6051654836344447`*^9}},
+ FontSize->14,ExpressionUUID->"fc4798dc-f682-40c2-8dd9-56dbb6c33438"],
+
+Cell["Consegna entro: 27 maggio 2020", "Text",
+ CellChangeTimes->{{3.794982459599351*^9, 3.794982493114044*^9}, {
+  3.7967385732833433`*^9, 3.796738575672991*^9}, {3.797233561770916*^9, 
+  3.7972335630185804`*^9}, {3.798523916028536*^9, 3.798523925212773*^9}},
+ FontSize->14,ExpressionUUID->"0cf0e74b-e9df-4b02-a52b-4b2042bd9292"],
+
+Cell[TextData[{
+ "Vedere istruzioni e raccomandazioni nel notebook degli Esercizi 1, con in \
+pi\[UGrave] la seguente, che varr\[AGrave] anche per gli esercizi successivi:\
+\n\n",
+ StyleBox["Prima della consegna cancellate tutti gli output dal notebook",
+  FontSlant->"Italic"],
+ ". Le immagini verranno ricreate al momento della correzione. Nel caso la \
+creazione delle immagini richieda tempi lunghi (superiore a una decina di \
+minuti) scrivetelo nel notebook e eventualmente contattatemi."
+}], "Text",
+ CellChangeTimes->{{3.6051594482786837`*^9, 3.605159463468705*^9}, {
+  3.605165499714467*^9, 3.6051655227944994`*^9}, {3.667324702107689*^9, 
+  3.66732470332769*^9}, {3.7966507307858553`*^9, 3.7966507820419292`*^9}, {
+  3.798522882855182*^9, 3.798522945335992*^9}, {3.7985229799741254`*^9, 
+  3.7985229970378675`*^9}},
+ FontSize->14,
+ Background->RGBColor[
+  0, 1, 1],ExpressionUUID->"e25d5928-8aa4-4124-9e8f-f616fe56730e"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Esercizio 4.1: Autosimilarit\[AGrave] (approssimata) degli insiemi di Julia \
+e/o di Mandelbrot\
+\>", "Section 1",
+ CellChangeTimes->{{3.605158728587676*^9, 3.605158728717676*^9}, {
+   3.6051593963886113`*^9, 3.6051594028186207`*^9}, {3.6051596052989035`*^9, 
+   3.605159612848914*^9}, {3.6051618379420295`*^9, 3.605161863342065*^9}, {
+   3.6060502807140913`*^9, 3.606050281194092*^9}, {3.60612365239643*^9, 
+   3.6061236922664857`*^9}, {3.6697317939617033`*^9, 3.6697318070657263`*^9}, 
+   3.6697318448645926`*^9, 3.7972330663821306`*^9, {3.7972360612966995`*^9, 
+   3.797236062232751*^9}},ExpressionUUID->"e3c84dba-1699-451e-a440-\
+9bfba392880b"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.667324682717662*^9, 3.6673246884576693`*^9}},
+ FontSize->16,ExpressionUUID->"76aa8d65-6c85-4dfa-9633-21b2b3b2e608"],
+
+Cell["\<\
+Investigare la auto-similarit\[AGrave] (approssimata) degli insiemi di Julia \
+e/o dell\[CloseCurlyQuote]insieme di Mandelbrot. 
+Creare una successione di ingradimenti successivi di uno (o due, o tre, ma \
+non di pi\[UGrave]: \[EGrave] meglio la qualit\[AGrave] della \
+quantit\[AGrave]) Julia sets e/o dell\[CloseCurlyQuote]insieme di Mandlebrot, \
+a  scelta, che ne mostrino nel modo pi\[UGrave] chiaro possibile, secondo i \
+vostri gusti, l'approssimata autosimilarit\[AGrave].\
+\>", "Text",
+ CellChangeTimes->{{3.6093153569438796`*^9, 3.609315482590066*^9}, {
+   3.609316457555831*^9, 3.6093164591719236`*^9}, {3.6715380947086773`*^9, 
+   3.671538095738679*^9}, 3.7346899614430523`*^9, {3.797233104886216*^9, 
+   3.7972331471825037`*^9}, {3.7972363695827837`*^9, 3.7972363706070747`*^9}},
+ FontSize->16,
+ Background->RGBColor[
+  0, 1, 0],ExpressionUUID->"75ad1980-1dd9-4343-8e73-f602a8d036c4"],
+
+Cell[CellGroupData[{
+
+Cell["Suggerimenti ed osservazioni:", "Subsubsection",
+ CellChangeTimes->{{3.6673254396597214`*^9, 3.6673254447397285`*^9}},
+ FontSize->16,ExpressionUUID->"51538f24-bcb0-4231-9987-a104a72f2c2a"],
+
+Cell["\<\
+Usare la finestrella e mostrare il risultato o in una graphics grid oppure in \
+un'animazione.
+
+Cercate di curare il risultato, creando delle immagini che diano un'idea \
+quanto pi\[UGrave] immediata e convincente possibile dell'autosimilari\
+\[AGrave]. 
+
+Se lo desiderate potete usare una colorazione di vostra scelta.
+
+Saranno ovviamente apprezzati disegni che utilizzino effetti cromatici \
+particolarmente belli, anche se questo non \[EGrave] essenziale per \
+evidenziare la autosimilarit\[AGrave].\
+\>", "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.60931549559481*^9, 3.609315500262077*^9}, {
+  3.6093156775002146`*^9, 3.609315677891237*^9}, {3.79723318127234*^9, 
+  3.7972331969536343`*^9}, {3.797233429501091*^9, 3.7972334449881897`*^9}, {
+  3.797236398279087*^9, 3.7972364203023863`*^9}},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"da5419b8-fdde-45d8-9b1a-a6023894feae"],
+
+Cell[TextData[{
+ "NB: Regola generale: ",
+ StyleBox["Meglio poche immagini chiare e curate che tante disorganizzate.",
+  FontSlant->"Italic"]
+}], "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.60931549559481*^9, 3.609315500262077*^9}, {
+  3.6093156775002146`*^9, 3.609315677891237*^9}, {3.79723318127234*^9, 
+  3.7972331969536343`*^9}, {3.797233429501091*^9, 3.7972334535900965`*^9}},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"195a4203-3eb4-4a4c-8206-7da559e47924"],
+
+Cell[TextData[{
+ "Importante:\n",
+ StyleBox["Prima della consegna cancellate tutti gli output dal notebook",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ ". Le immagini verranno ricreate al momento della correzione. Nel caso la \
+creazione delle immagini richieda tempi lunghi (superiore a una decina di \
+minuti) scrivetelo nel notebook e contattatemi."
+}], "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.6093155411144133`*^9, 3.6093156395970464`*^9}, {
+   3.6715383363590155`*^9, 3.6715383426790247`*^9}, {3.7346899868336697`*^9, 
+   3.7346900014976435`*^9}, {3.7346900607739325`*^9, 3.7346900615694265`*^9}, 
+   3.7972332314586344`*^9},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"f86230d1-f8a3-4e9e-851b-1050a4647b9a"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Esercizio 4.2: Insieme di Mandelbrot e dinamica della mappa quadratica\
+\>", "Section 1",
+ CellChangeTimes->{{3.605158728587676*^9, 3.605158728717676*^9}, {
+   3.6051593963886113`*^9, 3.6051594028186207`*^9}, {3.6051596052989035`*^9, 
+   3.605159612848914*^9}, {3.6051618379420295`*^9, 3.605161863342065*^9}, {
+   3.6060502807140913`*^9, 3.606050281194092*^9}, {3.60612365239643*^9, 
+   3.6061236922664857`*^9}, {3.6697317939617033`*^9, 
+   3.6697318248809576`*^9}, {3.6697366381511245`*^9, 3.6697366395083265`*^9}, 
+   3.7972335143184004`*^9},ExpressionUUID->"fcc5b9e8-a358-4739-b196-\
+ee1af7ef93e7"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.667324682717662*^9, 3.6673246884576693`*^9}},
+ FontSize->18,ExpressionUUID->"ad7433a3-f82b-4b11-87be-1d42610cca37"],
+
+Cell[TextData[{
+ "Investigare la relazione fra la struttura dell\[CloseCurlyQuote]insieme di \
+Mandelbrot e le orbite periodiche attrattive del sistema dinamico discreoa \
+dato dalle iterazioni del polinomio  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["P", "c"], "(", "z", ")"}], " ", "=", " ", 
+    RowBox[{
+     SuperscriptBox["z", "2"], "+", "c"}]}], TraditionalForm]],ExpressionUUID->
+  "80f9a3dc-80d0-4ce2-bc86-e486ee494911"],
+ ".\n\nSi pu\[OGrave] fare una e/o l\[CloseCurlyQuote]altra delle cose \
+seguenti:\n\n1. Produrre, per qualche ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ "=1,2,3,.. (arrivare a quel che si desidera, o si riesce), un immagine o un\
+\[CloseCurlyQuote]animazione che, per un opportuno valore di ",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ " (dipendente da ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ "),  evidenzi l\[CloseCurlyQuote]esistenza di un\[CloseCurlyQuote]orbita \
+periodica attrattiva di ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "c"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d35540bb-4100-4346-bd29-01a1008efb3f"],
+ " di periodo ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " all\[CloseCurlyQuote]interno di ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["K", "c"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "177ebda3-784d-440a-be82-687f03f247af"],
+ StyleBox[".",
+  FontSlant->"Italic"],
+ " Evidenziare, nel Mandelbrot, i valori usati di ",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ ". \n\n2. In alternativa, e anzi meglio, posizionare un locator nel \
+Mandelbort che legge ",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ " e produce affianco un disegno di ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["K", "c"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e4fd5457-9dae-43e2-b4a6-45e30764a636"],
+ " con, al suo interno, l\[CloseCurlyQuote]orbita periodica attrattiva."
+}], "Text",
+ CellChangeTimes->{{3.6093153569438796`*^9, 3.609315482590066*^9}, {
+  3.6093164937579017`*^9, 3.6093166443605156`*^9}, {3.7024722670381393`*^9, 
+  3.7024723692836456`*^9}, {3.7024724435555277`*^9, 3.7024725267519035`*^9}, {
+  3.7985213044822173`*^9, 3.7985213117679224`*^9}, {3.798521834767733*^9, 
+  3.7985218569438496`*^9}, {3.7985219009053187`*^9, 3.7985222029757347`*^9}, {
+  3.798522237064702*^9, 3.798522590117859*^9}, {3.798522680601376*^9, 
+  3.7985227068796434`*^9}, {3.7985227693664923`*^9, 3.7985227694572496`*^9}, {
+  3.7985230274665036`*^9, 3.7985231871005883`*^9}},
+ FontSize->16,
+ Background->RGBColor[
+  0, 1, 0],ExpressionUUID->"42ea6918-8a8a-47c8-857b-442e603b1a1d"],
+
+Cell[CellGroupData[{
+
+Cell["Suggerimenti ed osservazioni:", "Subsubsection",
+ CellChangeTimes->{{3.6673254396597214`*^9, 3.6673254447397285`*^9}},
+ FontSize->18,ExpressionUUID->"13f714ba-5ae3-49d8-a8f0-fe48dcc1fc67"],
+
+Cell["\<\
+Per disegnare i punti di un\[CloseCurlyQuote]orbita periodica attrattiva s \
+puo` per esempio determinare un po\[CloseCurlyQuote] di punti di una \
+qualunque orbita (nel suo bacino di attrazione) e tenerne solo la `coda\
+\[CloseCurlyQuote].\
+\>", "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.60931549559481*^9, 3.609315500262077*^9}, {
+  3.6093156775002146`*^9, 3.609315677891237*^9}, {3.79723318127234*^9, 
+  3.7972331969536343`*^9}, {3.797233429501091*^9, 3.7972334535900965`*^9}, {
+  3.7985227739312863`*^9, 3.7985228671661325`*^9}, {3.798523633723053*^9, 
+  3.7985236518694396`*^9}, {3.7985237714048147`*^9, 3.7985238209649897`*^9}},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"1da77ed4-6832-46f2-a3a6-4989f39bde2f"],
+
+Cell[TextData[{
+ "1. Se si inseriscono i diversi valori di ",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ " in un unico Mandelbrot, indentificarli in modo opportuno (labels, frecce, \
+..)"
+}], "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.60931549559481*^9, 3.609315500262077*^9}, {
+  3.6093156775002146`*^9, 3.609315677891237*^9}, {3.79723318127234*^9, 
+  3.7972331969536343`*^9}, {3.797233429501091*^9, 3.7972334535900965`*^9}, {
+  3.7985227739312863`*^9, 3.7985228671661325`*^9}, {3.7985232249972963`*^9, 
+  3.798523307837182*^9}, {3.798523541258464*^9, 3.798523556797443*^9}},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"47131725-c730-4c19-9acb-3abd9886ed10"],
+
+Cell[TextData[{
+ "2. Per disegnare ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["K", "c"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c55633d3-9555-46fe-aa7b-c261a6988437"],
+ " usare la dinamica (insiemistica) all\[CloseCurlyQuote]indietro, come fatto \
+a lezione.\nPer un esempio di uso del locator vedere il notebook della \
+lezione "
+}], "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.60931549559481*^9, 3.609315500262077*^9}, {
+  3.6093156775002146`*^9, 3.609315677891237*^9}, {3.79723318127234*^9, 
+  3.7972331969536343`*^9}, {3.797233429501091*^9, 3.7972334449881897`*^9}, {
+  3.798522623428306*^9, 3.7985226265543823`*^9}, {3.798522710396256*^9, 
+  3.7985227588057175`*^9}, {3.798523199605099*^9, 3.798523200261345*^9}, {
+  3.7985235649456153`*^9, 3.798523579581169*^9}},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"cfe2faf2-5e43-4de3-b3a0-f38ee009c6c7"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Esercizio 4.3: Paesaggi frattali e dimensione box-counting", "Section 1",
+ CellChangeTimes->{{3.605158728587676*^9, 3.605158728717676*^9}, {
+   3.6051593963886113`*^9, 3.6051594028186207`*^9}, {3.6051596052989035`*^9, 
+   3.605159612848914*^9}, {3.6051618379420295`*^9, 3.605161863342065*^9}, {
+   3.6060502807140913`*^9, 3.606050281194092*^9}, {3.60612365239643*^9, 
+   3.6061236922664857`*^9}, {3.6697317939617033`*^9, 3.6697318070657263`*^9}, 
+   3.6697318448645926`*^9, {3.6697319211019263`*^9, 3.669731927482338*^9}, 
+   3.7972333140150676`*^9},ExpressionUUID->"09272956-0d10-48f8-b14b-\
+ac30b918e8a0"],
+
+Cell[TextData[{
+ "a) Costruire un (bel) paesaggio frattale.\n\nb) Determinare la dimensione \
+del \[OpenCurlyDoubleQuote]box-counting\[CloseCurlyDoubleQuote] di qualche \
+paesaggio costruito con diversi valori dell\[CloseCurlyQuote]esponente \
+\[Alpha]  del fattore di riscalamento ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"k", "=", 
+    SuperscriptBox["2", "\[Alpha]"]}], TraditionalForm]],ExpressionUUID->
+  "191f294a-44bb-409b-8557-ea09baeacd54"],
+ " della variazione casuale delle altezze.\n\nc) Si riesce a formulare un\
+\[CloseCurlyQuote]ipotesi sulla dipendenza della dimensione box-counting dall\
+\[CloseCurlyQuote]esponente \[Alpha]? [Questo e` laborioso. Non e` \
+obbligatorio farlo, ma se riuscite e` molto apprezzato]"
+}], "Text",
+ CellChangeTimes->{{3.6093153569438796`*^9, 3.609315482590066*^9}, {
+  3.609316457555831*^9, 3.6093164591719236`*^9}, {3.6100270927443275`*^9, 
+  3.610027178004447*^9}, {3.671538541069302*^9, 3.67153877529963*^9}, {
+  3.6715394920806336`*^9, 3.6715396194008117`*^9}, {3.7031644875112886`*^9, 
+  3.703164563568576*^9}, {3.734690154174429*^9, 3.7346901844294596`*^9}},
+ FontSize->16,
+ Background->RGBColor[
+  0, 1, 0],ExpressionUUID->"948f84af-2b9c-42d8-b9c3-a29723224145"],
+
+Cell[CellGroupData[{
+
+Cell["Suggerimenti ed osservazioni:", "Subsubsection",
+ CellChangeTimes->{{3.6673254396597214`*^9, 3.6673254447397285`*^9}},
+ FontSize->18,ExpressionUUID->"1de0fe94-0430-44ce-b518-c70d32426977"],
+
+Cell[TextData[{
+ "Per b), evidenziate su qualche esempio che la  dimensione box-counting \
+dipende da \[Alpha].\n\nNaturalmente la dimensione che rileverete dipender\
+\[AGrave] un po\[CloseCurlyQuote] dal numero di iterazioni che fate nella \
+costruzione del paesaggio frattale, come illustrato dai seguenti grafici \
+log-log di ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"k", "\[Rule]", 
+    SubscriptBox["M", "k"]}], TraditionalForm]],ExpressionUUID->
+  "d071a01f-383e-4312-8d50-b8d4b29d4ec0"],
+ " relativi a tre diversi valori del numero di iterazioni."
+}], "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.60931549559481*^9, 3.609315500262077*^9}, 
+   3.6093165873342543`*^9, {3.6093166532890263`*^9, 3.6093167056200194`*^9}, {
+   3.6093168685003357`*^9, 3.6093169601855793`*^9}, 3.6715348826125174`*^9, 
+   3.6715383551290417`*^9, {3.671538442549164*^9, 3.6715385118092613`*^9}, {
+   3.6715396035207896`*^9, 3.6715397646610155`*^9}, {3.6715399835313215`*^9, 
+   3.6715401054114923`*^9}, {3.734690198707079*^9, 3.7346902015624475`*^9}, {
+   3.797233404726411*^9, 3.7972334056140347`*^9}},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"2e2bea1d-f0d4-465a-87b4-063c04f82f5c"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: 1 
+MathPictureStart
+/Mabs {
+Mgmatrix idtransform
+Mtmatrix dtransform
+} bind def
+/Mabsadd { Mabs
+3 -1 roll add
+3 1 roll add
+exch } bind def
+%% Graphics
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+0.0238095 0.413893 -0.163978 0.207939 [
+[.02381 -0.00776 -5 -12.5625 ]
+[.02381 -0.00776 5 0 ]
+[.1484 -0.00776 -5 -12.5625 ]
+[.1484 -0.00776 5 0 ]
+[.31311 -0.00776 -5 -12.5625 ]
+[.31311 -0.00776 5 0 ]
+[.4377 -0.00776 -8 -12.5625 ]
+[.4377 -0.00776 8 0 ]
+[.5623 -0.00776 -8 -12.5625 ]
+[.5623 -0.00776 8 0 ]
+[.727 -0.00776 -8 -12.5625 ]
+[.727 -0.00776 8 0 ]
+[.8516 -0.00776 -11 -12.5625 ]
+[.8516 -0.00776 11 0 ]
+[.97619 -0.00776 -11 -12.5625 ]
+[.97619 -0.00776 11 0 ]
+[-0.0125 .04396 -16 -6.28125 ]
+[-0.0125 .04396 0 6.28125 ]
+[-0.0125 .2519 -22 -6.28125 ]
+[-0.0125 .2519 0 6.28125 ]
+[-0.0125 .45984 -28 -6.28125 ]
+[-0.0125 .45984 0 6.28125 ]
+[-0.0125 .66778 -34 -6.28125 ]
+[-0.0125 .66778 0 6.28125 ]
+[-0.0125 .87572 -46 -6.28125 ]
+[-0.0125 .87572 0 6.28125 ]
+[ -0.0005 0 0 0 ]
+[ 1 1 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+0 g
+.25 Mabswid
+[ ] 0 setdash
+.02381 .00474 m
+.02381 .01099 L
+s
+gsave
+.02381 -0.00776 -66 -16.5625 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(1) show
+69.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+.1484 .00474 m
+.1484 .01099 L
+s
+gsave
+.1484 -0.00776 -66 -16.5625 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(2) show
+69.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+.31311 .00474 m
+.31311 .01099 L
+s
+gsave
+.31311 -0.00776 -66 -16.5625 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(5) show
+69.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+.4377 .00474 m
+.4377 .01099 L
+s
+gsave
+.4377 -0.00776 -69 -16.5625 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(10) show
+75.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+.5623 .00474 m
+.5623 .01099 L
+s
+gsave
+.5623 -0.00776 -69 -16.5625 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(20) show
+75.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+.727 .00474 m
+.727 .01099 L
+s
+gsave
+.727 -0.00776 -69 -16.5625 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(50) show
+75.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+.8516 .00474 m
+.8516 .01099 L
+s
+gsave
+.8516 -0.00776 -72 -16.5625 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(100) show
+81.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+.97619 .00474 m
+.97619 .01099 L
+s
+gsave
+.97619 -0.00776 -72 -16.5625 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(200) show
+81.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+.001 w
+.22129 .00474 m
+.22129 .00849 L
+s
+.273 .00474 m
+.273 .00849 L
+s
+.34588 .00474 m
+.34588 .00849 L
+s
+.37359 .00474 m
+.37359 .00849 L
+s
+.39759 .00474 m
+.39759 .00849 L
+s
+.41876 .00474 m
+.41876 .00849 L
+s
+.63518 .00474 m
+.63518 .00849 L
+s
+.68689 .00474 m
+.68689 .00849 L
+s
+.75977 .00474 m
+.75977 .00849 L
+s
+.78748 .00474 m
+.78748 .00849 L
+s
+.81149 .00474 m
+.81149 .00849 L
+s
+.83266 .00474 m
+.83266 .00849 L
+s
+.25 Mabswid
+0 .00474 m
+1 .00474 L
+s
+0 .04396 m
+.00625 .04396 L
+s
+gsave
+-0.0125 .04396 -77 -10.2813 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(10) show
+75.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+0 .2519 m
+.00625 .2519 L
+s
+gsave
+-0.0125 .2519 -83 -10.2813 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(100) show
+81.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+0 .45984 m
+.00625 .45984 L
+s
+gsave
+-0.0125 .45984 -89 -10.2813 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(1000) show
+87.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+0 .66778 m
+.00625 .66778 L
+s
+gsave
+-0.0125 .66778 -95 -10.2813 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(10000) show
+93.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+0 .87572 m
+.00625 .87572 L
+s
+gsave
+-0.0125 .87572 -107 -10.2813 Mabsadd m
+1 1 Mabs scale
+currentpoint translate
+0 20.5625 translate 1 -1 scale
+/g { setgray} bind def
+/k { setcmykcolor} bind def
+/p { gsave} bind def
+/r { setrgbcolor} bind def
+/w { setlinewidth} bind def
+/C { curveto} bind def
+/F { fill} bind def
+/L { lineto} bind def
+/rL { rlineto} bind def
+/P { grestore} bind def
+/s { stroke} bind def
+/S { show} bind def
+/N {currentpoint 3 -1 roll show moveto} bind def
+/Msf { findfont exch scalefont [1 0 0 -1 0 0 ] makefont setfont} bind def
+/m { moveto} bind def
+/Mr { rmoveto} bind def
+/Mx {currentpoint exch pop moveto} bind def
+/My {currentpoint pop exch moveto} bind def
+/X {0 rmoveto} bind def
+/Y {0 exch rmoveto} bind def
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+63.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+(100000.) show
+105.000 12.813 moveto
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10.000 scalefont
+[1 0 0 -1 0 0 ] makefont setfont
+0.000 0.000 0.000 setrgbcolor
+0.000 0.000 rmoveto
+1.000 setlinewidth
+grestore
+.001 w
+0 .10656 m
+.00375 .10656 L
+s
+0 .14317 m
+.00375 .14317 L
+s
+0 .16915 m
+.00375 .16915 L
+s
+0 .1893 m
+.00375 .1893 L
+s
+0 .20577 m
+.00375 .20577 L
+s
+0 .21969 m
+.00375 .21969 L
+s
+0 .23175 m
+.00375 .23175 L
+s
+0 .24239 m
+.00375 .24239 L
+s
+0 .3145 m
+.00375 .3145 L
+s
+0 .35111 m
+.00375 .35111 L
+s
+0 .37709 m
+.00375 .37709 L
+s
+0 .39724 m
+.00375 .39724 L
+s
+0 .41371 m
+.00375 .41371 L
+s
+0 .42763 m
+.00375 .42763 L
+s
+0 .43969 m
+.00375 .43969 L
+s
+0 .45032 m
+.00375 .45032 L
+s
+0 .52243 m
+.00375 .52243 L
+s
+0 .55905 m
+.00375 .55905 L
+s
+0 .58503 m
+.00375 .58503 L
+s
+0 .60518 m
+.00375 .60518 L
+s
+0 .62165 m
+.00375 .62165 L
+s
+0 .63557 m
+.00375 .63557 L
+s
+0 .64763 m
+.00375 .64763 L
+s
+0 .65826 m
+.00375 .65826 L
+s
+0 .73037 m
+.00375 .73037 L
+s
+0 .76699 m
+.00375 .76699 L
+s
+0 .79297 m
+.00375 .79297 L
+s
+0 .81312 m
+.00375 .81312 L
+s
+0 .82959 m
+.00375 .82959 L
+s
+0 .84351 m
+.00375 .84351 L
+s
+0 .85557 m
+.00375 .85557 L
+s
+0 .8662 m
+.00375 .8662 L
+s
+0 .93831 m
+.00375 .93831 L
+s
+0 .97493 m
+.00375 .97493 L
+s
+.25 Mabswid
+0 0 m
+0 1 L
+s
+1 0 0 r
+.008 w
+.02381 .02381 Mdot
+.1484 .10656 Mdot
+.22129 .17356 Mdot
+.273 .2116 Mdot
+.31311 .24535 Mdot
+.34588 .28545 Mdot
+.37359 .31034 Mdot
+.39759 .32906 Mdot
+.41876 .35319 Mdot
+.4377 .37126 Mdot
+.45484 .38813 Mdot
+.47048 .40469 Mdot
+.48486 .41811 Mdot
+.49818 .43338 Mdot
+.51059 .44559 Mdot
+.52219 .45681 Mdot
+.53308 .46746 Mdot
+.54336 .47934 Mdot
+.55308 .48807 Mdot
+.5623 .4983 Mdot
+.57107 .50823 Mdot
+.57943 .51627 Mdot
+.58742 .52378 Mdot
+.59507 .53311 Mdot
+.60241 .54069 Mdot
+.60946 .54785 Mdot
+.61624 .5559 Mdot
+.62278 .56224 Mdot
+.62909 .56831 Mdot
+.63518 .57506 Mdot
+.64107 .58144 Mdot
+.64678 .58779 Mdot
+.65231 .59353 Mdot
+.65768 .59957 Mdot
+.66289 .60404 Mdot
+.66795 .60926 Mdot
+.67288 .61532 Mdot
+.67767 .61971 Mdot
+.68234 .62587 Mdot
+.68689 .6294 Mdot
+.69133 .63369 Mdot
+.69566 .63915 Mdot
+.69989 .64322 Mdot
+.70402 .64705 Mdot
+.70806 .6514 Mdot
+.71201 .65502 Mdot
+.71588 .65921 Mdot
+.71966 .66318 Mdot
+.72337 .66726 Mdot
+.727 .67056 Mdot
+.73056 .6742 Mdot
+.73405 .67748 Mdot
+.73748 .68069 Mdot
+.74084 .68357 Mdot
+.74413 .68708 Mdot
+.74737 .68953 Mdot
+.75055 .69288 Mdot
+.75368 .69648 Mdot
+.75675 .69891 Mdot
+.75977 .70147 Mdot
+.76275 .70432 Mdot
+.76567 .70722 Mdot
+.76854 .71002 Mdot
+.77138 .71199 Mdot
+.77416 .71433 Mdot
+.77691 .71655 Mdot
+.77961 .71858 Mdot
+.78227 .72072 Mdot
+.7849 .72288 Mdot
+.78748 .72482 Mdot
+.79003 .72634 Mdot
+.79255 .72839 Mdot
+.79503 .72998 Mdot
+.79747 .73221 Mdot
+.79988 .73338 Mdot
+.80227 .73484 Mdot
+.80462 .73611 Mdot
+.80693 .73839 Mdot
+.80922 .73992 Mdot
+.81149 .74113 Mdot
+.81372 .74237 Mdot
+.81592 .74416 Mdot
+.8181 .74556 Mdot
+.82026 .74691 Mdot
+.82238 .74829 Mdot
+.82449 .74913 Mdot
+.82656 .75073 Mdot
+.82862 .75172 Mdot
+.83065 .75292 Mdot
+.83266 .75415 Mdot
+.83464 .75527 Mdot
+.83661 .75631 Mdot
+.83855 .75712 Mdot
+.84047 .75851 Mdot
+.84238 .75974 Mdot
+.84426 .76058 Mdot
+.84612 .76131 Mdot
+.84796 .76154 Mdot
+.84979 .76246 Mdot
+.8516 .76289 Mdot
+.85338 .76322 Mdot
+.85516 .76409 Mdot
+.85691 .76437 Mdot
+.85865 .7654 Mdot
+.86037 .76557 Mdot
+.86207 .76614 Mdot
+.86376 .76679 Mdot
+.86543 .76678 Mdot
+.86709 .76738 Mdot
+.86873 .76767 Mdot
+.87036 .76843 Mdot
+.87197 .76889 Mdot
+.87356 .76943 Mdot
+.87515 .76974 Mdot
+.87672 .77021 Mdot
+.87827 .77065 Mdot
+.87982 .77117 Mdot
+.88135 .77108 Mdot
+.88286 .77152 Mdot
+.88437 .77203 Mdot
+.88586 .77232 Mdot
+.88734 .77272 Mdot
+.88881 .77286 Mdot
+.89026 .77323 Mdot
+.89171 .77386 Mdot
+.89314 .77414 Mdot
+.89456 .77451 Mdot
+.89597 .77485 Mdot
+.89737 .7751 Mdot
+.89876 .77533 Mdot
+.90013 .77573 Mdot
+.9015 .77591 Mdot
+.90286 .7762 Mdot
+.9042 .77657 Mdot
+.90554 .77688 Mdot
+.90687 .77704 Mdot
+.90818 .77723 Mdot
+.90949 .77786 Mdot
+.91079 .77799 Mdot
+.91208 .77817 Mdot
+.91336 .77838 Mdot
+.91463 .77875 Mdot
+.91589 .7785 Mdot
+.91714 .77913 Mdot
+.91839 .77922 Mdot
+.91962 .77953 Mdot
+.92085 .77957 Mdot
+.92207 .77996 Mdot
+.92328 .78023 Mdot
+.92448 .78055 Mdot
+.92567 .78074 Mdot
+.92686 .78092 Mdot
+.92804 .78116 Mdot
+.92921 .78117 Mdot
+.93037 .78148 Mdot
+.93153 .78163 Mdot
+.93268 .7818 Mdot
+.93382 .78198 Mdot
+.93495 .78218 Mdot
+.93608 .78232 Mdot
+.9372 .78225 Mdot
+.93831 .78267 Mdot
+.93942 .78282 Mdot
+.94052 .78288 Mdot
+.94161 .78311 Mdot
+.9427 .78336 Mdot
+.94378 .78344 Mdot
+.94485 .78353 Mdot
+.94592 .78368 Mdot
+.94698 .78377 Mdot
+.94803 .78406 Mdot
+.94908 .78418 Mdot
+.95012 .78434 Mdot
+.95116 .78446 Mdot
+.95219 .78459 Mdot
+.95321 .78469 Mdot
+.95423 .78481 Mdot
+.95524 .78494 Mdot
+.95625 .78497 Mdot
+.95725 .78521 Mdot
+.95825 .78535 Mdot
+.95924 .78554 Mdot
+.96022 .78556 Mdot
+.9612 .78573 Mdot
+.96218 .78576 Mdot
+.96315 .78589 Mdot
+.96411 .78605 Mdot
+.96507 .78612 Mdot
+.96602 .78622 Mdot
+.96697 .78634 Mdot
+.96791 .78643 Mdot
+.96885 .78653 Mdot
+.96979 .78507 Mdot
+.97072 .78653 Mdot
+.97164 .78653 Mdot
+.97256 .78653 Mdot
+.97347 .78653 Mdot
+.97438 .78653 Mdot
+.97529 .78653 Mdot
+.97619 .78653 Mdot
+0 1 0 r
+.02381 .02381 Mdot
+.1484 .10656 Mdot
+.22129 .17356 Mdot
+.273 .2116 Mdot
+.31311 .24727 Mdot
+.34588 .28357 Mdot
+.37359 .30843 Mdot
+.39759 .33096 Mdot
+.41876 .35609 Mdot
+.4377 .37573 Mdot
+.45484 .39069 Mdot
+.47048 .40908 Mdot
+.48486 .42259 Mdot
+.49818 .43809 Mdot
+.51059 .45132 Mdot
+.52219 .46207 Mdot
+.53308 .47386 Mdot
+.54336 .48627 Mdot
+.55308 .49621 Mdot
+.5623 .50637 Mdot
+.57107 .51641 Mdot
+.57943 .52431 Mdot
+.58742 .53299 Mdot
+.59507 .54259 Mdot
+.60241 .55037 Mdot
+.60946 .55796 Mdot
+.61624 .56633 Mdot
+.62278 .57333 Mdot
+.62909 .57954 Mdot
+.63518 .58677 Mdot
+.64107 .593 Mdot
+.64678 .59907 Mdot
+.65231 .60538 Mdot
+.65768 .61223 Mdot
+.66289 .61746 Mdot
+.66795 .62333 Mdot
+.67288 .62836 Mdot
+.67767 .63374 Mdot
+.68234 .6391 Mdot
+.68689 .64455 Mdot
+.69133 .64938 Mdot
+.69566 .65436 Mdot
+.69989 .65862 Mdot
+.70402 .66305 Mdot
+.70806 .66787 Mdot
+.71201 .67206 Mdot
+.71588 .67657 Mdot
+.71966 .68115 Mdot
+.72337 .68519 Mdot
+.727 .68916 Mdot
+.73056 .69323 Mdot
+.73405 .69704 Mdot
+.73748 .70099 Mdot
+.74084 .70503 Mdot
+.74413 .70862 Mdot
+.74737 .7123 Mdot
+.75055 .71594 Mdot
+.75368 .71901 Mdot
+.75675 .72261 Mdot
+.75977 .72563 Mdot
+.76275 .72905 Mdot
+.76567 .73256 Mdot
+.76854 .73562 Mdot
+.77138 .73898 Mdot
+.77416 .74162 Mdot
+.77691 .74482 Mdot
+.77961 .74806 Mdot
+.78227 .75052 Mdot
+.7849 .75362 Mdot
+.78748 .75635 Mdot
+.79003 .75924 Mdot
+.79255 .7621 Mdot
+.79503 .76481 Mdot
+.79747 .76732 Mdot
+.79988 .76987 Mdot
+.80227 .77252 Mdot
+.80462 .77481 Mdot
+.80693 .77768 Mdot
+.80922 .77978 Mdot
+.81149 .7823 Mdot
+.81372 .78508 Mdot
+.81592 .78691 Mdot
+.8181 .78921 Mdot
+.82026 .79153 Mdot
+.82238 .79363 Mdot
+.82449 .796 Mdot
+.82656 .79803 Mdot
+.82862 .79997 Mdot
+.83065 .80209 Mdot
+.83266 .80419 Mdot
+.83464 .80643 Mdot
+.83661 .80797 Mdot
+.83855 .81029 Mdot
+.84047 .81204 Mdot
+.84238 .81393 Mdot
+.84426 .81586 Mdot
+.84612 .81777 Mdot
+.84796 .81937 Mdot
+.84979 .82123 Mdot
+.8516 .82254 Mdot
+.85338 .82429 Mdot
+.85516 .82589 Mdot
+.85691 .82764 Mdot
+.85865 .82901 Mdot
+.86037 .83046 Mdot
+.86207 .83203 Mdot
+.86376 .8337 Mdot
+.86543 .8349 Mdot
+.86709 .83645 Mdot
+.86873 .83771 Mdot
+.87036 .83925 Mdot
+.87197 .84059 Mdot
+.87356 .84218 Mdot
+.87515 .84325 Mdot
+.87672 .84447 Mdot
+.87827 .84587 Mdot
+.87982 .84701 Mdot
+.88135 .84843 Mdot
+.88286 .84996 Mdot
+.88437 .85074 Mdot
+.88586 .85201 Mdot
+.88734 .85325 Mdot
+.88881 .85439 Mdot
+.89026 .85545 Mdot
+.89171 .8567 Mdot
+.89314 .85797 Mdot
+.89456 .85874 Mdot
+.89597 .86002 Mdot
+.89737 .86089 Mdot
+.89876 .86166 Mdot
+.90013 .86238 Mdot
+.9015 .86322 Mdot
+.90286 .86384 Mdot
+.9042 .86504 Mdot
+.90554 .86571 Mdot
+.90687 .86636 Mdot
+.90818 .86704 Mdot
+.90949 .86794 Mdot
+.91079 .86861 Mdot
+.91208 .86945 Mdot
+.91336 .86979 Mdot
+.91463 .87082 Mdot
+.91589 .87143 Mdot
+.91714 .87214 Mdot
+.91839 .87265 Mdot
+.91962 .87358 Mdot
+.92085 .87413 Mdot
+.92207 .87481 Mdot
+.92328 .87539 Mdot
+.92448 .87608 Mdot
+.92567 .87658 Mdot
+.92686 .87712 Mdot
+.92804 .87788 Mdot
+.92921 .87823 Mdot
+.93037 .87894 Mdot
+.93153 .8794 Mdot
+.93268 .88004 Mdot
+.93382 .88062 Mdot
+.93495 .88111 Mdot
+.93608 .88154 Mdot
+.9372 .88203 Mdot
+.93831 .88265 Mdot
+.93942 .88319 Mdot
+.94052 .88359 Mdot
+.94161 .88425 Mdot
+.9427 .88458 Mdot
+.94378 .88522 Mdot
+.94485 .88574 Mdot
+.94592 .88606 Mdot
+.94698 .88655 Mdot
+.94803 .88703 Mdot
+.94908 .88753 Mdot
+.95012 .88812 Mdot
+.95116 .88834 Mdot
+.95219 .88879 Mdot
+.95321 .8892 Mdot
+.95423 .88951 Mdot
+.95524 .88995 Mdot
+.95625 .89042 Mdot
+.95725 .89074 Mdot
+.95825 .89118 Mdot
+.95924 .89164 Mdot
+.96022 .89189 Mdot
+.9612 .89227 Mdot
+.96218 .8926 Mdot
+.96315 .89307 Mdot
+.96411 .89331 Mdot
+.96507 .89364 Mdot
+.96602 .89405 Mdot
+.96697 .89439 Mdot
+.96791 .89479 Mdot
+.96885 .89529 Mdot
+.96979 .89537 Mdot
+.97072 .89558 Mdot
+.97164 .89576 Mdot
+.97256 .89601 Mdot
+.97347 .89607 Mdot
+.97438 .89636 Mdot
+.97529 .89657 Mdot
+.97619 .8968 Mdot
+0 0 1 r
+.02381 .02381 Mdot
+.1484 .10656 Mdot
+.22129 .17568 Mdot
+.273 .213 Mdot
+.31311 .2528 Mdot
+.34588 .2873 Mdot
+.37359 .30986 Mdot
+.39759 .33429 Mdot
+.41876 .35862 Mdot
+.4377 .3791 Mdot
+.45484 .39505 Mdot
+.47048 .4131 Mdot
+.48486 .42789 Mdot
+.49818 .44192 Mdot
+.51059 .45671 Mdot
+.52219 .46967 Mdot
+.53308 .47934 Mdot
+.54336 .49296 Mdot
+.55308 .50262 Mdot
+.5623 .51347 Mdot
+.57107 .52382 Mdot
+.57943 .5321 Mdot
+.58742 .5412 Mdot
+.59507 .5499 Mdot
+.60241 .55817 Mdot
+.60946 .56567 Mdot
+.61624 .57453 Mdot
+.62278 .58111 Mdot
+.62909 .58833 Mdot
+.63518 .59583 Mdot
+.64107 .60213 Mdot
+.64678 .60928 Mdot
+.65231 .61572 Mdot
+.65768 .62154 Mdot
+.66289 .62783 Mdot
+.66795 .63399 Mdot
+.67288 .63937 Mdot
+.67767 .64486 Mdot
+.68234 .65091 Mdot
+.68689 .65533 Mdot
+.69133 .66041 Mdot
+.69566 .66632 Mdot
+.69989 .67062 Mdot
+.70402 .6755 Mdot
+.70806 .68074 Mdot
+.71201 .68489 Mdot
+.71588 .68936 Mdot
+.71966 .69357 Mdot
+.72337 .69806 Mdot
+.727 .70267 Mdot
+.73056 .70682 Mdot
+.73405 .71039 Mdot
+.73748 .71473 Mdot
+.74084 .71908 Mdot
+.74413 .72252 Mdot
+.74737 .72633 Mdot
+.75055 .73021 Mdot
+.75368 .73362 Mdot
+.75675 .73771 Mdot
+.75977 .74113 Mdot
+.76275 .74454 Mdot
+.76567 .74799 Mdot
+.76854 .75146 Mdot
+.77138 .75444 Mdot
+.77416 .75811 Mdot
+.77691 .76133 Mdot
+.77961 .76455 Mdot
+.78227 .76731 Mdot
+.7849 .77052 Mdot
+.78748 .77361 Mdot
+.79003 .77654 Mdot
+.79255 .77989 Mdot
+.79503 .78253 Mdot
+.79747 .78545 Mdot
+.79988 .78847 Mdot
+.80227 .79114 Mdot
+.80462 .79402 Mdot
+.80693 .79667 Mdot
+.80922 .79927 Mdot
+.81149 .80192 Mdot
+.81372 .80486 Mdot
+.81592 .80727 Mdot
+.8181 .80984 Mdot
+.82026 .81234 Mdot
+.82238 .81485 Mdot
+.82449 .81714 Mdot
+.82656 .81959 Mdot
+.82862 .82191 Mdot
+.83065 .82448 Mdot
+.83266 .82682 Mdot
+.83464 .82901 Mdot
+.83661 .8315 Mdot
+.83855 .83366 Mdot
+.84047 .8357 Mdot
+.84238 .83786 Mdot
+.84426 .84022 Mdot
+.84612 .8424 Mdot
+.84796 .84449 Mdot
+.84979 .84675 Mdot
+.8516 .84881 Mdot
+.85338 .85094 Mdot
+.85516 .85298 Mdot
+.85691 .85485 Mdot
+.85865 .85679 Mdot
+.86037 .85902 Mdot
+.86207 .86087 Mdot
+.86376 .86268 Mdot
+.86543 .86481 Mdot
+.86709 .86659 Mdot
+.86873 .86841 Mdot
+.87036 .87038 Mdot
+.87197 .87217 Mdot
+.87356 .87394 Mdot
+.87515 .87582 Mdot
+.87672 .8776 Mdot
+.87827 .87907 Mdot
+.87982 .88108 Mdot
+.88135 .88271 Mdot
+.88286 .88426 Mdot
+.88437 .88607 Mdot
+.88586 .88783 Mdot
+.88734 .88938 Mdot
+.88881 .89121 Mdot
+.89026 .89262 Mdot
+.89171 .89453 Mdot
+.89314 .89609 Mdot
+.89456 .89748 Mdot
+.89597 .89927 Mdot
+.89737 .90066 Mdot
+.89876 .90213 Mdot
+.90013 .90358 Mdot
+.9015 .90519 Mdot
+.90286 .90658 Mdot
+.9042 .90797 Mdot
+.90554 .90934 Mdot
+.90687 .91097 Mdot
+.90818 .91227 Mdot
+.90949 .91376 Mdot
+.91079 .91504 Mdot
+.91208 .91638 Mdot
+.91336 .91786 Mdot
+.91463 .91903 Mdot
+.91589 .92062 Mdot
+.91714 .9219 Mdot
+.91839 .92326 Mdot
+.91962 .92428 Mdot
+.92085 .92573 Mdot
+.92207 .92694 Mdot
+.92328 .92837 Mdot
+.92448 .92955 Mdot
+.92567 .9308 Mdot
+.92686 .93189 Mdot
+.92804 .93325 Mdot
+.92921 .93438 Mdot
+.93037 .93564 Mdot
+.93153 .93652 Mdot
+.93268 .93774 Mdot
+.93382 .93879 Mdot
+.93495 .93995 Mdot
+.93608 .94094 Mdot
+.9372 .94208 Mdot
+.93831 .94326 Mdot
+.93942 .94416 Mdot
+.94052 .94523 Mdot
+.94161 .94629 Mdot
+.9427 .94731 Mdot
+.94378 .94831 Mdot
+.94485 .9493 Mdot
+.94592 .95033 Mdot
+.94698 .9513 Mdot
+.94803 .95224 Mdot
+.94908 .95329 Mdot
+.95012 .95424 Mdot
+.95116 .95526 Mdot
+.95219 .95619 Mdot
+.95321 .95692 Mdot
+.95423 .95792 Mdot
+.95524 .95876 Mdot
+.95625 .95972 Mdot
+.95725 .96072 Mdot
+.95825 .96163 Mdot
+.95924 .96252 Mdot
+.96022 .96333 Mdot
+.9612 .96415 Mdot
+.96218 .96507 Mdot
+.96315 .96579 Mdot
+.96411 .96675 Mdot
+.96507 .96746 Mdot
+.96602 .96841 Mdot
+.96697 .96925 Mdot
+.96791 .97008 Mdot
+.96885 .97096 Mdot
+.96979 .97134 Mdot
+.97072 .97208 Mdot
+.97164 .97276 Mdot
+.97256 .97355 Mdot
+.97347 .97432 Mdot
+.97438 .97494 Mdot
+.97529 .97546 Mdot
+.97619 .97619 Mdot
+0 0 m
+1 0 L
+1 1 L
+0 1 L
+closepath
+clip
+newpath
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Text",
+ CellChangeTimes->{3.6715397764510317`*^9},
+ ImageSize->{279.5, 279.5},
+ ImageMargins->{{44, 0}, {0, 31}},
+ FontSize->18,ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztXWmQVcUVvrxtZmCQJTKDIJlhcwNENkGJwrAHJa6Ju2GCC0sQxFE0rsFY
+AjGuUTSOa0RjTCRGK5FUJYSYqkiZFKaymB9aFvzQH/IjppIqrYrVuef26Xv7
+nXdO973vMfOGyBRzx379fWft7Xbfd13W2bXyyrWdXatWdLYv3tC5fuWqFde1
+L1q3Ifwo3y8IcpPhd3gQ/rcKAv1rfqaEv0nxcOlwqS+WVsI1370kwJ8CXPJB
+0LUrAgWTovr3Y0BR1y/p1kKCDriUVAIIf5Z0v68meOQW4FK0WFARjPNo41mz
+BBsaWHRbVZbxslqrspeX1RTlY00sMbIniLKUV7u6tEtaYlTW9R2WBeEnQS7B
+R+VJRF6kuxRWgzT9ExXGefQUBN5Mj/6iwBuT0q6S8HlrlfZK8vjoTyVaFumy
+AVhadXki4ZeIVfnoEmsPxhL5TR78dI/+vIffntE+n7yWjPb75DWwWZiWeB1p
+OROpyBOizmmNOiaOMom8Rg9+NtEne6XxfJRlvE9ea0Z7ffL4KE8nWs5IFWVT
+jLXEbXM8kdfgwfNRlvF8lGW8T97wjPb65PFRnkG0LE28ZkeQIolKgWg5hsjz
+4WcTfTkPnkbZJ98n76iM9vrk8VE+mWiZn5RhpEpyhz0ka9SPJfILHvwMj/7e
+zsKIjPZXl4WZBDXPKneHl3y0Woon4sxZOI7tkamywOrv7SyMzGh/dVmYRcod
+hDWV1JtxFONSMa4dT/B5D34GKTd58NK4LuF9+o/OaK+vno+yjmJ3l1n50zk3
+XdTNwqiSP9YjP+/h81mQ8eIaRsD79LfUaL+vns8K3j2ZBTL2GLNcTpsVeWU1
+xiPftzLjsyLj5fV7upUfrR9Wo/2+ep2VaI8hvt+Nht6uXWZVH98p5mLdlbMF
+lCezUqK1cCm2OPzRk9p4j/SiwKNzVn8B15bJmpLw+fAqrZTk6bvY1ZZUsCpa
+2RfL9kfCNciCxFNrH8TIU8EJREoku6iLya7FMazsRhY706OxwLJGp7Kjgf30
+qAzW8RJ0RNHCHtyH64y8DMzH0Z8/pqiBLec3wt9mFttIyjNIeRQpDyPlQaQ8
+gJT7e/SVPOW+Zs90Tv/hqPaJqC721GfFp7MKLmn6Ya01xntlIXezSBinDPB3
+NcqqzQc9Q3dn3ElvFuUtjGr8e8LpJfj2N2nL9kmSVz5ZJcn7RiCpgILeYiX4
+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
++Y5H4g==\
+\>"],ImageRangeCache->{{{135.079, 483.204}, {488.204, 140.079}} -> {-1.74924, \
+2.45603, 0.0107846, \
+0.0214662}},ExpressionUUID->"37cadf4f-2c1a-47fb-a7a7-92ffc2a20bfe"],
+
+Cell["\<\
+Per c), confrontate i fit relativi allo stesso numero di iterazioni e due o \
+pi\[UGrave] diversi valori di \[Alpha] e provate a vedere se si comprende la \
+dipendenza da \[Alpha].\
+\>", "Text",
+ CellDingbat->None,
+ CellChangeTimes->{{3.60931549559481*^9, 3.609315500262077*^9}, 
+   3.6093165873342543`*^9, {3.6093166532890263`*^9, 3.6093167056200194`*^9}, {
+   3.6093168685003357`*^9, 3.6093169601855793`*^9}, 3.6715348826125174`*^9, 
+   3.6715383551290417`*^9, {3.671538442549164*^9, 3.6715385118092613`*^9}, {
+   3.6715396035207896`*^9, 3.6715397646610155`*^9}, {3.671540069721442*^9, 
+   3.6715401894516096`*^9}, {3.797233414821844*^9, 3.797233416412588*^9}},
+ FontSize->16,
+ Background->GrayLevel[
+  0.900008],ExpressionUUID->"818cd72f-1034-436c-b817-2640644ca121"]
+}, Closed]]
+}, Closed]]
+}, Open  ]]
+},
+WindowToolbars->{},
+WindowSize->{1494, 926},
+WindowMargins->{{68, Automatic}, {-152, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+PrintingOptions->{"PrintCellBrackets"->False,
+"PrintMultipleHorizontalPages"->False,
+"PrintRegistrationMarks"->False,
+"PrintingMargins"->{{72, 72}, {54, 54}}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Report.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 984, 17, 74, "Text",ExpressionUUID->"838ff745-ca8a-4694-84c1-96722830562d"],
+Cell[CellGroupData[{
+Cell[1567, 41, 328, 5, 103, "Title",ExpressionUUID->"501a57f7-f6b2-4eca-8597-a5f011d3c4df"],
+Cell[1898, 48, 176, 2, 41, "Text",ExpressionUUID->"30a09ea0-053b-4802-94b7-76ef7501aa45"],
+Cell[2077, 52, 227, 3, 41, "Text",ExpressionUUID->"4646078c-f9bd-441a-a344-bc7476db858c"],
+Cell[2307, 57, 256, 6, 93, "Text",ExpressionUUID->"fc4798dc-f682-40c2-8dd9-56dbb6c33438"],
+Cell[2566, 65, 330, 4, 41, "Text",ExpressionUUID->"0cf0e74b-e9df-4b02-a52b-4b2042bd9292"],
+Cell[2899, 71, 930, 17, 143, "Text",ExpressionUUID->"e25d5928-8aa4-4124-9e8f-f616fe56730e"],
+Cell[CellGroupData[{
+Cell[3854, 92, 658, 11, 103, "Section 1",ExpressionUUID->"e3c84dba-1699-451e-a440-9bfba392880b"],
+Cell[CellGroupData[{
+Cell[4537, 107, 197, 2, 59, "Subsection",ExpressionUUID->"76aa8d65-6c85-4dfa-9633-21b2b3b2e608"],
+Cell[4737, 111, 907, 15, 129, "Text",ExpressionUUID->"75ad1980-1dd9-4343-8e73-f602a8d036c4"],
+Cell[CellGroupData[{
+Cell[5669, 130, 194, 2, 47, "Subsubsection",ExpressionUUID->"51538f24-bcb0-4231-9987-a104a72f2c2a"],
+Cell[5866, 134, 918, 21, 279, "Text",ExpressionUUID->"da5419b8-fdde-45d8-9b1a-a6023894feae"],
+Cell[6787, 157, 494, 11, 69, "Text",ExpressionUUID->"195a4203-3eb4-4a4c-8206-7da559e47924"],
+Cell[7284, 170, 751, 16, 130, "Text",ExpressionUUID->"f86230d1-f8a3-4e9e-851b-1050a4647b9a"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8096, 193, 611, 10, 62, "Section 1",ExpressionUUID->"fcc5b9e8-a358-4739-b196-ee1af7ef93e7"],
+Cell[CellGroupData[{
+Cell[8732, 207, 197, 2, 64, "Subsection",ExpressionUUID->"ad7433a3-f82b-4b11-87be-1d42610cca37"],
+Cell[8932, 211, 2618, 66, 369, "Text",ExpressionUUID->"42ea6918-8a8a-47c8-857b-442e603b1a1d"],
+Cell[CellGroupData[{
+Cell[11575, 281, 194, 2, 52, "Subsubsection",ExpressionUUID->"13f714ba-5ae3-49d8-a8f0-fe48dcc1fc67"],
+Cell[11772, 285, 759, 14, 99, "Text",ExpressionUUID->"1da77ed4-6832-46f2-a3a6-4989f39bde2f"],
+Cell[12534, 301, 687, 15, 69, "Text",ExpressionUUID->"47131725-c730-4c19-9acb-3abd9886ed10"],
+Cell[13224, 318, 916, 20, 99, "Text",ExpressionUUID->"cfe2faf2-5e43-4de3-b3a0-f38ee009c6c7"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[14201, 345, 613, 8, 62, "Section 1",ExpressionUUID->"09272956-0d10-48f8-b14b-ac30b918e8a0"],
+Cell[14817, 355, 1213, 22, 249, "Text",ExpressionUUID->"948f84af-2b9c-42d8-b9c3-a29723224145"],
+Cell[CellGroupData[{
+Cell[16055, 381, 194, 2, 52, "Subsubsection",ExpressionUUID->"1de0fe94-0430-44ce-b518-c70d32426977"],
+Cell[16252, 385, 1197, 23, 159, "Text",ExpressionUUID->"2e2bea1d-f0d4-465a-87b4-063c04f82f5c"],
+Cell[17452, 410, 36862, 1570, 484, 31509, 1480, "GraphicsData", "PostScript", "Text",ExpressionUUID->"37cadf4f-2c1a-47fb-a7a7-92ffc2a20bfe"],
+Cell[54317, 1982, 780, 14, 99, "Text",ExpressionUUID->"818cd72f-1034-436c-b817-2640644ca121"]
+}, Closed]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
