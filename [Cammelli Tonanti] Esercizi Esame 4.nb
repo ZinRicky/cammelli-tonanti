@@ -1,0 +1,294 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10679,        286]
+NotebookOptionsPosition[      8601,        236]
+NotebookOutlinePosition[      9358,        262]
+CellTagsIndexPosition[      9315,        259]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Corso di Laboratorio Computazionale \[LongDash] Corso di Laurea in Matematica \
+\[LongDash] Universit\[AGrave] di Padova.\
+\>", "Department",
+ CellChangeTimes->{{3.794994124658628*^9, 
+  3.7949941850996037`*^9}},ExpressionUUID->"fe6bf087-39c0-4d57-bbb8-\
+676949ad7429"],
+
+Cell["Anno Accademico 2019-2020", "Date",
+ CellChangeTimes->{{3.7949941902012987`*^9, 
+  3.7949942089217854`*^9}},ExpressionUUID->"ef18cc5a-c401-44b0-a51b-\
+2c900d04a1bf"],
+
+Cell[CellGroupData[{
+
+Cell["Esercizi 4. Julia e Mandelbrot sets, paesaggi frattali", "Title",
+ CellChangeTimes->{{3.794994215766157*^9, 3.7949942326650686`*^9}, {
+   3.794998375288208*^9, 3.7949983803135004`*^9}, {3.7950125964211664`*^9, 
+   3.795012597874813*^9}, 3.795629178732089*^9, {3.7959393669091005`*^9, 
+   3.795939374697331*^9}, {3.7971776268013535`*^9, 3.797177651514906*^9}, {
+   3.798535184568542*^9, 
+   3.798535211316542*^9}},ExpressionUUID->"5438ebd9-e8d2-4e87-abe3-\
+9c86d0693964"],
+
+Cell[TextData[{
+ "Notebook del gruppo ",
+ StyleBox["Cammelli Tonanti.",
+  FontSlant->"Plain"],
+ "\nComponenti del gruppo:",
+ StyleBox[" Francesco Tognetti, Riccardo Cazzin.",
+  FontSlant->"Plain"],
+ "\n",
+ StyleBox["Se ci sono stati collaborazioni o aiuti al di fuori del gruppo, \
+dichiararli.\n",
+  FontSize->10],
+ "In collaborazione con\nAiutati da"
+}], "Author",
+ CellChangeTimes->{{3.794994269687989*^9, 3.7949942998707647`*^9}, {
+   3.7949946561398306`*^9, 3.7949946773934655`*^9}, {3.7949947543436556`*^9, 
+   3.794994807461353*^9}, {3.795611014622757*^9, 3.7956110149398327`*^9}, 
+   3.797671515235983*^9},ExpressionUUID->"09e83f57-2ba0-4605-8456-\
+803100daaceb"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Esercizio 4.1 (Autosimilarit\[AGrave] (approssimata) degli insiemi di Julia \
+e/o di Mandelbrot).\
+\>", "Section",
+ CellChangeTimes->{{3.7971776678870707`*^9, 3.7971776808333955`*^9}, {
+   3.7985352398265376`*^9, 3.7985352656405425`*^9}, 
+   3.7985353162925367`*^9},ExpressionUUID->"6483f153-91dd-41ca-a54e-\
+c37df7a08b84"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.7985352817475424`*^9, 
+  3.7985352871775427`*^9}},ExpressionUUID->"cf786cda-b8fe-4bd4-8ddc-\
+dbaa6bf91b7a"],
+
+Cell["\<\
+Investigare la auto-similarit\[AGrave] (approssimata) degli insiemi di Julia \
+e/o dell\[CloseCurlyQuote]insieme di Mandelbrot. 
+Creare una successione di ingradimenti successivi di uno (o due, o tre, ma \
+non di pi\[UGrave]: \[EGrave] meglio la qualit\[AGrave] della \
+quantit\[AGrave]) Julia sets e/o dell\[CloseCurlyQuote]insieme di Mandlebrot, \
+a  scelta, che ne mostrino nel modo pi\[UGrave] chiaro possibile, secondo i \
+vostri gusti, l\[CloseCurlyQuote]approssimata autosimilarit\[AGrave].\
+\>", "Text",
+ CellChangeTimes->{
+  3.7985352999385357`*^9},ExpressionUUID->"aca97212-0252-4cda-9e61-\
+54d2c071f7b2"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Esercizio 4.2 (Insieme di Mandelbrot e dinamica della mappa quadratica).\
+\>", "Section",
+ CellChangeTimes->{{3.7971805792654705`*^9, 3.7971806195545692`*^9}, {
+  3.7985353188785424`*^9, 
+  3.7985353316115427`*^9}},ExpressionUUID->"153f6381-5c5e-4eea-84c5-\
+a8c4195060c5"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.7971807466509857`*^9, 
+  3.797180749722427*^9}},ExpressionUUID->"b1d515de-f18f-4880-9637-\
+006b65c4a2ae"],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{
+   "Investigare", " ", "la", " ", "relazione", " ", "fra", " ", "la", " ", 
+    "struttura", " ", 
+    RowBox[{"dell", "'"}], "insieme", " ", "di", " ", "Mandelbrot", " ", "e", 
+    " ", "le", " ", "orbite", " ", "periodiche", " ", "attrattive", " ", 
+    "del", " ", "sistema", " ", "dinamico", " ", "discreoa", " ", "dato", " ",
+     "dalle", " ", "iterazioni", " ", "del", " ", "polinomio", "  ", 
+    RowBox[{
+     FormBox[
+      RowBox[{
+       RowBox[{
+        SubscriptBox["P", "c"], "(", "z", ")"}], " ", "=", " ", 
+       RowBox[{
+        SuperscriptBox["z", "2"], "+", "c"}]}],
+      TraditionalForm], ".", "\n", "\n", "Si"}], " ", "pu\[OGrave]", " ", 
+    "fare", " ", "una", " ", 
+    RowBox[{"e", "/", "o"}], " ", 
+    RowBox[{"l", "'"}], "altra", " ", "delle", " ", "cose", " ", 
+    RowBox[{"seguenti", ":", "\n", "\n", 
+     RowBox[{"1.", " ", "Produrre"}]}]}], ",", " ", 
+   RowBox[{
+    RowBox[{"per", " ", "qualche", " ", 
+     StyleBox["n",
+      FontSlant->"Italic"]}], "=", "1"}], ",", "2", ",", "3", ",", 
+   RowBox[{"..", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+      "arrivare", " ", "a", " ", "quel", " ", "che", " ", "si", " ", 
+       "desidera"}], ",", " ", 
+      RowBox[{"o", " ", "si", " ", "riesce"}]}], ")"}]}], ",", " ", 
+   RowBox[{"un", " ", "immagine", " ", "o", " ", 
+    RowBox[{"un", "'"}], "animazione", " ", "che"}], ",", " ", 
+   RowBox[{"per", " ", "un", " ", "opportuno", " ", "valore", " ", "di", " ", 
+    StyleBox["c",
+     FontSlant->"Italic"], " ", 
+    RowBox[{"(", 
+     RowBox[{"dipendente", " ", "da", " ", 
+      StyleBox["n",
+       FontSlant->"Italic"]}], ")"}]}], ",", "  ", 
+   RowBox[{"evidenzi", " ", 
+    RowBox[{"l", "'"}], "esistenza", " ", "di", " ", 
+    RowBox[{"un", "'"}], "orbita", " ", "periodica", " ", "attrattiva", " ", 
+    "di", " ", 
+    FormBox[
+     SubscriptBox["P", "c"],
+     TraditionalForm], " ", "di", " ", "periodo", " ", 
+    StyleBox["n",
+     FontSlant->"Italic"], " ", 
+    RowBox[{"all", "'"}], "interno", " ", "di", " ", 
+    RowBox[{
+     FormBox[
+      SubscriptBox["K", "c"],
+      TraditionalForm], 
+     StyleBox[".",
+      FontSlant->"Italic"], " ", "Evidenziare"}]}], ",", " ", 
+   RowBox[{"nel", " ", "Mandelbrot"}], ",", " ", 
+   RowBox[{"i", " ", "valori", " ", "usati", " ", "di", " ", 
+    RowBox[{
+     StyleBox["c",
+      FontSlant->"Italic"], ".", " ", "\n", "\n", "2."}], " ", "In", " ", 
+    "alternativa"}], ",", " ", 
+   RowBox[{"e", " ", "anzi", " ", "meglio"}], ",", " ", 
+   RowBox[{
+   "posizionare", " ", "un", " ", "locator", " ", "nel", " ", "Mandelbort", 
+    " ", "che", " ", "legge", " ", 
+    StyleBox["c",
+     FontSlant->"Italic"], " ", "e", " ", "produce", " ", "affianco", " ", 
+    "un", " ", "disegno", " ", "di", " ", 
+    FormBox[
+     SubscriptBox["K", "c"],
+     TraditionalForm], " ", "con"}], ",", " ", 
+   RowBox[{"al", " ", "suo", " ", "interno"}], ",", " ", 
+   RowBox[{
+    RowBox[{"l", "'"}], "orbita", " ", "periodica", " ", 
+    RowBox[{"attrattiva", "."}]}]}], 
+  "Text"]],ExpressionUUID->"36e37ac1-b738-412a-9af0-0aead692fe7c"]], "Text",
+ CellChangeTimes->{
+  3.7985353556915417`*^9},ExpressionUUID->"16c98c64-a40c-4a2b-85c6-\
+c5e53ebed7eb"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Esercizio 4.3 (Paesaggi frattali e dimensione box-counting).", "Section",
+ CellChangeTimes->{{3.7974379289060574`*^9, 3.7974379479864492`*^9}, {
+  3.798535373323537*^9, 
+  3.798535382204542*^9}},ExpressionUUID->"1c089516-061d-4491-b242-\
+1667b8f3603e"],
+
+Cell[CellGroupData[{
+
+Cell["Testo dell\[CloseCurlyQuote]esercizio", "Subsection",
+ CellChangeTimes->{{3.7974380949226933`*^9, 
+  3.7974380987621126`*^9}},ExpressionUUID->"9a7a8742-d675-4dba-a4cb-\
+504c79faf137"],
+
+Cell[TextData[{
+ "a) Costruire un (bel) paesaggio frattale.\n\nb) Determinare la dimensione \
+del \[OpenCurlyDoubleQuote]box-counting\[CloseCurlyDoubleQuote] di qualche \
+paesaggio costruito con diversi valori dell\[CloseCurlyQuote]esponente \
+\[Alpha]  del fattore di riscalamento ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"k", "=", 
+    SuperscriptBox["2", "\[Alpha]"]}], TraditionalForm]],ExpressionUUID->
+  "5cad1dc0-c77a-49c8-aa23-7517fafc94ed"],
+ " della variazione casuale delle altezze.\n\nc) Si riesce a formulare un\
+\[CloseCurlyQuote]ipotesi sulla dipendenza della dimensione box-counting dall\
+\[CloseCurlyQuote]esponente \[Alpha]? [Questo e` laborioso. Non e` \
+obbligatorio farlo, ma se riuscite e` molto apprezzato]"
+}], "Text",
+ CellChangeTimes->{
+  3.7985354112765417`*^9},ExpressionUUID->"ffb1820e-019b-4efc-b5b0-\
+7afcbe4a821f"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{1920, 997},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"Report"}, "StandardReport.nb", CharacterEncoding -> 
+       "UTF-8"]]], 
+   Cell[
+    StyleData["Text"], TextJustification -> 1.]}, Visible -> False, 
+  FrontEndVersion -> "12.0 for Microsoft Windows (64-bit) (April 8, 2019)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 279, 6, 22, "Department",ExpressionUUID->"fe6bf087-39c0-4d57-bbb8-676949ad7429"],
+Cell[840, 28, 171, 3, 54, "Date",ExpressionUUID->"ef18cc5a-c401-44b0-a51b-2c900d04a1bf"],
+Cell[CellGroupData[{
+Cell[1036, 35, 476, 7, 119, "Title",ExpressionUUID->"5438ebd9-e8d2-4e87-abe3-9c86d0693964"],
+Cell[1515, 44, 671, 17, 150, "Author",ExpressionUUID->"09e83f57-2ba0-4605-8456-803100daaceb"],
+Cell[CellGroupData[{
+Cell[2211, 65, 333, 7, 86, "Section",ExpressionUUID->"6483f153-91dd-41ca-a54e-c37df7a08b84"],
+Cell[CellGroupData[{
+Cell[2569, 76, 189, 3, 42, "Subsection",ExpressionUUID->"cf786cda-b8fe-4bd4-8ddc-dbaa6bf91b7a"],
+Cell[2761, 81, 625, 11, 98, "Text",ExpressionUUID->"aca97212-0252-4cda-9e61-54d2c071f7b2"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3435, 98, 282, 6, 86, "Section",ExpressionUUID->"153f6381-5c5e-4eea-84c5-a8c4195060c5"],
+Cell[CellGroupData[{
+Cell[3742, 108, 187, 3, 42, "Subsection",ExpressionUUID->"b1d515de-f18f-4880-9637-006b65c4a2ae"],
+Cell[3932, 113, 3260, 82, 239, "Text",ExpressionUUID->"16c98c64-a40c-4a2b-85c6-c5e53ebed7eb"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7241, 201, 258, 4, 86, "Section",ExpressionUUID->"1c089516-061d-4491-b242-1667b8f3603e"],
+Cell[CellGroupData[{
+Cell[7524, 209, 189, 3, 42, "Subsection",ExpressionUUID->"9a7a8742-d675-4dba-a4cb-504c79faf137"],
+Cell[7716, 214, 845, 17, 153, "Text",ExpressionUUID->"ffb1820e-019b-4efc-b5b0-7afcbe4a821f"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
