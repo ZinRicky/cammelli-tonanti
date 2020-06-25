@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1951,         65]
+NotebookOptionsPosition[      1225,         43]
+NotebookOutlinePosition[      1745,         61]
+CellTagsIndexPosition[      1702,         58]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Mappa logistica", "Title",
+ CellChangeTimes->{{3.802109169926526*^9, 3.802109172784894*^9}, 
+   3.802109246709219*^9},ExpressionUUID->"bd676067-3d4b-46b5-ba19-\
+a4e7aed40d54"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Cammelli Tonanti, ovvero Riccardo Cazzin e Francesco Tognetti\
+\>", "Author",
+ CellChangeTimes->{{3.8021091831740923`*^9, 
+  3.802109232373522*^9}},ExpressionUUID->"78ec2e16-cfea-4e60-94dd-\
+59fa8c6346cf"],
+
+Cell["Universit\[AGrave] degli Studi di Padova", "Institution",
+ CellChangeTimes->{{3.8021092164581184`*^9, 
+  3.8021092228998795`*^9}},ExpressionUUID->"8f4b1b9b-5866-424a-b12a-\
+2d38ff3544c3"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{582.6, 493.2},
+WindowMargins->{{279, Automatic}, {Automatic, 40.199999999999996`}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
+StyleDefinitions->FrontEnd`FileName[{"Article"}, "JournalArticle.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"e7ad33d1-258c-4616-8e1a-f499f99ee579"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 181, 3, 78, "Title",ExpressionUUID->"bd676067-3d4b-46b5-ba19-a4e7aed40d54"],
+Cell[CellGroupData[{
+Cell[786, 29, 215, 5, 44, "Author",ExpressionUUID->"78ec2e16-cfea-4e60-94dd-59fa8c6346cf"],
+Cell[1004, 36, 193, 3, 14, "Institution",ExpressionUUID->"8f4b1b9b-5866-424a-b12a-2d38ff3544c3"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
