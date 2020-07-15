@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     34600,       1008]
-NotebookOptionsPosition[     29717,        922]
-NotebookOutlinePosition[     30184,        940]
-CellTagsIndexPosition[     30141,        937]
+NotebookDataLength[     39100,       1137]
+NotebookOptionsPosition[     33673,       1042]
+NotebookOutlinePosition[     34140,       1060]
+CellTagsIndexPosition[     34097,       1057]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -916,7 +916,127 @@ Cell[TextData[{
  CellChangeTimes->{{3.803812770733618*^9, 3.803812787405283*^9}, {
   3.8038129050233974`*^9, 
   3.803813036210574*^9}},ExpressionUUID->"99d079f5-ce3a-4377-9861-\
-311a9aea1f20"]
+311a9aea1f20"],
+
+Cell[TextData[{
+ StyleBox["Lemma 4.",
+  FontWeight->"Bold"],
+ " Se ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", "<", "\[Mu]", "\[LessEqual]", "4"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c6beac87-408e-45e1-bce4-024d65899f4f"],
+ ", allora tutte le orbite con dato iniziale in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "5abbb08c-e2bb-4e0f-b183-7c586d4b8bf9"],
+ " rimangono in tale intervallo. Se, invece, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", ">", "4"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "89306533-8572-4c21-b53a-b754b45a38e6"],
+ ", allora esiste un intervallo ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["A", "0"], "\[SubsetEqual]", 
+    RowBox[{"[", 
+     RowBox[{"0", ",", "1"}], "]"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3660f41b-50e4-4e8d-bc6f-aede747f3e21"],
+ " tale che ogni orbita con dato iniziale in ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["A", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ef61b83f-89ce-43ff-adb5-545cc0ee36bb"],
+ " non \[EGrave] contenuta in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "92433a45-05a0-4183-96ad-8e436d6cd684"],
+ " a partire dalla prima iterazione.\nLa dimostrazione \[EGrave] ovvia, se si \
+considerano le seguenti disuguaglianze."
+}], "Text",
+ CellChangeTimes->{{3.8038138225537386`*^9, 3.8038139567049723`*^9}, {
+  3.8038140114973683`*^9, 
+  3.803814030872215*^9}},ExpressionUUID->"b0883d2c-97b9-41e8-b6fc-\
+32701aa52b4e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "1"}], ",", 
+     RowBox[{"0", "\[LessEqual]", 
+      RowBox[{"f", "[", 
+       RowBox[{"\[Mu]", ",", "x"}], "]"}], "\[LessEqual]", "1"}], ",", 
+     RowBox[{"0", "<", "\[Mu]", "\[LessEqual]", "4"}]}], "}"}], ",", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8020093737464676`*^9, 3.80200941361234*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"32795a26-1413-4d4b-8656-0558415ae0ff"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"0", "<", "\[Mu]", "\[LessEqual]", "4"}], "&&", 
+  RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "1"}]}]], "Output",
+ CellChangeTimes->{{3.8020094019308615`*^9, 3.802009414165814*^9}},
+ CellLabel->"Out[17]=",ExpressionUUID->"846534fe-9046-4b01-86bf-6f98cb0cb8b6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Reduce", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "1"}], ",", 
+     RowBox[{"\[Mu]", ">", "4"}], ",", 
+     RowBox[{"0", "\[LessEqual]", 
+      RowBox[{"f", "[", 
+       RowBox[{"\[Mu]", ",", "x"}], "]"}], "\[LessEqual]", "1"}]}], "}"}], 
+   ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8020094857233505`*^9, 3.8020095037577286`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"63802ebe-8632-4d2f-94bf-fdef176255f3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Mu]", ">", "4"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", 
+     RowBox[{
+      FractionBox["1", "2"], "-", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       SqrtBox[
+        FractionBox[
+         RowBox[{
+          RowBox[{"-", "4"}], "+", "\[Mu]"}], "\[Mu]"]]}]}]}], "||", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "2"], "+", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       SqrtBox[
+        FractionBox[
+         RowBox[{
+          RowBox[{"-", "4"}], "+", "\[Mu]"}], "\[Mu]"]]}]}], "\[LessEqual]", 
+     "x", "\[LessEqual]", "1"}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.8020095044138303`*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"701a745e-54a6-45e6-af94-164ccf8271cd"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -1007,7 +1127,16 @@ Cell[CellGroupData[{
 Cell[27147, 842, 964, 27, 77, "Input",ExpressionUUID->"54ef5d71-3a98-4373-9348-118559cbae35"],
 Cell[28114, 871, 296, 6, 51, "Output",ExpressionUUID->"ac3246a8-d0b8-4f55-9f6c-51c6a7b1c515"]
 }, Open  ]],
-Cell[28425, 880, 1264, 38, 70, "Text",ExpressionUUID->"99d079f5-ce3a-4377-9861-311a9aea1f20"]
+Cell[28425, 880, 1264, 38, 70, "Text",ExpressionUUID->"99d079f5-ce3a-4377-9861-311a9aea1f20"],
+Cell[29692, 920, 1754, 50, 127, "Text",ExpressionUUID->"b0883d2c-97b9-41e8-b6fc-32701aa52b4e"],
+Cell[CellGroupData[{
+Cell[31471, 974, 521, 12, 28, "Input",ExpressionUUID->"32795a26-1413-4d4b-8656-0558415ae0ff"],
+Cell[31995, 988, 301, 5, 32, "Output",ExpressionUUID->"846534fe-9046-4b01-86bf-6f98cb0cb8b6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32333, 998, 504, 12, 28, "Input",ExpressionUUID->"63802ebe-8632-4d2f-94bf-fdef176255f3"],
+Cell[32840, 1012, 793, 25, 60, "Output",ExpressionUUID->"701a745e-54a6-45e6-af94-164ccf8271cd"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
