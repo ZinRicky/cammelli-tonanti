@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     26849,        779]
-NotebookOptionsPosition[     22809,        706]
-NotebookOutlinePosition[     23259,        723]
-CellTagsIndexPosition[     23216,        720]
+NotebookDataLength[     27500,        796]
+NotebookOptionsPosition[     23459,        723]
+NotebookOutlinePosition[     23909,        740]
+CellTagsIndexPosition[     23866,        737]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -531,6 +531,13 @@ Cell[TextData[{
     SubscriptBox["x", "0"], ">", "1"}], TraditionalForm]],
   FormatType->"TraditionalForm",ExpressionUUID->
   "bc864d9d-dc15-4b43-95bc-5dec1e0a4cf0"],
+ " oppure ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "<", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "de5728f0-43e4-4129-8921-e2ec21402bd2"],
  ", allora ",
  Cell[BoxData[
   FormBox[
@@ -612,8 +619,8 @@ si \[EGrave] provata la tesi."
    3.8038091595988812`*^9, 3.8038092420799036`*^9}, 3.80380931116236*^9, {
    3.8038093644378138`*^9, 3.803809369314766*^9}, {3.803809464914382*^9, 
    3.803809470441599*^9}, {3.80380971571751*^9, 3.8038099612769766`*^9}, {
-   3.803810980890164*^9, 
-   3.803810980890164*^9}},ExpressionUUID->"df40cc18-0cd5-4857-92b6-\
+   3.803810980890164*^9, 3.803810980890164*^9}, {3.8038117606461716`*^9, 
+   3.8038117681634254`*^9}},ExpressionUUID->"df40cc18-0cd5-4857-92b6-\
 dc8d1e8a48af"],
 
 Cell[CellGroupData[{
@@ -674,9 +681,18 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    RowBox[{
-    SubscriptBox["x", "0"], ">", "1"}], TraditionalForm]],
+    SubscriptBox["x", "0"], ">", "1", ">", 
+    FractionBox[
+     RowBox[{"\[Mu]", "-", "1"}], "\[Mu]"]}], TraditionalForm]],
   FormatType->"TraditionalForm",ExpressionUUID->
   "b3a1742f-00c5-4a5f-8952-e4ac9e592299"],
+ " e per ogni ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "<", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c590cd7d-bb66-4a00-9260-7b1b4d631217"],
  ", dunque la successione ",
  Cell[BoxData[
   FormBox[
@@ -698,8 +714,9 @@ Cell[TextData[{
    3.8038100440790243`*^9, 3.803810199667965*^9, {3.8038103891013985`*^9, 
    3.8038105467939167`*^9}, 3.803811004005129*^9, {3.8038110469222527`*^9, 
    3.8038110706092873`*^9}, {3.8038111049173107`*^9, 3.803811141578581*^9}, {
-   3.803811306880324*^9, 
-   3.803811361958634*^9}},ExpressionUUID->"8256da5b-d890-45c1-8493-\
+   3.803811306880324*^9, 3.803811361958634*^9}, 3.8038114844397135`*^9, {
+   3.80381167359116*^9, 3.8038116797746077`*^9}, {3.8038117888300962`*^9, 
+   3.8038117935257955`*^9}},ExpressionUUID->"8256da5b-d890-45c1-8493-\
 240c1d92e92d"]
 }, Open  ]]
 }, Open  ]]
@@ -773,12 +790,12 @@ Cell[CellGroupData[{
 Cell[15168, 477, 1033, 28, 88, "Input",ExpressionUUID->"5d679344-fc21-4f22-8279-2d2a6d3144a7"],
 Cell[16204, 507, 294, 7, 51, "Output",ExpressionUUID->"67933e02-936b-4b15-81f9-786d5ee07f97"]
 }, Open  ]],
-Cell[16513, 517, 3428, 99, 155, "Text",ExpressionUUID->"df40cc18-0cd5-4857-92b6-dc8d1e8a48af"],
+Cell[16513, 517, 3680, 106, 155, "Text",ExpressionUUID->"df40cc18-0cd5-4857-92b6-dc8d1e8a48af"],
 Cell[CellGroupData[{
-Cell[19966, 620, 888, 24, 49, "Input",ExpressionUUID->"7bd16e2f-5276-4857-9890-873b1aa94e31"],
-Cell[20857, 646, 476, 13, 51, "Output",ExpressionUUID->"1e956adb-360b-45bc-8a83-d02dde28086f"]
+Cell[20218, 627, 888, 24, 49, "Input",ExpressionUUID->"7bd16e2f-5276-4857-9890-873b1aa94e31"],
+Cell[21109, 653, 476, 13, 51, "Output",ExpressionUUID->"1e956adb-360b-45bc-8a83-d02dde28086f"]
 }, Open  ]],
-Cell[21348, 662, 1433, 40, 60, "Text",ExpressionUUID->"8256da5b-d890-45c1-8493-240c1d92e92d"]
+Cell[21600, 669, 1831, 50, 65, "Text",ExpressionUUID->"8256da5b-d890-45c1-8493-240c1d92e92d"]
 }, Open  ]]
 }, Open  ]]
 }
