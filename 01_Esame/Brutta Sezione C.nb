@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     24861,        650]
-NotebookOptionsPosition[     21865,        605]
-NotebookOutlinePosition[     22286,        621]
-CellTagsIndexPosition[     22243,        618]
+NotebookDataLength[     26075,        691]
+NotebookOptionsPosition[     22820,        640]
+NotebookOutlinePosition[     23241,        656]
+CellTagsIndexPosition[     23198,        653]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -597,10 +597,45 @@ Cell[BoxData[
 48e95702cfa1"]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
 Cell["Cose fatte poi", "Section",
  CellChangeTimes->{{3.80381411869238*^9, 
   3.803814123316969*^9}},ExpressionUUID->"6b0357dc-82d0-455c-adda-\
-5c5ddf4af1fc"]
+5c5ddf4af1fc"],
+
+Cell[CellGroupData[{
+
+Cell["Sezione C2.", "Subsection",
+ CellChangeTimes->{{3.8038895301098804`*^9, 
+  3.803889533583581*^9}},ExpressionUUID->"25e7ab8c-23a6-4bb1-b6a6-\
+a4eb2a9ff545"],
+
+Cell[TextData[{
+ "Lemma 1. Per ogni ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", ">", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "4794dc2f-6e96-4cff-9b97-9a2c5b48631d"],
+ " il punto ",
+ Cell[BoxData[
+  FormBox["0", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e3395667-2a98-4cc0-9af4-bb9418d75ba3"],
+ " \[EGrave] un punto fisso repulsivo di ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "\[Mu]"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "2c5357c2-3a8e-4331-aaf1-21830cd455a6"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.803889543189915*^9, 
+  3.8038895758136225`*^9}},ExpressionUUID->"31ef2a16-9225-41aa-a256-\
+5d0826451e68"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{582.6, 493.2},
@@ -650,7 +685,13 @@ Cell[20134, 547, 528, 16, 49, "Input",ExpressionUUID->"27d68f85-7f37-463b-b27b-e
 Cell[20665, 565, 420, 12, 37, "Input",ExpressionUUID->"c17e2c5b-5ad9-4057-9da1-4861f3d59ad2"],
 Cell[21088, 579, 588, 17, 66, "Input",ExpressionUUID->"a00b46fd-7d73-4f92-99d6-48e95702cfa1"]
 }, Open  ]],
-Cell[21691, 599, 158, 3, 67, "Section",ExpressionUUID->"6b0357dc-82d0-455c-adda-5c5ddf4af1fc"]
+Cell[CellGroupData[{
+Cell[21713, 601, 158, 3, 67, "Section",ExpressionUUID->"6b0357dc-82d0-455c-adda-5c5ddf4af1fc"],
+Cell[CellGroupData[{
+Cell[21896, 608, 161, 3, 54, "Subsection",ExpressionUUID->"25e7ab8c-23a6-4bb1-b6a6-a4eb2a9ff545"],
+Cell[22060, 613, 720, 22, 35, "Text",ExpressionUUID->"31ef2a16-9225-41aa-a256-5d0826451e68"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
