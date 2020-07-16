@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     27397,        729]
-NotebookOptionsPosition[     24141,        678]
-NotebookOutlinePosition[     24562,        694]
-CellTagsIndexPosition[     24519,        691]
+NotebookDataLength[     33822,        926]
+NotebookOptionsPosition[     29851,        864]
+NotebookOutlinePosition[     30255,        880]
+CellTagsIndexPosition[     30212,        877]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -671,13 +671,199 @@ Cell[TextData[{
   3.803896274196954*^9, 3.8038962969820833`*^9}, {3.803896428919335*^9, 
   3.803896478808967*^9}, {3.8038965141654963`*^9, 
   3.803896534586907*^9}},ExpressionUUID->"31ef2a16-9225-41aa-a256-\
-5d0826451e68"]
+5d0826451e68"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"With", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"f", "=", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\[Mu]", ",", "x"}], "}"}], ",", 
+        RowBox[{"\[Mu]", " ", "x", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", "x"}], ")"}]}]}], "]"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f", "[", 
+        RowBox[{"\[Mu]", ",", "x"}], "]"}], ",", "x"}], "]"}], "/.", 
+     RowBox[{"x", "\[Rule]", "0"}]}]}], "\[IndentingNewLine]", "]"}], "//", 
+  "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.8038967486954885`*^9, 
+  3.8038968392978244`*^9}},ExpressionUUID->"428c46cf-8341-424e-bad6-\
+f8d0a3355781"],
+
+Cell[BoxData["\[Mu]"], "Output",
+ CellChangeTimes->{{3.8038967944621677`*^9, 3.8038968193910465`*^9}},
+ CellLabel->"Out[6]=",ExpressionUUID->"cad2821c-b2fc-422f-a283-d68aeaa33b25"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Lemma 2.",
+  FontWeight->"Bold"],
+ "  Il punto fisso ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "\[Mu]"], "=", 
+    RowBox[{"1", "-", 
+     FractionBox["1", "\[Mu]"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ea137247-0e9f-4344-b5ca-53cb67366aff"],
+ " per ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "\[Mu]"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "569b2983-94ad-465f-aa9d-47744b4ddddd"],
+ " \[EGrave] attrattivo per ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "<", "\[Mu]", "<", "3"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "0602117b-3105-48e2-b632-77acfd652def"],
+ " e repulsivo per ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", ">", "3"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c8deacb0-c311-4123-84cd-40f4526cac1d"],
+ ".\n",
+ StyleBox["Dimostrazione.",
+  FontSlant->"Italic"],
+ " Con un ragionamento simile a quello usato nel Lemma 1, calcoliamo la \
+derivata di ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "\[Mu]"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d5fd56ff-c077-4926-bce3-eefe45b89b42"],
+ " in ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["p", "\[Mu]"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "608f498d-0526-4c2b-a54e-bccc99a74708"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.8038967086834965`*^9, 3.8038967418069053`*^9}, {
+  3.8038968733397923`*^9, 
+  3.803896969418971*^9}},ExpressionUUID->"fb81499b-c549-4380-86cb-\
+e2073bc2241a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"With", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"f", "=", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\[Mu]", ",", "x"}], "}"}], ",", 
+        RowBox[{"\[Mu]", " ", "x", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", "x"}], ")"}]}]}], "]"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f", "[", 
+        RowBox[{"\[Mu]", ",", "x"}], "]"}], ",", "x"}], "]"}], "/.", 
+     RowBox[{"x", "\[Rule]", 
+      RowBox[{"1", "-", 
+       FractionBox["1", "\[Mu]"]}]}]}]}], "\[IndentingNewLine]", "]"}], "//", 
+  "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.8038967486954885`*^9, 3.803896845912112*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"57d13365-1fda-4f6f-b19a-40cc25f4738f"],
+
+Cell[BoxData[
+ RowBox[{"2", "-", "\[Mu]"}]], "Output",
+ CellChangeTimes->{3.803896847570709*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"ff2dd54c-1dd1-4a73-b67b-bfa751210285"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Dato che ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[LeftBracketingBar]", 
+     RowBox[{"2", "-", "\[Mu]"}], "\[RightBracketingBar]"}], "<", "1"}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "66d87186-1003-4353-a390-dbeb7c605e3a"],
+ " per ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "<", "\[Mu]", "<", "3"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "a4bd793b-71c8-47f4-87ad-f3166866b7f7"],
+ " e ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[LeftBracketingBar]", 
+     RowBox[{"2", "-", "\[Mu]"}], "\[RightBracketingBar]"}], ">", "1"}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e227f35c-ddb9-4cb2-8e0c-ab9975344bab"],
+ " per ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", ">", "3"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "8d69aede-9f3a-4f53-a69b-85aa43fad283"],
+ ", si \[EGrave] provata la tesi."
+}], "Text",
+ CellChangeTimes->{{3.8038969812353554`*^9, 3.8038970602846174`*^9}, {
+  3.8038974701088467`*^9, 
+  3.803897544720437*^9}},ExpressionUUID->"2b986da7-ee88-4efd-b638-\
+7db761642084"],
+
+Cell[TextData[{
+ StyleBox["Lemma 3.",
+  FontWeight->"Bold"],
+ " L\[CloseCurlyQuote]orbita di periodo minimo due di ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "\[Mu]"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "620e957f-c719-4793-b17c-fd11e26808c5"],
+ " esiste per ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", ">", "3"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "424d91e4-ee03-4aa2-bf3c-98536878399b"],
+ " ed \[EGrave] attrattiva per ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"3", "<", "\[Mu]", "<", 
+    RowBox[{"1", "+", 
+     SqrtBox["6"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "390672a8-0ab1-4cbc-8421-82c7d0e81f8d"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.803897552277237*^9, 
+  3.80389760402984*^9}},ExpressionUUID->"a6942ca4-c550-4a5c-9e69-\
+3b2f569914e9"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{582.6, 493.2},
-WindowMargins->{{279, Automatic}, {Automatic, 40.199999999999996`}},
+WindowMargins->{{7.8, Automatic}, {Automatic, 33}},
 FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"2d7bede5-8d0f-44d5-ba6a-a9db368f8172"
@@ -727,7 +913,18 @@ Cell[CellGroupData[{
 Cell[21713, 601, 158, 3, 67, "Section",ExpressionUUID->"6b0357dc-82d0-455c-adda-5c5ddf4af1fc"],
 Cell[CellGroupData[{
 Cell[21896, 608, 161, 3, 54, "Subsection",ExpressionUUID->"25e7ab8c-23a6-4bb1-b6a6-a4eb2a9ff545"],
-Cell[22060, 613, 2041, 60, 85, "Text",ExpressionUUID->"31ef2a16-9225-41aa-a256-5d0826451e68"]
+Cell[22060, 613, 2041, 60, 85, "Text",ExpressionUUID->"31ef2a16-9225-41aa-a256-5d0826451e68"],
+Cell[CellGroupData[{
+Cell[24126, 677, 785, 23, 88, "Input",ExpressionUUID->"428c46cf-8341-424e-bad6-f8d0a3355781"],
+Cell[24914, 702, 180, 2, 32, "Output",ExpressionUUID->"cad2821c-b2fc-422f-a283-d68aeaa33b25"]
+}, Open  ]],
+Cell[25109, 707, 1599, 51, 110, "Text",ExpressionUUID->"fb81499b-c549-4380-86cb-e2073bc2241a"],
+Cell[CellGroupData[{
+Cell[26733, 762, 858, 24, 127, "Input",ExpressionUUID->"57d13365-1fda-4f6f-b19a-40cc25f4738f"],
+Cell[27594, 788, 174, 3, 32, "Output",ExpressionUUID->"ff2dd54c-1dd1-4a73-b67b-bfa751210285"]
+}, Open  ]],
+Cell[27783, 794, 1159, 36, 35, "Text",ExpressionUUID->"2b986da7-ee88-4efd-b638-7db761642084"],
+Cell[28945, 832, 866, 27, 60, "Text",ExpressionUUID->"a6942ca4-c550-4a5c-9e69-3b2f569914e9"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
