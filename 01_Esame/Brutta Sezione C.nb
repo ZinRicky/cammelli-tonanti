@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     26075,        691]
-NotebookOptionsPosition[     22820,        640]
-NotebookOutlinePosition[     23241,        656]
-CellTagsIndexPosition[     23198,        653]
+NotebookDataLength[     27397,        729]
+NotebookOptionsPosition[     24141,        678]
+NotebookOutlinePosition[     24562,        694]
+CellTagsIndexPosition[     24519,        691]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -612,27 +612,65 @@ Cell["Sezione C2.", "Subsection",
 a4eb2a9ff545"],
 
 Cell[TextData[{
- "Lemma 1. Per ogni ",
+ StyleBox["Lemma 1.",
+  FontWeight->"Bold"],
+ " Per ogni ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"\[Mu]", ">", "1"}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   RowBox[{"\[Mu]", ">", "1"}], TraditionalForm]],ExpressionUUID->
   "4794dc2f-6e96-4cff-9b97-9a2c5b48631d"],
  " il punto ",
  Cell[BoxData[
-  FormBox["0", TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+  FormBox["0", TraditionalForm]],ExpressionUUID->
   "e3395667-2a98-4cc0-9af4-bb9418d75ba3"],
  " \[EGrave] un punto fisso repulsivo di ",
  Cell[BoxData[
   FormBox[
+   SubscriptBox["f", "\[Mu]"], TraditionalForm]],ExpressionUUID->
+  "2c5357c2-3a8e-4331-aaf1-21830cd455a6"],
+ ".\n",
+ StyleBox["Dimostrazione.",
+  FontSlant->"Italic"],
+ " Un punto fisso ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "42045bb6-a6c2-452e-ba5a-4446416dfae2"],
+ " \[EGrave] repulsivo per ",
+ Cell[BoxData[
+  FormBox[
    SubscriptBox["f", "\[Mu]"], TraditionalForm]],
   FormatType->"TraditionalForm",ExpressionUUID->
-  "2c5357c2-3a8e-4331-aaf1-21830cd455a6"],
- "."
+  "d5bbba41-fe27-4774-a33f-90af56a0002b"],
+ " se e solo se ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[LeftBracketingBar]", 
+     RowBox[{
+      TemplateBox[{"f", "\[Mu]", "\[Prime]"},
+       "Subsuperscript"], "(", 
+      SubscriptBox["x", "0"], ")"}], "\[RightBracketingBar]"}], ">", "1"}], 
+   TraditionalForm]],
+  CellChangeTimes->{{3.803896419023834*^9, 3.8038964253049974`*^9}},
+  ExpressionUUID->"2aca307e-b2f9-48a1-8537-5a0102c63611"],
+ ". Dal momento che ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     TemplateBox[{"f", "\[Mu]", "\[Prime]"},
+      "Subsuperscript"], "(", "0", ")"}], "=", 
+    RowBox[{"\[Mu]", ">", "1"}]}], TraditionalForm]],
+  CellChangeTimes->{{3.803896419023834*^9, 3.8038964253049974`*^9}},
+  ExpressionUUID->"4d27448a-100e-4c2f-ab93-3795edacd843"],
+ ", la tesi \[EGrave] verificata."
 }], "Text",
- CellChangeTimes->{{3.803889543189915*^9, 
-  3.8038895758136225`*^9}},ExpressionUUID->"31ef2a16-9225-41aa-a256-\
+ CellChangeTimes->{{3.803889543189915*^9, 3.8038895758136225`*^9}, {
+  3.803896274196954*^9, 3.8038962969820833`*^9}, {3.803896428919335*^9, 
+  3.803896478808967*^9}, {3.8038965141654963`*^9, 
+  3.803896534586907*^9}},ExpressionUUID->"31ef2a16-9225-41aa-a256-\
 5d0826451e68"]
 }, Open  ]]
 }, Open  ]]
@@ -689,7 +727,7 @@ Cell[CellGroupData[{
 Cell[21713, 601, 158, 3, 67, "Section",ExpressionUUID->"6b0357dc-82d0-455c-adda-5c5ddf4af1fc"],
 Cell[CellGroupData[{
 Cell[21896, 608, 161, 3, 54, "Subsection",ExpressionUUID->"25e7ab8c-23a6-4bb1-b6a6-a4eb2a9ff545"],
-Cell[22060, 613, 720, 22, 35, "Text",ExpressionUUID->"31ef2a16-9225-41aa-a256-5d0826451e68"]
+Cell[22060, 613, 2041, 60, 85, "Text",ExpressionUUID->"31ef2a16-9225-41aa-a256-5d0826451e68"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
