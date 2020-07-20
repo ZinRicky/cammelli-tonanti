@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1951,         65]
-NotebookOptionsPosition[      1225,         43]
-NotebookOutlinePosition[      1745,         61]
-CellTagsIndexPosition[      1702,         58]
+NotebookDataLength[      8064,        225]
+NotebookOptionsPosition[      6739,        195]
+NotebookOutlinePosition[      7260,        213]
+CellTagsIndexPosition[      7217,        210]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -37,13 +37,165 @@ Cammelli Tonanti, ovvero Riccardo Cazzin e Francesco Tognetti\
 Cell["Universit\[AGrave] degli Studi di Padova", "Institution",
  CellChangeTimes->{{3.8021092164581184`*^9, 
   3.8021092228998795`*^9}},ExpressionUUID->"8f4b1b9b-5866-424a-b12a-\
-2d38ff3544c3"]
+2d38ff3544c3"],
+
+Cell[TextData[{
+ "Le iterazioni della ",
+ StyleBox["mappa logistica",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["f", "\[Mu]"], "=", 
+    RowBox[{"\[Mu]", "\[VeryThinSpace]", 
+     RowBox[{"x", "(", 
+      RowBox[{"1", "-", "x"}], ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "01c5915d-d709-4234-93d5-a5ee58a3a5c7"],
+ ", che dipende dal parametro positivo ",
+ Cell[BoxData[
+  FormBox["\[Mu]", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "b064c87c-d113-4fdf-a3b4-cdab6b844c35"],
+ ", costituiscono (a prima vista) una versione discreta della dinamica \
+continua descritta dall\[CloseCurlyQuote]equazione logistica. A differenza di \
+quest\[CloseCurlyQuote]ultima, per\[OGrave], la dinamica discreta della mappa \
+logistica \[EGrave] enormemente complicata."
+}], "Abstract",
+ CellChangeTimes->{{3.8042220873515196`*^9, 
+  3.8042221477475986`*^9}},ExpressionUUID->"14a02761-ca1e-4556-80fb-\
+cb64eb2f766a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Orbite e attrattivit\[AGrave].", "Section",
+ CellChangeTimes->{{3.8042222707213345`*^9, 3.804222283802484*^9}, {
+   3.804222940943735*^9, 3.804222952190799*^9}, {3.8042230038921824`*^9, 
+   3.8042230188644085`*^9}, 
+   3.8042231026860943`*^9},ExpressionUUID->"8daa70bd-d01f-4887-8a18-\
+b34ed4629d17"],
+
+Cell["", "Text",ExpressionUUID->"b381e4b7-b8e8-403d-bbb2-d1fb42e6bf6f"],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"\[Mu]_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{"\[Mu]", " ", "x", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", "x"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fn", "[", 
+   RowBox[{"\[Mu]_", ",", "x_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{"NestList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"\[Mu]", ",", "#"}], "]"}], "&"}], ",", "x", ",", "n"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.804223389343317*^9, 3.8042234503796372`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"e4c43776-10b2-4d05-aa5e-fff33caa31d5"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"graficoOrbita", "[", 
+   RowBox[{"\[Mu]_", ",", "x_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{"With", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"pts", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\[Xi]", ",", "\[Xi]"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\[Xi]", ",", 
+          RowBox[{"fn", "[", 
+           RowBox[{"\[Mu]", ",", "x", ",", "n"}], "]"}]}], "}"}]}], "]"}]}], 
+     "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{"\[Mu]", ",", "t"}], "]"}], ",", "t"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", 
+        RowBox[{"Min", "[", 
+         RowBox[{"x", ",", "0"}], "]"}], ",", 
+        RowBox[{"Max", "[", 
+         RowBox[{"x", ",", "1"}], "]"}]}], "}"}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"{", "Black", "}"}], "}"}]}], ",", 
+      RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+      RowBox[{"Epilog", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", "Thin", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Line", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"First", "[", "#", "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"First", "[", 
+                   RowBox[{"First", "@", "#"}], "]"}], ",", 
+                  RowBox[{"Last", "[", 
+                   RowBox[{"Last", "@", "#"}], "]"}]}], "}"}], ",", 
+                RowBox[{"Last", "[", "#", "]"}]}], "}"}], "]"}], "&"}], "/@", 
+            RowBox[{"Partition", "[", 
+             RowBox[{"pts", ",", "2", ",", "1"}], "]"}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Red", ",", "Thick", ",", 
+           RowBox[{"Point", "/@", 
+            RowBox[{"Drop", "[", 
+             RowBox[{"pts", ",", 
+              RowBox[{"-", "1"}]}], "]"}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Cyan", ",", "Thick", ",", 
+           RowBox[{"Point", "[", 
+            RowBox[{"pts", "//", "Last"}], "]"}]}], "}"}]}], "}"}]}]}], 
+     "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.8042234545106983`*^9, {3.8042234861250114`*^9, 3.8042234865231824`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"60037083-3e7e-4028-add7-b373e8e32251"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"graficoOrbita", "[", 
+    RowBox[{"\[Mu]", ",", "x0", ",", "n"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Mu]", ",", "1.2"}], "}"}], ",", "0", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x0", ",", "0.4"}], "}"}], ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n", ",", "21"}], "}"}], ",", 
+     RowBox[{"Range", "[", 
+      RowBox[{"1", ",", "201", ",", "10"}], "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.804223561242202*^9, 3.804223596633503*^9}, {
+  3.8042236812127485`*^9, 3.804223704585466*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"f1b00c74-149c-468c-a30b-5c951df4d229"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowToolbars->"EditBar",
 WindowSize->{582.6, 493.2},
-WindowMargins->{{279, Automatic}, {Automatic, 40.199999999999996`}},
+WindowMargins->{{43.8, Automatic}, {Automatic, 14.399999999999999`}},
 FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
 StyleDefinitions->FrontEnd`FileName[{"Article"}, "JournalArticle.nb", 
   CharacterEncoding -> "UTF-8"],
@@ -64,7 +216,15 @@ Cell[CellGroupData[{
 Cell[580, 22, 181, 3, 78, "Title",ExpressionUUID->"bd676067-3d4b-46b5-ba19-a4e7aed40d54"],
 Cell[CellGroupData[{
 Cell[786, 29, 215, 5, 44, "Author",ExpressionUUID->"78ec2e16-cfea-4e60-94dd-59fa8c6346cf"],
-Cell[1004, 36, 193, 3, 14, "Institution",ExpressionUUID->"8f4b1b9b-5866-424a-b12a-2d38ff3544c3"]
+Cell[1004, 36, 193, 3, 14, "Institution",ExpressionUUID->"8f4b1b9b-5866-424a-b12a-2d38ff3544c3"],
+Cell[1200, 41, 1005, 26, 178, "Abstract",ExpressionUUID->"14a02761-ca1e-4556-80fb-cb64eb2f766a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2242, 72, 306, 5, 50, "Section",ExpressionUUID->"8daa70bd-d01f-4887-8a18-b34ed4629d17"],
+Cell[2551, 79, 71, 0, 22, "Text",ExpressionUUID->"b381e4b7-b8e8-403d-bbb2-d1fb42e6bf6f"],
+Cell[2625, 81, 690, 18, 64, "Input",ExpressionUUID->"e4c43776-10b2-4d05-aa5e-fff33caa31d5"],
+Cell[3318, 101, 2596, 67, 202, "Input",ExpressionUUID->"60037083-3e7e-4028-add7-b373e8e32251"],
+Cell[5917, 170, 794, 21, 47, "Input",ExpressionUUID->"f1b00c74-149c-468c-a30b-5c951df4d229"]
 }, Open  ]]
 }, Open  ]]
 }
