@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13955,        384]
-NotebookOptionsPosition[     12347,        351]
-NotebookOutlinePosition[     12868,        369]
-CellTagsIndexPosition[     12825,        366]
+NotebookDataLength[     18274,        508]
+NotebookOptionsPosition[     16127,        466]
+NotebookOutlinePosition[     16648,        484]
+CellTagsIndexPosition[     16605,        481]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -235,12 +235,118 @@ iniziale ",
    TraditionalForm]],
   FormatType->"TraditionalForm",ExpressionUUID->
   "683c1c85-8d7a-4385-933a-11d1d2d34e1a"],
- " tale che "
+ " tale che ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["f", "\[Mu]"], "(", 
+     SubscriptBox["x", 
+      SubscriptBox["f", "\[Mu]"]], ")"}], "=", 
+    SubscriptBox["x", 
+     SubscriptBox["f", "\[Mu]"]]}], TraditionalForm]],ExpressionUUID->
+  "c874f670-f874-4df5-a6eb-b0d97cc7d25e"],
+ "."
 }], "Text",
  CellChangeTimes->{{3.8047676989235487`*^9, 3.8047677379585257`*^9}, {
-  3.8047679468475523`*^9, 
-  3.8047679805503864`*^9}},ExpressionUUID->"f6de7216-f46c-483a-a2fa-\
+  3.8047679468475523`*^9, 3.8047679805503864`*^9}, {3.804768139973177*^9, 
+  3.8047681550003953`*^9}},ExpressionUUID->"f6de7216-f46c-483a-a2fa-\
 bceb5a9852a1"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Lemma 1",
+  FontWeight->"Bold",
+  FontSlant->"Plain"],
+ ". Per ogni ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", ">", "0"}], TraditionalForm]],ExpressionUUID->
+  "0ec7accc-5be6-4375-a797-595bc3d85c2e"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "\[Mu]"], TraditionalForm]],ExpressionUUID->
+  "2fc57a9a-73a7-41c8-84d7-1cdd9cdddb91"],
+ " ha come unici punti fissi ",
+ Cell[BoxData[
+  FormBox["0", TraditionalForm]],ExpressionUUID->
+  "feb3434d-cd70-45ef-8e72-760b975e949e"],
+ " e ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "-", 
+    FractionBox["1", "\[Mu]"]}], TraditionalForm]],ExpressionUUID->
+  "f7e55bc2-3829-4cf1-aac2-46d7c74b8a7b"],
+ "."
+}], "Lemma",
+ CellChangeTimes->{{3.8047681743702936`*^9, 
+  3.8047682120108705`*^9}},ExpressionUUID->"5c999253-9d93-443b-a74f-\
+d6cfa001cf25"],
+
+Cell[TextData[{
+ StyleBox["Dimostrazione",
+  FontSlant->"Italic"],
+ ". Si pu\[OGrave] lasciare a ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " la soluzione dell\[CloseCurlyQuote]equazione di punto fisso: si applica ",
+ StyleBox["First", "Code"],
+ " per rimuovere le espressioni condizionali, dato che il caso ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", "=", "1"}], TraditionalForm]],ExpressionUUID->
+  "1c4efea0-a548-4bb6-8930-cea607079701"],
+ " d\[AGrave] come unico punto fisso con molteplicit\[AGrave] doppia il punto \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "0"}], TraditionalForm]],ExpressionUUID->
+  "c234a45a-5596-49a7-836d-67cffa70c5da"],
+ ". I punti trovati sono quelli richiesti dal Lemma."
+}], "Proof",
+ CellChangeTimes->{{3.8047682620822315`*^9, 3.8047682644366555`*^9}, {
+  3.804768357533481*^9, 3.8047683905627155`*^9}, {3.8047685151225233`*^9, 
+  3.8047685461128078`*^9}},ExpressionUUID->"321a3734-c8de-42b9-90ff-\
+c265d149a34a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"First", "/@", 
+  RowBox[{"(", 
+   RowBox[{"x", "/.", 
+    RowBox[{"Solve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\[Mu]", ">", "0"}], ",", 
+        RowBox[{
+         RowBox[{"f", "[", 
+          RowBox[{"\[Mu]", ",", "x"}], "]"}], "\[Equal]", "x"}]}], "}"}], ",",
+       "x", ",", "Reals"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.8038085312048388`*^9, 3.8038086270091076`*^9}, {
+  3.8038086717749014`*^9, 3.8038086940701056`*^9}, {3.8047684118673553`*^9, 
+  3.804768419538139*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"84ae07a4-6c19-4498-9115-706b0c68c15c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "\[Mu]"}], "\[Mu]"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8038086766529226`*^9, 3.80380869485787*^9}, {
+  3.8047684043800015`*^9, 3.804768423036009*^9}},
+ CellLabel->"Out[29]=",ExpressionUUID->"db378df0-7b36-478c-a36f-5ab5ef2a1f79"]
+}, Open  ]],
+
+Cell["\[EmptySquare]", "QED",
+ CellChangeTimes->{{3.804768554668624*^9, 
+  3.804768574732355*^9}},ExpressionUUID->"3b35b5bf-6982-4813-be35-\
+6c816cc35f45"],
 
 Cell[TextData[{
  StyleBox["A priori",
@@ -250,11 +356,20 @@ Cell[TextData[{
   FormBox["\[DoubleStruckCapitalR]", TraditionalForm]],
   FormatType->"TraditionalForm",ExpressionUUID->
   "4b123744-48f8-4c5b-b6c9-d7e5fd4afe24"],
+ ". Coi prossimi lemmi, invece, mostriamo che lo studio pi\[UGrave] fecondo \
+avviene nell\[CloseCurlyQuote]intervallo ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "cbf139bd-1750-4c4a-b241-7d5805bba841"],
  "."
 }], "Text",
  CellChangeTimes->{{3.804767520544483*^9, 3.8047675232782593`*^9}, {
-   3.804767609979291*^9, 3.8047676291140594`*^9}, 
-   3.804767690342029*^9},ExpressionUUID->"53eb8088-ebd7-453f-99da-\
+   3.804767609979291*^9, 3.8047676291140594`*^9}, 3.804767690342029*^9, {
+   3.8047685994076996`*^9, 3.8047686061429477`*^9}, {3.8047686519872365`*^9, 
+   3.804768680476688*^9}},ExpressionUUID->"53eb8088-ebd7-453f-99da-\
 3ef0c65c4e76"],
 
 Cell[BoxData[
@@ -380,10 +495,19 @@ Cell[2195, 69, 502, 7, 50, "Section",ExpressionUUID->"8daa70bd-d01f-4887-8a18-b3
 Cell[2700, 78, 71, 0, 22, "Text",ExpressionUUID->"b381e4b7-b8e8-403d-bbb2-d1fb42e6bf6f"],
 Cell[2774, 80, 3238, 92, 118, "Text",ExpressionUUID->"2dc7e836-35b8-4b71-b83b-bfa27882fd3a"],
 Cell[6015, 174, 1565, 39, 134, "Input",ExpressionUUID->"e4c43776-10b2-4d05-aa5e-fff33caa31d5"],
-Cell[7583, 215, 894, 27, 43, "Text",ExpressionUUID->"f6de7216-f46c-483a-a2fa-bceb5a9852a1"],
-Cell[8480, 244, 503, 13, 22, "Text",ExpressionUUID->"53eb8088-ebd7-453f-99da-3ef0c65c4e76"],
-Cell[8986, 259, 2536, 65, 202, "Input",ExpressionUUID->"60037083-3e7e-4028-add7-b373e8e32251"],
-Cell[11525, 326, 794, 21, 47, "Input",ExpressionUUID->"f1b00c74-149c-468c-a30b-5c951df4d229"]
+Cell[7583, 215, 1247, 38, 44, "Text",ExpressionUUID->"f6de7216-f46c-483a-a2fa-bceb5a9852a1"],
+Cell[CellGroupData[{
+Cell[8855, 257, 830, 28, 31, "Lemma",ExpressionUUID->"5c999253-9d93-443b-a74f-d6cfa001cf25"],
+Cell[9688, 287, 969, 24, 56, "Proof",ExpressionUUID->"321a3734-c8de-42b9-90ff-c265d149a34a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10694, 316, 630, 16, 28, "Input",ExpressionUUID->"84ae07a4-6c19-4498-9115-706b0c68c15c"],
+Cell[11327, 334, 346, 8, 47, "Output",ExpressionUUID->"db378df0-7b36-478c-a36f-5ab5ef2a1f79"]
+}, Open  ]],
+Cell[11688, 345, 155, 3, 24, "QED",ExpressionUUID->"3b35b5bf-6982-4813-be35-6c816cc35f45"],
+Cell[11846, 350, 917, 22, 39, "Text",ExpressionUUID->"53eb8088-ebd7-453f-99da-3ef0c65c4e76"],
+Cell[12766, 374, 2536, 65, 202, "Input",ExpressionUUID->"60037083-3e7e-4028-add7-b373e8e32251"],
+Cell[15305, 441, 794, 21, 47, "Input",ExpressionUUID->"f1b00c74-149c-468c-a30b-5c951df4d229"]
 }, Open  ]]
 }, Open  ]]
 }
