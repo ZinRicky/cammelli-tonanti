@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     59541,       1693]
-NotebookOptionsPosition[     53065,       1593]
-NotebookOutlinePosition[     53583,       1611]
-CellTagsIndexPosition[     53540,       1608]
+NotebookDataLength[     59021,       1678]
+NotebookOptionsPosition[     52546,       1578]
+NotebookOutlinePosition[     53064,       1596]
+CellTagsIndexPosition[     53021,       1593]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1506,25 +1506,10 @@ Cell["\[EmptySquare]", "QED",
   3.8052146686191845`*^9}},ExpressionUUID->"29f0cf41-e963-4ed8-a68a-\
 efde28c46e73"],
 
-Cell[TextData[{
- "Estendendo in modo analogo la ricerca dei punti fissi di ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[{"f", "\[Mu]", "n"},
-    "Subsuperscript"], TraditionalForm]],
-  CellChangeTimes->{{3.804766546998644*^9, 3.8047665505641403`*^9}},
-  ExpressionUUID->"7df45cab-fa77-4b68-95c0-ecdbbc049db4"],
- ", possiamo tracciare un grafico dei suoi punti fissi in funzione di ",
- Cell[BoxData[
-  FormBox["\[Mu]", TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
-  "091b63f7-1f60-4b1e-8241-f3f549b22c4f"],
- ":"
-}], "Text",
- CellChangeTimes->{{3.80521755019427*^9, 3.8052175543704624`*^9}, {
-  3.805217587438518*^9, 
-  3.8052176587253523`*^9}},ExpressionUUID->"5fe7f35f-9885-4265-840d-\
-b2b6ae708882"],
+Cell["Questo ragionamento si pu\[OGrave] ", "Text",
+ CellChangeTimes->{{3.8052228127980022`*^9, 
+  3.805222820158252*^9}},ExpressionUUID->"d33a4a00-4e80-474a-bb98-\
+6af222445326"],
 
 Cell[BoxData[
  RowBox[{"ListPlot", "[", "\[IndentingNewLine]", 
@@ -1559,7 +1544,7 @@ Cell[BoxData[
          RowBox[{"n", ",", 
           SuperscriptBox["2", 
            RowBox[{"Range", "[", 
-            RowBox[{"0", ",", "2"}], "]"}]]}], "}"}]}], "\[IndentingNewLine]",
+            RowBox[{"0", ",", "3"}], "]"}]]}], "}"}]}], "\[IndentingNewLine]",
         "]"}], ",", "\[IndentingNewLine]", "2"}], "\[IndentingNewLine]", 
      "]"}]}], ",", "\[IndentingNewLine]", 
    RowBox[{"Ticks", "\[Rule]", 
@@ -1585,8 +1570,8 @@ Cell[BoxData[
    3.8052177508141785`*^9, 3.805217784010309*^9}, {3.805217853045702*^9, 
    3.8052178582592707`*^9}, 3.80521806918993*^9, {3.8052181289908285`*^9, 
    3.805218134144209*^9}, 3.805218186433695*^9, {3.805222015467023*^9, 
-   3.8052221440733457`*^9}, {3.805222176270364*^9, 
-   3.8052222596822987`*^9}},ExpressionUUID->"c99f57b9-8b2d-45e5-946a-\
+   3.8052221440733457`*^9}, {3.805222176270364*^9, 3.8052222596822987`*^9}, 
+   3.8052223425586753`*^9},ExpressionUUID->"c99f57b9-8b2d-45e5-946a-\
 5255de1b278b"]
 }, Open  ]]
 }, Open  ]]
@@ -1621,7 +1606,7 @@ Cell[CellGroupData[{
 Cell[2195, 69, 502, 7, 50, "Section",ExpressionUUID->"8daa70bd-d01f-4887-8a18-b34ed4629d17"],
 Cell[2700, 78, 71, 0, 22, "Text",ExpressionUUID->"b381e4b7-b8e8-403d-bbb2-d1fb42e6bf6f"],
 Cell[2774, 80, 3004, 84, 84, "Text",ExpressionUUID->"2dc7e836-35b8-4b71-b83b-bfa27882fd3a"],
-Cell[5781, 166, 1983, 49, 134, "Input",ExpressionUUID->"e4c43776-10b2-4d05-aa5e-fff33caa31d5"],
+Cell[5781, 166, 1983, 49, 164, "Input",ExpressionUUID->"e4c43776-10b2-4d05-aa5e-fff33caa31d5"],
 Cell[7767, 217, 1247, 38, 44, "Text",ExpressionUUID->"f6de7216-f46c-483a-a2fa-bceb5a9852a1"],
 Cell[CellGroupData[{
 Cell[9039, 259, 830, 28, 31, "Lemma",ExpressionUUID->"5c999253-9d93-443b-a74f-d6cfa001cf25"],
@@ -1691,8 +1676,8 @@ Cell[47777, 1447, 330, 10, 22, "ProofContinuation",ExpressionUUID->"ea2ae15d-b28
 Cell[48110, 1459, 1302, 37, 98, "Input",ExpressionUUID->"0109fe01-a64e-4e0f-8f1c-233c6d51239a"],
 Cell[49415, 1498, 195, 3, 22, "Text",ExpressionUUID->"ff1b4d9e-ad9c-4d48-b866-f12f7aeb3cff"],
 Cell[49613, 1503, 159, 3, 24, "QED",ExpressionUUID->"29f0cf41-e963-4ed8-a68a-efde28c46e73"],
-Cell[49775, 1508, 722, 18, 25, "Text",ExpressionUUID->"5fe7f35f-9885-4265-840d-b2b6ae708882"],
-Cell[50500, 1528, 2537, 61, 261, "Input",ExpressionUUID->"c99f57b9-8b2d-45e5-946a-5255de1b278b"]
+Cell[49775, 1508, 179, 3, 22, "Text",ExpressionUUID->"d33a4a00-4e80-474a-bb98-6af222445326"],
+Cell[49957, 1513, 2561, 61, 261, "Input",ExpressionUUID->"c99f57b9-8b2d-45e5-946a-5255de1b278b"]
 }, Open  ]]
 }, Open  ]]
 }
