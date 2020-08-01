@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     59021,       1678]
-NotebookOptionsPosition[     52546,       1578]
-NotebookOutlinePosition[     53064,       1596]
-CellTagsIndexPosition[     53021,       1593]
+NotebookDataLength[     66123,       1854]
+NotebookOptionsPosition[     59548,       1753]
+NotebookOutlinePosition[     60066,       1771]
+CellTagsIndexPosition[     60023,       1768]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1350,8 +1350,7 @@ Cell[TextData[{
  " e ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["x", "2"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["x", "2"], TraditionalForm]],ExpressionUUID->
   "4bc60122-7ba2-4e7b-9276-c19ce13d7465"],
  " sono punti fissi di ",
  Cell[BoxData[
@@ -1506,10 +1505,186 @@ Cell["\[EmptySquare]", "QED",
   3.8052146686191845`*^9}},ExpressionUUID->"29f0cf41-e963-4ed8-a68a-\
 efde28c46e73"],
 
-Cell["Questo ragionamento si pu\[OGrave] ", "Text",
- CellChangeTimes->{{3.8052228127980022`*^9, 
-  3.805222820158252*^9}},ExpressionUUID->"d33a4a00-4e80-474a-bb98-\
+Cell[TextData[{
+ "Ogni nuova biforcazione \[EGrave] prodotta dallo stesso fenomeno analitico. \
+Alla ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "4394afba-bcf9-492c-97b0-6b271f415dcf"],
+ "-esima biforcazione, infatti, le orbite attrattive convergono ai punti \
+fissi di ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"f", "\[Mu]", 
+     SuperscriptBox["2", "n"]},
+    "Subsuperscript"], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"83c0ef8a-fe8d-4a62-a454-196d6b423bcc"],
+ " che abbiano modulo della derivata strettamente minore di ",
+ Cell[BoxData[
+  FormBox["1", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "f6bee4dd-142b-46c1-84e1-e30cf728e806"],
+ ": posseggono questa caratteristica i punti fissi di ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"f", "\[Mu]", 
+     SuperscriptBox["2", "n"]},
+    "Subsuperscript"], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"3ee30161-b67c-4054-88b3-92737e8d6ac4"],
+ " che non sono anche punti fissi di ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"f", "\[Mu]", 
+     SuperscriptBox["2", 
+      RowBox[{"n", "-", "1"}]]},
+    "Subsuperscript"], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"1c8c9960-0cf8-4378-b640-47f9cedcd068"],
+ ". Tali punti attrattivi compaiono non appena i punti fissi di ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"f", "\[Mu]", 
+     SuperscriptBox["2", "n"]},
+    "Subsuperscript"], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"374f8365-82c7-459e-bcb5-6c061f2cceaa"],
+ " che sono anche punti fissi di ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"f", "\[Mu]", 
+     SuperscriptBox["2", 
+      RowBox[{"n", "-", "1"}]]},
+    "Subsuperscript"], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"5c8fe3fc-e768-44bd-bec4-5184d94c0145"],
+ " hanno derivata di modulo maggiore di ",
+ Cell[BoxData[
+  FormBox["1", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "0f7674e6-d82a-4925-be20-5f67ba90e19e"],
+ "; come \[EGrave] possibile vedere nel grafico sotto, infatti, la comparsa \
+di nuovi attrattori \[EGrave] strettamente collegata al superamento della \
+soglia 1 per il modulo della derivata calcolata negli attrattori \
+\[OpenCurlyDoubleQuote]precedenti\[CloseCurlyDoubleQuote]."
+}], "Text",
+ CellChangeTimes->{{3.8052228127980022`*^9, 3.805222820158252*^9}, {
+  3.8052791449594955`*^9, 3.8052791697774663`*^9}, {3.805279217185012*^9, 
+  3.805279227586626*^9}, {3.8052793101889496`*^9, 3.8052794611335096`*^9}, {
+  3.8052795179520693`*^9, 3.8052795652992315`*^9}, {3.805279598688076*^9, 
+  3.805279684369023*^9}},ExpressionUUID->"d33a4a00-4e80-474a-bb98-\
 6af222445326"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"GraphicsRow", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"fn", "[", 
+           RowBox[{"\[Mu]", ",", "x", ",", "n"}], "]"}], ",", "x"}], "}"}], 
+        ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Ticks", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Range", "[", 
+            RowBox[{"0", ",", "1", ",", ".1"}], "]"}], ",", 
+           RowBox[{"Range", "[", 
+            RowBox[{"0", ",", "1", ",", ".1"}], "]"}]}], "}"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Epilog", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"Red", ",", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "x"}], "}"}], "]"}], "/.", 
+            RowBox[{"Solve", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"fn", "[", 
+                  RowBox[{
+                   RowBox[{"Rationalize", "@", "\[Mu]"}], ",", "x", ",", 
+                   "n"}], "]"}], "\[Equal]", "x"}], ",", 
+                RowBox[{"x", "\[GreaterEqual]", "0"}]}], "}"}], ",", "x", ",",
+               "Reals"}], "]"}]}]}], "}"}]}]}], "\[IndentingNewLine]", "]"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"Plot", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Abs", "[", 
+            RowBox[{"D", "[", 
+             RowBox[{
+              RowBox[{"fn", "[", 
+               RowBox[{"\[Mu]", ",", "y", ",", "n"}], "]"}], ",", "y"}], 
+             "]"}], "]"}], "/.", 
+           RowBox[{"y", "\[Rule]", "x"}]}], ",", "1"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "5"}], "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Ticks", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Range", "[", 
+            RowBox[{"0", ",", "1", ",", ".1"}], "]"}], ",", 
+           RowBox[{"Range", "[", 
+            RowBox[{"0", ",", "5"}], "]"}]}], "}"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Epilog", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"Red", ",", 
+           RowBox[{
+            RowBox[{"Point", "[", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", 
+               RowBox[{"Abs", "[", 
+                RowBox[{
+                 RowBox[{"D", "[", 
+                  RowBox[{
+                   RowBox[{"fn", "[", 
+                    RowBox[{"\[Mu]", ",", "y", ",", "n"}], "]"}], ",", "y"}], 
+                  "]"}], "/.", 
+                 RowBox[{"y", "\[Rule]", "x"}]}], "]"}]}], "}"}], "]"}], "/.", 
+            RowBox[{"Solve", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"fn", "[", 
+                  RowBox[{
+                   RowBox[{"Rationalize", "@", "\[Mu]"}], ",", "x", ",", 
+                   "n"}], "]"}], "\[Equal]", "x"}], ",", 
+                RowBox[{"x", "\[GreaterEqual]", "0"}]}], "}"}], ",", "x", ",",
+               "Reals"}], "]"}]}]}], "}"}]}]}], "\[IndentingNewLine]", 
+       "]"}]}], "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"\[Mu]", ",", "3", ",", "3.57"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", 
+     SuperscriptBox["2", 
+      RowBox[{"Range", "[", "3", "]"}]]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{3.805279698412368*^9},
+ CellLabel->"In[15]:=",ExpressionUUID->"b8c600b2-36dd-442d-8a66-a985b50d13ef"],
 
 Cell[BoxData[
  RowBox[{"ListPlot", "[", "\[IndentingNewLine]", 
@@ -1600,14 +1775,14 @@ Cell[580, 22, 181, 3, 78, "Title",ExpressionUUID->"bd676067-3d4b-46b5-ba19-a4e7a
 Cell[CellGroupData[{
 Cell[786, 29, 215, 5, 44, "Author",ExpressionUUID->"78ec2e16-cfea-4e60-94dd-59fa8c6346cf"],
 Cell[1004, 36, 193, 3, 14, "Institution",ExpressionUUID->"8f4b1b9b-5866-424a-b12a-2d38ff3544c3"],
-Cell[1200, 41, 958, 23, 133, "Abstract",ExpressionUUID->"14a02761-ca1e-4556-80fb-cb64eb2f766a"]
+Cell[1200, 41, 958, 23, 89, "Abstract",ExpressionUUID->"14a02761-ca1e-4556-80fb-cb64eb2f766a"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[2195, 69, 502, 7, 50, "Section",ExpressionUUID->"8daa70bd-d01f-4887-8a18-b34ed4629d17"],
 Cell[2700, 78, 71, 0, 22, "Text",ExpressionUUID->"b381e4b7-b8e8-403d-bbb2-d1fb42e6bf6f"],
-Cell[2774, 80, 3004, 84, 84, "Text",ExpressionUUID->"2dc7e836-35b8-4b71-b83b-bfa27882fd3a"],
-Cell[5781, 166, 1983, 49, 164, "Input",ExpressionUUID->"e4c43776-10b2-4d05-aa5e-fff33caa31d5"],
-Cell[7767, 217, 1247, 38, 44, "Text",ExpressionUUID->"f6de7216-f46c-483a-a2fa-bceb5a9852a1"],
+Cell[2774, 80, 3004, 84, 65, "Text",ExpressionUUID->"2dc7e836-35b8-4b71-b83b-bfa27882fd3a"],
+Cell[5781, 166, 1983, 49, 134, "Input",ExpressionUUID->"e4c43776-10b2-4d05-aa5e-fff33caa31d5"],
+Cell[7767, 217, 1247, 38, 27, "Text",ExpressionUUID->"f6de7216-f46c-483a-a2fa-bceb5a9852a1"],
 Cell[CellGroupData[{
 Cell[9039, 259, 830, 28, 31, "Lemma",ExpressionUUID->"5c999253-9d93-443b-a74f-d6cfa001cf25"],
 Cell[9872, 289, 969, 24, 56, "Proof",ExpressionUUID->"321a3734-c8de-42b9-90ff-c265d149a34a"]
@@ -1667,17 +1842,18 @@ Cell[40824, 1234, 157, 3, 24, "QED",ExpressionUUID->"4a1d8f8a-13e2-46bf-97ad-6ff
 Cell[40996, 1240, 2176, 63, 60, "Text",ExpressionUUID->"0403aaf0-c35d-4330-8fc6-29e56695f07c"],
 Cell[CellGroupData[{
 Cell[43197, 1307, 830, 27, 26, "Lemma",ExpressionUUID->"140376d0-c5e0-42f9-9620-739a59a717d5"],
-Cell[44030, 1336, 1311, 37, 45, "Proof",ExpressionUUID->"ad62e82d-1005-4975-9ad8-4514814f64e8"]
+Cell[44030, 1336, 1278, 36, 45, "Proof",ExpressionUUID->"ad62e82d-1005-4975-9ad8-4514814f64e8"]
 }, Open  ]],
-Cell[45356, 1376, 510, 14, 28, "Input",ExpressionUUID->"67f27dcf-35ca-4c81-9006-b77bf7c38877"],
-Cell[45869, 1392, 877, 23, 44, "ProofContinuation",ExpressionUUID->"a95ffac3-5a4a-42d4-b4f5-08796d02bd8a"],
-Cell[46749, 1417, 1025, 28, 81, "Input",ExpressionUUID->"ec01b02c-1b76-49d4-984c-018ce19570e3"],
-Cell[47777, 1447, 330, 10, 22, "ProofContinuation",ExpressionUUID->"ea2ae15d-b28c-4c14-81c8-b5571e0d0a2e"],
-Cell[48110, 1459, 1302, 37, 98, "Input",ExpressionUUID->"0109fe01-a64e-4e0f-8f1c-233c6d51239a"],
-Cell[49415, 1498, 195, 3, 22, "Text",ExpressionUUID->"ff1b4d9e-ad9c-4d48-b866-f12f7aeb3cff"],
-Cell[49613, 1503, 159, 3, 24, "QED",ExpressionUUID->"29f0cf41-e963-4ed8-a68a-efde28c46e73"],
-Cell[49775, 1508, 179, 3, 22, "Text",ExpressionUUID->"d33a4a00-4e80-474a-bb98-6af222445326"],
-Cell[49957, 1513, 2561, 61, 261, "Input",ExpressionUUID->"c99f57b9-8b2d-45e5-946a-5255de1b278b"]
+Cell[45323, 1375, 510, 14, 28, "Input",ExpressionUUID->"67f27dcf-35ca-4c81-9006-b77bf7c38877"],
+Cell[45836, 1391, 877, 23, 44, "ProofContinuation",ExpressionUUID->"a95ffac3-5a4a-42d4-b4f5-08796d02bd8a"],
+Cell[46716, 1416, 1025, 28, 81, "Input",ExpressionUUID->"ec01b02c-1b76-49d4-984c-018ce19570e3"],
+Cell[47744, 1446, 330, 10, 22, "ProofContinuation",ExpressionUUID->"ea2ae15d-b28c-4c14-81c8-b5571e0d0a2e"],
+Cell[48077, 1458, 1302, 37, 47, "Input",ExpressionUUID->"0109fe01-a64e-4e0f-8f1c-233c6d51239a"],
+Cell[49382, 1497, 195, 3, 22, "Text",ExpressionUUID->"ff1b4d9e-ad9c-4d48-b866-f12f7aeb3cff"],
+Cell[49580, 1502, 159, 3, 24, "QED",ExpressionUUID->"29f0cf41-e963-4ed8-a68a-efde28c46e73"],
+Cell[49742, 1507, 2940, 70, 68, "Text",ExpressionUUID->"d33a4a00-4e80-474a-bb98-6af222445326"],
+Cell[52685, 1579, 4271, 107, 418, "Input",ExpressionUUID->"b8c600b2-36dd-442d-8a66-a985b50d13ef"],
+Cell[56959, 1688, 2561, 61, 261, "Input",ExpressionUUID->"c99f57b9-8b2d-45e5-946a-5255de1b278b"]
 }, Open  ]]
 }, Open  ]]
 }
