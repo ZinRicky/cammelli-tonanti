@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     81475,       2206]
-NotebookOptionsPosition[     74034,       2096]
-NotebookOutlinePosition[     74552,       2114]
-CellTagsIndexPosition[     74509,       2111]
+NotebookDataLength[     81534,       2205]
+NotebookOptionsPosition[     74093,       2095]
+NotebookOutlinePosition[     74611,       2113]
+CellTagsIndexPosition[     74568,       2110]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2047,13 +2047,12 @@ Cell[BoxData[
   RowBox[{"sas", "=", 
    RowBox[{
    "Import", "[", 
-    "\"\<D:\\\\Universit\[AGrave]\\\\Laboratorio computazionale\\\\Esercizi\\\
-\\01_Esame\\\\03_Dati\\\\[Corrente] Dati caotici.csv\>\"", "]"}]}], 
-  ";"}]], "Input",
+    "\"\<https://raw.githubusercontent.com/ZinRicky/cammelli-tonanti/master/\
+01_Esame/03_Dati/C_caotica.csv?token=AGKK2XEZJQWKZC7BEKVE5JC7FGB34\>\"", 
+    "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.805450019865193*^9, 3.805450095071669*^9}, {
-  3.805450367797043*^9, 
-  3.8054503764546337`*^9}},ExpressionUUID->"0c7fc5c4-7321-42ad-843a-\
-0174c249bb6a"],
+   3.805450367797043*^9, 3.8054503764546337`*^9}, 3.8055449835444965`*^9},
+ CellLabel->"In[12]:=",ExpressionUUID->"0c7fc5c4-7321-42ad-843a-0174c249bb6a"],
 
 Cell[BoxData[
  RowBox[{"Rasterize", "[", 
@@ -2204,8 +2203,8 @@ Cell[65152, 1890, 715, 18, 51, "Input",ExpressionUUID->"61d742ac-3295-4abd-b82a-
 Cell[65870, 1910, 1352, 31, 38, "Input",ExpressionUUID->"a51c225a-356c-4310-9226-5d91ad447b37"],
 Cell[67225, 1943, 345, 7, 39, "Text",ExpressionUUID->"5fd49479-2688-45a4-a1ed-dce54f6e2854"],
 Cell[67573, 1952, 4465, 90, 90, "Input",ExpressionUUID->"c14cc0c0-50e0-4141-b426-3b13740c819a"],
-Cell[72041, 2044, 421, 11, 81, "Input",ExpressionUUID->"0c7fc5c4-7321-42ad-843a-0174c249bb6a"],
-Cell[72465, 2057, 1541, 35, 64, "Input",ExpressionUUID->"f2e9fbbd-3247-4dde-8f74-26aa6bbd7374"]
+Cell[72041, 2044, 480, 10, 81, "Input",ExpressionUUID->"0c7fc5c4-7321-42ad-843a-0174c249bb6a"],
+Cell[72524, 2056, 1541, 35, 64, "Input",ExpressionUUID->"f2e9fbbd-3247-4dde-8f74-26aa6bbd7374"]
 }, Open  ]]
 }, Open  ]]
 }

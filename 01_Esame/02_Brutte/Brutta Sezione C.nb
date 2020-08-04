@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    507386,       8965]
-NotebookOptionsPosition[    500571,       8873]
-NotebookOutlinePosition[    501004,       8890]
-CellTagsIndexPosition[    500961,       8887]
+NotebookDataLength[    507056,       8956]
+NotebookOptionsPosition[    500338,       8865]
+NotebookOutlinePosition[    500771,       8882]
+CellTagsIndexPosition[    500728,       8879]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -8823,31 +8823,33 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{
   RowBox[{"Export", "[", 
-   RowBox[{"\"\<sas56425.csv\>\"", ",", 
+   RowBox[{"\"\<sas34.csv\>\"", ",", 
     RowBox[{"N", "@", 
      RowBox[{"attrattivoData", "[", 
       RowBox[{
-       SuperscriptBox["10", "4"], ",", "100", ",", 
+       SuperscriptBox["10", "4"], ",", "50", ",", 
        RowBox[{"{", 
-        RowBox[{"3.56", ",", "4", ",", 
-         RowBox[{"2", "*", 
-          SuperscriptBox["10", 
-           RowBox[{"-", "5"}]]}]}], "}"}]}], "]"}]}]}], "]"}], "//", 
+        RowBox[{"3", ",", "4", ",", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "5"}]]}], "}"}]}], "]"}]}]}], "]"}], "//", 
   "AbsoluteTiming"}]], "Input",
  CellChangeTimes->{{3.805206375881831*^9, 3.805206396061289*^9}, {
   3.8052066927478237`*^9, 3.805206693841034*^9}, {3.8052070398625255`*^9, 
   3.8052070544587946`*^9}, {3.805432218447508*^9, 3.8054322340958414`*^9}, {
   3.8054456354184074`*^9, 3.805445661501022*^9}, {3.8054492844120183`*^9, 
-  3.80544928818517*^9}, {3.805541436859459*^9, 3.8055414407872257`*^9}},
- CellLabel->"In[7]:=",ExpressionUUID->"99b14918-6765-4c8a-97ea-eb8968a49482"],
+  3.80544928818517*^9}, {3.805541436859459*^9, 3.8055414407872257`*^9}, {
+  3.805542982893856*^9, 3.8055430194037523`*^9}, {3.8055435845114613`*^9, 
+  3.8055435940857253`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"99b14918-6765-4c8a-97ea-eb8968a49482"],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"139.6751264`", ",", "\<\"sas56425.csv\"\>"}], "}"}]], "Output",
+  RowBox[{"493.5977329`", ",", "\<\"sas34.csv\"\>"}], "}"}]], "Output",
  CellChangeTimes->{3.8054322291717014`*^9, 3.805432387923422*^9, 
   3.8054456579005127`*^9, 3.8054481960880136`*^9, 3.8054495321572266`*^9, 
-  3.8055414457798257`*^9, 3.805541593872439*^9},
- CellLabel->"Out[7]=",ExpressionUUID->"a4e78eb9-4065-46f2-9523-9d6d6d6a7121"]
+  3.8055414457798257`*^9, 3.805541593872439*^9, 3.8055429121204643`*^9, 
+  3.805543016988415*^9, 3.8055431967428617`*^9, 3.8055440946058054`*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"f0a1afa6-c8b1-443a-99ce-f389ed5fb6aa"]
 }, Open  ]],
 
 Cell["\<\
@@ -8856,17 +8858,7 @@ efficiente di quella cui avevo pensato.\
 \>", "Text",
  CellChangeTimes->{{3.8052140682220545`*^9, 
   3.805214090181446*^9}},ExpressionUUID->"ac0d22e5-ba01-478b-976f-\
-97d5a724e126"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"codaOrbita", "=", 
-   RowBox[{
-   "Import", "[", 
-    "\"\<D:\\\\Universit\[AGrave]\\\\Laboratorio computazionale\\\\Esercizi\\\
-\\01_Esame\\\\03_Dati\\\\[Corrente] Dati 04.csv\>\"", "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.8054369721160784`*^9, 3.8054369876162405`*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"daf29205-bf72-47d3-a9a4-7eb328e14596"]
+97d5a724e126"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -8959,11 +8951,10 @@ Cell[496843, 8770, 590, 14, 32, "Input",ExpressionUUID->"82c2f88e-7bac-4955-8e33
 Cell[497436, 8786, 980, 27, 68, "Input",ExpressionUUID->"1339829f-11c0-4798-96a0-5910faf5ac3c"],
 Cell[498419, 8815, 152, 3, 28, "Input",ExpressionUUID->"e1917f6c-8f48-4f7c-ba94-58e578ef8e80"],
 Cell[CellGroupData[{
-Cell[498596, 8822, 885, 19, 74, "Input",ExpressionUUID->"99b14918-6765-4c8a-97ea-eb8968a49482"],
-Cell[499484, 8843, 371, 6, 55, "Output",ExpressionUUID->"a4e78eb9-4065-46f2-9523-9d6d6d6a7121"]
+Cell[498596, 8822, 951, 20, 51, "Input",ExpressionUUID->"99b14918-6765-4c8a-97ea-eb8968a49482"],
+Cell[499550, 8844, 466, 7, 32, "Output",ExpressionUUID->"f0a1afa6-c8b1-443a-99ce-f389ed5fb6aa"]
 }, Open  ]],
-Cell[499870, 8852, 267, 6, 58, "Text",ExpressionUUID->"ac0d22e5-ba01-478b-976f-97d5a724e126"],
-Cell[500140, 8860, 391, 8, 107, "Input",ExpressionUUID->"daf29205-bf72-47d3-a9a4-7eb328e14596"]
+Cell[500031, 8854, 267, 6, 58, "Text",ExpressionUUID->"ac0d22e5-ba01-478b-976f-97d5a724e126"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
