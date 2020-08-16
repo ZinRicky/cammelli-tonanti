@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9171,        264]
-NotebookOptionsPosition[      7708,        233]
-NotebookOutlinePosition[      8080,        249]
-CellTagsIndexPosition[      8037,        246]
+NotebookDataLength[     12877,        375]
+NotebookOptionsPosition[     11131,        341]
+NotebookOutlinePosition[     11503,        357]
+CellTagsIndexPosition[     11460,        354]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -228,7 +228,115 @@ Cell[TextData[{
 }], "Text",
  CellChangeTimes->{{3.8065851908116407`*^9, 
   3.806585286447641*^9}},ExpressionUUID->"60c2ce96-fa28-4570-9639-\
-81ae44437b2a"]
+81ae44437b2a"],
+
+Cell[TextData[{
+ "sia ora n>1, n\[NotEqual]3, vogliamo dimostrare \
+l\[CloseCurlyQuote]esistenza di un\[CloseCurlyQuote]orbita di periodo n\nper \
+fare questo costruiamo ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["J", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3e6244e4-e891-4bd1-a7b0-a6ba7c5418e0"],
+ "\[Subset]...\[Subset] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["J", "2"], "\[Subset]", 
+     SubscriptBox["J", "1"], "\[Subset]", 
+     SubscriptBox["J", "0"]}], "=", "I"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "12ba33f2-9682-47d5-83c0-63ca192b069d"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    SubscriptBox["J", "k"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3d448af5-82dd-48b7-ab5a-f52dc6fcf8e9"],
+ ")= ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["J", 
+    RowBox[{"k", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ee4140c4-3128-45de-9e8c-deee9190588e"],
+ " \[ForAll]k = 1 ... n-2\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", "k"], "(", 
+    SubscriptBox["J", "k"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "2ff3ca90-36b5-4174-bc78-83e23cbfd4bc"],
+ "=I\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", 
+     RowBox[{"n", "-", "1"}]], "(", 
+    SubscriptBox["J", 
+     RowBox[{"n", "-", "1"}]], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e43340a0-5b9b-4064-ae6c-37bbc3c1e933"],
+ "=I\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", "n"], "(", 
+    SubscriptBox["J", "n"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "4136c2c4-6b19-4db5-9c68-338a86388a42"],
+ "=I"
+}], "Text",
+ CellChangeTimes->{{3.806585503839639*^9, 
+  3.806585742934641*^9}},ExpressionUUID->"82c15f22-b08d-4a54-9b32-\
+b4bbf1734fa8"],
+
+Cell[TextData[{
+ "per costruire tale successione di intervalli possiamo usare l\
+\[CloseCurlyQuote]antimmagine.\nsappiamo che ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["J", "k"], "=", " ", 
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"-", "1"}]], "(", 
+     SubscriptBox["J", 
+      RowBox[{"k", "-", "1"}]], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "19e49449-4826-4bab-b147-081355a82a59"],
+ " e che tutte le orbite sono contenute in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ee3bb104-cb78-43d3-98f0-c803d428308c"]
+}], "Text",
+ CellChangeTimes->{{3.8065858307626457`*^9, 3.8065859109746456`*^9}, {
+  3.8065878171703568`*^9, 3.8065878243773565`*^9}, {3.806587854963356*^9, 
+  3.8065878697243505`*^9}},ExpressionUUID->"b9cbaa89-be67-41da-b326-\
+657e97149a48"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}], ",", "#"}], "]"}], "&"}], "/@", 
+     RowBox[{"Range", "[", "5", "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Mu]", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8065883420287895`*^9, 3.80658842149082*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"28e8e2f8-01a1-4a0f-b60d-fb8a2b711647"]
 }, Open  ]]
 },
 WindowSize->{958, 988},
@@ -264,7 +372,10 @@ Cell[CellGroupData[{
 Cell[6529, 196, 376, 10, 52, "Input",ExpressionUUID->"47cfdb2a-3e2d-4959-b456-cc4677c6c4a1"],
 Cell[6908, 208, 175, 3, 54, "Output",ExpressionUUID->"938d4e05-6687-46ee-bea7-e30464d29d74"]
 }, Open  ]],
-Cell[7098, 214, 594, 16, 48, "Text",ExpressionUUID->"60c2ce96-fa28-4570-9639-81ae44437b2a"]
+Cell[7098, 214, 594, 16, 48, "Text",ExpressionUUID->"60c2ce96-fa28-4570-9639-81ae44437b2a"],
+Cell[7695, 232, 1951, 63, 182, "Text",ExpressionUUID->"82c15f22-b08d-4a54-9b32-b4bbf1734fa8"],
+Cell[9649, 297, 931, 25, 71, "Text",ExpressionUUID->"b9cbaa89-be67-41da-b326-657e97149a48"],
+Cell[10583, 324, 532, 14, 35, "Input",ExpressionUUID->"28e8e2f8-01a1-4a0f-b60d-fb8a2b711647"]
 }, Open  ]]
 }
 ]
