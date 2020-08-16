@@ -1,0 +1,272 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9171,        264]
+NotebookOptionsPosition[      7708,        233]
+NotebookOutlinePosition[      8080,        249]
+CellTagsIndexPosition[      8037,        246]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Sezione F:", "Subsubsection",
+ CellChangeTimes->{{3.8065783179253907`*^9, 
+  3.806578319880396*^9}},ExpressionUUID->"d595f11a-745c-49ab-aa5c-\
+1b4287e22bb4"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["in questa Brutta sezione F mi sembra adeguato \
+dimostrare il teorema di Sharkovskiy (\:0428\:0430\:0440\:043a\:043e\:0301\
+\:0432\:0441\:044c\:043a\:0438\:0439) facendo riferimento (come esempio \
+specifico) alla mappa logistica", "Text"]], "Subsubsection",
+ CellChangeTimes->{{3.80657817766142*^9, 3.8065782705593967`*^9}, {
+   3.806578310600395*^9, 3.80657833570839*^9}, 
+   3.806579118975396*^9},ExpressionUUID->"adbcdb08-9e16-483b-b3fd-\
+9409a470a8df"],
+
+Cell[TextData[{
+ "Th: sia \[CenterDot] \[Rule] \[CenterDot] un ordine totale definito su \
+\[DoubleStruckCapitalN] nel seguente modo\n3 \[Rule]  5 \[Rule]  7 \[Rule]  9 \
+\[Rule]  11 \[Rule]  ...      \n\[Rule]  3",
+ StyleBox["\[Cross]",
+  FontSize->18],
+ "2 \[Rule]  5",
+ StyleBox["\[Cross]",
+  FontSize->18],
+ "2 \[Rule]  7",
+ StyleBox["\[Cross]",
+  FontSize->18],
+ "2 \[Rule] ...     \n\[Rule] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"3", "\[Cross]", 
+    SuperscriptBox["2", "2"]}], TraditionalForm]],ExpressionUUID->
+  "2e84a0bb-dfe0-44fa-b755-f425318b4e8b"],
+ " \[Rule]  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"5", "\[Cross]", 
+    SuperscriptBox["2", "2"]}], TraditionalForm]],ExpressionUUID->
+  "63e89531-8901-4f32-b431-77da7bb18b8c"],
+ "\[Rule]  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"7", "\[Cross]", 
+    SuperscriptBox["2", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "88e192d9-a102-4b1d-8de2-2c5d13c1773a"],
+ "\[Rule] ... \n\[Rule]  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"3", "\[Cross]", 
+    SuperscriptBox["2", "n"]}], TraditionalForm]],ExpressionUUID->
+  "a14ddea7-f65d-4f83-854b-056d611df1fc"],
+ " \[Rule]  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"5", "\[Cross]", 
+    SuperscriptBox["2", "n"]}], TraditionalForm]],ExpressionUUID->
+  "8b35e112-3b6f-47e1-b9ab-f2f8a7e875df"],
+ "\[Rule]  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"7", "\[Cross]", 
+    SuperscriptBox["2", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "1591ba39-2cae-421c-9325-f3feae9c860e"],
+ "\[Rule] ...   \n... \[Rule]",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "3"], TraditionalForm]],ExpressionUUID->
+  "988b7149-d891-4a63-800b-c01520a5d4c7"],
+ " \[Rule]  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "2"], TraditionalForm]],ExpressionUUID->
+  "21891135-266e-4740-b613-ede8125e9627"],
+ " \[Rule]  2 \[Rule] 1\nquest\[CloseCurlyQuote]ordine ha come supremo 3, \
+come infimo 1"
+}], "Text",
+ CellChangeTimes->{{3.8065783627533956`*^9, 3.80657887434739*^9}, {
+  3.8065789187773952`*^9, 3.8065789398763905`*^9}, {3.80657897095239*^9, 
+  3.8065790267333903`*^9}, {3.8065790984773903`*^9, 3.8065790989103966`*^9}, {
+  3.8065791869403906`*^9, 
+  3.80657918806339*^9}},ExpressionUUID->"db30078f-2b87-420c-81b7-\
+128ce1b115f7"],
+
+Cell["\<\
+Il teorema di Sharkovskiy afferma che, data f:I\[Rule]I una mappa continua, \
+se f ha un punto periodico primitivo di periodo m\[Rule]n allora possiede \
+anche un punto periodico di periodo n\
+\>", "Text",
+ CellChangeTimes->{{3.806579091453396*^9, 3.806579150283396*^9}, {
+  3.8065792030673957`*^9, 
+  3.806579237469396*^9}},ExpressionUUID->"2e1d5e1e-a1ac-47a0-8a88-\
+e8776b127fef"],
+
+Cell[TextData[{
+ "si utilizzano i seguenti fatti, data una funzione f continua\n\n\
+\[CenterDot] teorema del punto fisso di Brouwer, ossia I\[SubsetEqual]f(I) \
+\[Implies] f ha un p. fisso in I\n\[CenterDot] V \[SubsetEqual] f(U) \
+\[Implies] \[Exists] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["U", "0"], "\[SubsetEqual]", "U", " "}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d2ee7dce-626d-4ef3-b279-5cfd95164eae"],
+ ": V = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    SubscriptBox["U", "0"], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "0badfcda-ed59-4024-a943-7f8cf06c1b35"]
+}], "Text",
+ CellChangeTimes->{{3.8065844033806095`*^9, 3.8065844815396166`*^9}, {
+  3.8065845168926163`*^9, 
+  3.806584658021609*^9}},ExpressionUUID->"4b629915-c316-4cb8-940c-\
+60d013fee4c3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"\[Mu]_", ",", "x_"}], "]"}], ":=", " ", 
+  RowBox[{"\[Mu]", " ", "x", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", "x"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fn", "[", 
+   RowBox[{"\[Mu]_", ",", "x_", ",", "n_"}], "]"}], ":=", " ", 
+  RowBox[{"Nest", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"\[Mu]", ",", "#"}], "]"}], "&"}], ",", "x", ",", "n"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8065846687036166`*^9, 3.8065847265786166`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"69b6a8b4-1045-4014-93f2-6118926d084b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"\[Mu]", ",", "x"}], "]"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8065847499106116`*^9, 3.8065848013046165`*^9}, {
+  3.806584834283637*^9, 3.806584913966612*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"8d1cbdc2-2593-4027-b7c8-aba39d42c770"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "-", "x"}], ")"}], " ", "\[Mu]"}], "-", 
+  RowBox[{"x", " ", "\[Mu]"}]}]], "Output",
+ CellChangeTimes->{3.8065850288216205`*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"4c7059ec-85cd-489c-8ea7-878a40602aa8"]
+}, Open  ]],
+
+Cell[TextData[{
+ "(1 - x) \[Mu] - x \[Mu]  = \[Mu](1-2x)= 0 \[DoubleLeftRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", 
+    FractionBox["1", "2"], " "}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "b85ae324-8abf-403a-b4d0-ae35ec7d4253"],
+ "supponendo \[Mu]\[NotEqual]0"
+}], "Text",
+ CellChangeTimes->{{3.8065850321016226`*^9, 
+  3.8065850979853334`*^9}},ExpressionUUID->"b3aec05e-bfe7-4dc4-96e6-\
+9ba1a8abb0a5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"\[Mu]", ",", 
+    FractionBox["1", "2"]}], "]"}], 
+  RowBox[{"(*", 
+   RowBox[{"\[EGrave]", " ", "il", " ", "massimo"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.8065851007313347`*^9, 3.8065851081103244`*^9}, {
+  3.806585183003646*^9, 
+  3.806585188413639*^9}},ExpressionUUID->"47cfdb2a-3e2d-4959-b456-\
+cc4677c6c4a1"],
+
+Cell[BoxData[
+ FractionBox["\[Mu]", "4"]], "Output",
+ CellChangeTimes->{3.8065851094463253`*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"938d4e05-6687-46ee-bea7-e30464d29d74"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["f", "\[Mu]"], ":", "\[DoubleStruckCapitalR]"}], "\[Rule]", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"-", "\[Infinity]"}], ",", 
+      FractionBox["\[Mu]", "4"]}], "]"}], " "}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "71bdb2b0-15f4-4923-8d51-9868a5ce577b"],
+ "\[Subset] \[DoubleStruckCapitalR] ergo valgono le ipotesi di cui sopra."
+}], "Text",
+ CellChangeTimes->{{3.8065851908116407`*^9, 
+  3.806585286447641*^9}},ExpressionUUID->"60c2ce96-fa28-4570-9639-\
+81ae44437b2a"]
+}, Open  ]]
+},
+WindowSize->{958, 988},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 163, 3, 56, "Subsubsection",ExpressionUUID->"d595f11a-745c-49ab-aa5c-1b4287e22bb4"],
+Cell[CellGroupData[{
+Cell[746, 27, 481, 7, 66, "Subsubsection",ExpressionUUID->"adbcdb08-9e16-483b-b3fd-9409a470a8df"],
+Cell[1230, 36, 2287, 68, 215, "Text",ExpressionUUID->"db30078f-2b87-420c-81b7-128ce1b115f7"],
+Cell[3520, 106, 392, 8, 71, "Text",ExpressionUUID->"2e1d5e1e-a1ac-47a0-8a88-e8776b127fef"],
+Cell[3915, 116, 859, 22, 127, "Text",ExpressionUUID->"4b629915-c316-4cb8-940c-60d013fee4c3"],
+Cell[4777, 140, 622, 17, 60, "Input",ExpressionUUID->"69b6a8b4-1045-4014-93f2-6118926d084b"],
+Cell[CellGroupData[{
+Cell[5424, 161, 333, 7, 35, "Input",ExpressionUUID->"8d1cbdc2-2593-4027-b7c8-aba39d42c770"],
+Cell[5760, 170, 276, 7, 40, "Output",ExpressionUUID->"4c7059ec-85cd-489c-8ea7-878a40602aa8"]
+}, Open  ]],
+Cell[6051, 180, 453, 12, 48, "Text",ExpressionUUID->"b3aec05e-bfe7-4dc4-96e6-9ba1a8abb0a5"],
+Cell[CellGroupData[{
+Cell[6529, 196, 376, 10, 52, "Input",ExpressionUUID->"47cfdb2a-3e2d-4959-b456-cc4677c6c4a1"],
+Cell[6908, 208, 175, 3, 54, "Output",ExpressionUUID->"938d4e05-6687-46ee-bea7-e30464d29d74"]
+}, Open  ]],
+Cell[7098, 214, 594, 16, 48, "Text",ExpressionUUID->"60c2ce96-fa28-4570-9639-81ae44437b2a"]
+}, Open  ]]
+}
+]
+*)
+
