@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12877,        375]
-NotebookOptionsPosition[     11131,        341]
-NotebookOutlinePosition[     11503,        357]
-CellTagsIndexPosition[     11460,        354]
+NotebookDataLength[     12598,        368]
+NotebookOptionsPosition[     10854,        334]
+NotebookOutlinePosition[     11226,        350]
+CellTagsIndexPosition[     11183,        347]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -322,21 +322,14 @@ Cell[TextData[{
   3.8065878697243505`*^9}},ExpressionUUID->"b9cbaa89-be67-41da-b326-\
 657e97149a48"],
 
-Cell[BoxData[
- RowBox[{"Manipulate", "[", 
-  RowBox[{
-   RowBox[{"ListPlot", "[", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"J", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"0", ",", "1"}], "}"}], ",", "#"}], "]"}], "&"}], "/@", 
-     RowBox[{"Range", "[", "5", "]"}]}], "]"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\[Mu]", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.8065883420287895`*^9, 3.80658842149082*^9}},
- CellLabel->"In[52]:=",ExpressionUUID->"28e8e2f8-01a1-4a0f-b60d-fb8a2b711647"]
+Cell["\<\
+ok la funzione inversa si ciava nei complessi lol
+\
+\>", "Text",
+ CellChangeTimes->{{3.8065890569498234`*^9, 3.806589065459818*^9}, {
+  3.8065891117028236`*^9, 
+  3.8065891118698235`*^9}},ExpressionUUID->"9b5bd83b-5146-4e98-8330-\
+84fb6962f7c3"]
 }, Open  ]]
 },
 WindowSize->{958, 988},
@@ -375,7 +368,7 @@ Cell[6908, 208, 175, 3, 54, "Output",ExpressionUUID->"938d4e05-6687-46ee-bea7-e3
 Cell[7098, 214, 594, 16, 48, "Text",ExpressionUUID->"60c2ce96-fa28-4570-9639-81ae44437b2a"],
 Cell[7695, 232, 1951, 63, 182, "Text",ExpressionUUID->"82c15f22-b08d-4a54-9b32-b4bbf1734fa8"],
 Cell[9649, 297, 931, 25, 71, "Text",ExpressionUUID->"b9cbaa89-be67-41da-b326-657e97149a48"],
-Cell[10583, 324, 532, 14, 35, "Input",ExpressionUUID->"28e8e2f8-01a1-4a0f-b60d-fb8a2b711647"]
+Cell[10583, 324, 255, 7, 71, "Text",ExpressionUUID->"9b5bd83b-5146-4e98-8330-84fb6962f7c3"]
 }, Open  ]]
 }
 ]
