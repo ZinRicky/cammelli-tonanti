@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     86289,       2312]
-NotebookOptionsPosition[     78280,       2193]
-NotebookOutlinePosition[     78799,       2211]
-CellTagsIndexPosition[     78756,       2208]
+NotebookDataLength[     89706,       2403]
+NotebookOptionsPosition[     81601,       2283]
+NotebookOutlinePosition[     82120,       2301]
+CellTagsIndexPosition[     82077,       2298]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2187,7 +2187,97 @@ buona approssimazione del punto ",
  CellChangeTimes->{{3.806859354423706*^9, 
   3.8068594516610904`*^9}},ExpressionUUID->"ba794b14-ef3a-43f0-aa26-\
 9b0364925add"]
-}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "La prima fase di questa ricerca si basa sul seguente fatto: volendo cercare \
+la ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "9189ebae-2ce1-41d0-8d3d-22afe88339c4"],
+ "-esima biforcazione, scelto \[OpenCurlyDoubleQuote]un quasi qualunque\
+\[CloseCurlyDoubleQuote] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "\[Element]", 
+    RowBox[{"(", 
+     RowBox[{"0", ",", "1"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e2fdd7c8-5d2d-4876-a277-1c814891b34a"],
+ ", ovvero un ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "32d4f913-7b6a-4890-ab2f-11f89664e56e"],
+ " che non risulti punto fisso di ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"f", "\[Mu]", "M"},
+    "Subsuperscript"], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"71bb371e-1320-4c51-a46b-3d0e8af7bb0f"],
+ " con ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"M", "<", 
+    SuperscriptBox["2", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "00e4d0ba-c95f-4f3c-aac9-75207192476f"],
+ " (e questi ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "9acade37-1a00-4de5-845d-2027a0f3965b"],
+ " sono abbastanza pochi da poterli trascurare), la distanza tra ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{"f", "\[Mu]", "N"},
+     "Subsuperscript"], "(", 
+    SubscriptBox["x", "0"], ")"}], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"b8c52259-7236-45cd-91ab-c9927720c973"],
+ " e ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{"f", "\[Mu]", 
+      RowBox[{"N", "+", 
+        SuperscriptBox["2", "n"]}]},
+     "Subsuperscript"], "(", 
+    SubscriptBox["x", "0"], ")"}], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"b1080a06-5c2a-47e7-af2d-1d50cb98eeef"],
+ " \[EGrave] infinitesima con l\[CloseCurlyQuote]aumentare di ",
+ Cell[BoxData[
+  FormBox["N", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "56cd48ea-4928-46c1-9869-3d89caa98926"],
+ ". In particolare, se ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"N", "\[Element]", "\[DoubleStruckCapitalN]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3c4bf6f8-3d7d-43b1-888a-7fcc9273d4dd"],
+ " \[EGrave] sufficientemente grande, la distanza tra i due stadi dell\
+\[CloseCurlyQuote]orbita descritti prima \[EGrave] trascurabile. Creiamo, \
+dunque, dei grafici in cui confrontiamo ",
+ Cell[BoxData[
+  FormBox["\[Mu]", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "4318d660-ca35-4786-b60e-e1557e0423c6"],
+ " con il numero di punti"
+}], "Text",
+ CellChangeTimes->{{3.8068611862866354`*^9, 3.806861219340803*^9}, {
+  3.8068612931519976`*^9, 3.8068614736616573`*^9}, {3.8068615332563562`*^9, 
+  3.8068616278677144`*^9}, {3.8068620509382334`*^9, 3.8068620928705335`*^9}, {
+  3.8068630675859823`*^9, 3.8068630722178764`*^9}, {3.806864309671562*^9, 
+  3.8068643114373617`*^9}},ExpressionUUID->"1e57da3e-38dc-42ae-b9f2-\
+2e1e21f6b992"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -2311,7 +2401,8 @@ Cell[75960, 2125, 905, 21, 39, "Text",ExpressionUUID->"e33f7579-4ac3-4a20-93fb-9
 Cell[CellGroupData[{
 Cell[76890, 2150, 898, 24, 23, "Item1Numbered",ExpressionUUID->"e40e36d0-d94b-4bb2-b342-57ebadafb69b"],
 Cell[77791, 2176, 449, 12, 17, "Item1Numbered",ExpressionUUID->"ba794b14-ef3a-43f0-aa26-9b0364925add"]
-}, Open  ]]
+}, Open  ]],
+Cell[78255, 2191, 3318, 88, 82, "Text",ExpressionUUID->"1e57da3e-38dc-42ae-b9f2-2e1e21f6b992"]
 }, Open  ]]
 }, Open  ]]
 }
