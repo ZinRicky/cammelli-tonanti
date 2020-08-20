@@ -1,6 +1,18 @@
 D:
+
+
 E:
-Ljapunov's Exponent - lecture 25/26 
+------------------------------------------Ljapunov's Exponent --------------------------------------------------
+lecture 25/26 
+
+
 F:
-Proof of 3-period => n-period forall n 
+---------------------------------------Proof of 3-period => n-period forall n -----------------------------------
 https://it.wikipedia.org/wiki/Teorema_di_Sharkovsky (i'm quite ashamed by this tho)
+
+------------------------------------full proof------------------------------------------------------------------
+Du, Bau-Sen. “A Simple Proof of Sharkovsky's Theorem.” The American Mathematical Monthly, vol. 111, no. 7, 2004, pp. 595–599. JSTOR, www.jstor.org/stable/4145161. Accessed 20 Aug. 2020.
+
+or
+
+https://www.math.arizona.edu/~dwang/BurnsHasselblattRevised-1.pdf
