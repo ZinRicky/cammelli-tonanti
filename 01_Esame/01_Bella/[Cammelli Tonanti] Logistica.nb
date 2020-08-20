@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     83372,       2232]
-NotebookOptionsPosition[     75732,       2120]
-NotebookOutlinePosition[     76251,       2138]
-CellTagsIndexPosition[     76208,       2135]
+NotebookDataLength[     89706,       2403]
+NotebookOptionsPosition[     81601,       2283]
+NotebookOutlinePosition[     82120,       2301]
+CellTagsIndexPosition[     82077,       2298]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1881,40 +1881,44 @@ Cell[BoxData[
  CellChangeTimes->{{3.805430634921752*^9, 3.805430646720368*^9}, {
   3.805430697793379*^9, 3.805430726501012*^9}, {3.806232665364303*^9, 
   3.806232745574213*^9}, {3.8062329870544252`*^9, 3.8062330009348264`*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"61d742ac-3295-4abd-b82a-b68d554fb861"],
+ CellLabel->"In[5]:=",ExpressionUUID->"61d742ac-3295-4abd-b82a-b68d554fb861"],
 
 Cell[BoxData[
- RowBox[{"ListPlot", "[", 
-  RowBox[{"codaOrbita", ",", 
-   InterpretationBox[
-    DynamicModuleBox[{Typeset`open = False}, 
-     TemplateBox[{"Expression", "SequenceIcon", 
-       GridBox[{{
-          RowBox[{
-            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["Sequence", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["6", "IconizedItem"]}]}, {
-          RowBox[{
-            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
-            TagBox["1104", "IconizedItem"]}]}}, 
-        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
-        "Column", 
-        GridBoxItemSize -> {
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-       Dynamic[Typeset`open]},
-      "IconizedObject"]],
-    Sequence[PlotMarkers -> None, PlotStyle -> {{Black, 
-        AbsolutePointSize[0.015]}}, PlotRange -> {{0, 4}, {0, 1}}, 
-     AspectRatio -> Automatic, Ticks -> {
-       Subdivide[0, 4., 20], 
-       Subdivide[0, 1., 10]}, ImageSize -> Full],
-    SelectWithContents->True,
-    Selectable->False]}], "]"}]], "Input",
+ RowBox[{"Rasterize", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"codaOrbita", ",", 
+     InterpretationBox[
+      DynamicModuleBox[{Typeset`open = False}, 
+       TemplateBox[{"Expression", "SequenceIcon", 
+         GridBox[{{
+            RowBox[{
+              TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["Sequence", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Length: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+              TagBox["6", "IconizedItem"]}]}, {
+            RowBox[{
+              TagBox["\"Byte count: \"", "IconizedLabel"], 
+              "\[InvisibleSpace]", 
+              TagBox["1104", "IconizedItem"]}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+          "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+         Dynamic[Typeset`open]},
+        "IconizedObject"]],
+      Sequence[PlotMarkers -> None, PlotStyle -> {{Black, 
+          AbsolutePointSize[0.015]}}, PlotRange -> {{0, 4}, {0, 1}}, 
+       AspectRatio -> Automatic, Ticks -> {
+         Subdivide[0, 4., 20], 
+         Subdivide[0, 1., 10]}, ImageSize -> Full],
+      SelectWithContents->True,
+      Selectable->False]}], "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "1000"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.805438910483398*^9, 3.805438996295472*^9}, 
-   3.8054393729417114`*^9},
- CellLabel->"In[9]:=",ExpressionUUID->"a51c225a-356c-4310-9226-5d91ad447b37"],
+   3.8054393729417114`*^9, {3.8068583058806815`*^9, 3.8068583148079643`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"a51c225a-356c-4310-9226-5d91ad447b37"],
 
 Cell["\<\
 Attraverso opportuni ingrandimenti, si nota che la struttura delle \
@@ -2014,7 +2018,7 @@ Cell[BoxData[
    3.8054386288331823`*^9}, {3.8054386617671485`*^9, 
    3.8054386872055593`*^9}, {3.805438721173253*^9, 3.8054387845708475`*^9}, 
    3.805438819669218*^9, {3.805438887986434*^9, 3.805438894063368*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"c14cc0c0-50e0-4141-b426-3b13740c819a"],
+ CellLabel->"In[7]:=",ExpressionUUID->"c14cc0c0-50e0-4141-b426-3b13740c819a"],
 
 Cell["\<\
 Quest\[CloseCurlyQuote]autosimilarit\[AGrave] si ritrova non solo ad ogni \
@@ -2112,10 +2116,169 @@ potenzialmente autosimili."
 1c3d1113f97d"]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
 Cell["Costante di Feigenbaum", "Section",
  CellChangeTimes->{{3.8062366034657373`*^9, 
   3.8062366119387875`*^9}},ExpressionUUID->"1f2a775a-ba8a-4fb9-86b9-\
-97814482ab55"]
+97814482ab55"],
+
+Cell[TextData[{
+ "Vogliamo capire se il susseguirsi delle biforcazioni a partire da ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", "=", "3"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "1202ef16-44ad-48e2-bd39-46f0d4fdc7dc"],
+ " segua una certa regola specifica. Per fare ci\[OGrave], ci occorrono \
+innanzitutto i ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Mu]", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "196d7f68-d858-464f-847a-266eb9831ba5"],
+ " dopo i quali avviene una biforcazione; il metodo con cui li cerchiamo \
+consta di due fasi:"
+}], "Text",
+ CellChangeTimes->{{3.806858687070289*^9, 3.8068587327770634`*^9}, {
+  3.8068587776129847`*^9, 3.8068587976388636`*^9}, {3.8068588318667507`*^9, 
+  3.806858855221676*^9}, {3.8068592719923353`*^9, 
+  3.8068593210538225`*^9}},ExpressionUUID->"e33f7579-4ac3-4a20-93fb-\
+9d3db9f19936"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "una ricerca \[OpenCurlyDoubleQuote]grossolana\[CloseCurlyDoubleQuote] di un \
+intervallo in cui l\[CloseCurlyQuote]attrattivit\[AGrave] passi dai punti \
+fissi di ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"f", "\[Mu]", 
+     SuperscriptBox["2", "n"]},
+    "Subsuperscript"], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"0d8bacf5-b1fc-422b-99f9-03858993dc71"],
+ " a quelli di ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"f", "\[Mu]", 
+     SuperscriptBox["2", 
+      RowBox[{"n", "+", "1"}]]},
+    "Subsuperscript"], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"827ffb61-c334-4948-9eae-3d7da8d85dc7"],
+ ";"
+}], "Item1Numbered",
+ CellChangeTimes->{{3.806859354423706*^9, 
+  3.806859426198228*^9}},ExpressionUUID->"e40e36d0-d94b-4bb2-b342-\
+57ebadafb69b"],
+
+Cell[TextData[{
+ "una ricerca \[OpenCurlyDoubleQuote]minuta\[CloseCurlyDoubleQuote] di una \
+buona approssimazione del punto ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Mu]", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "1696c3f1-57c8-42dc-9e2c-ff8c9621aeec"],
+ "."
+}], "Item1Numbered",
+ CellChangeTimes->{{3.806859354423706*^9, 
+  3.8068594516610904`*^9}},ExpressionUUID->"ba794b14-ef3a-43f0-aa26-\
+9b0364925add"]
+}, Open  ]],
+
+Cell[TextData[{
+ "La prima fase di questa ricerca si basa sul seguente fatto: volendo cercare \
+la ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "9189ebae-2ce1-41d0-8d3d-22afe88339c4"],
+ "-esima biforcazione, scelto \[OpenCurlyDoubleQuote]un quasi qualunque\
+\[CloseCurlyDoubleQuote] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "\[Element]", 
+    RowBox[{"(", 
+     RowBox[{"0", ",", "1"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e2fdd7c8-5d2d-4876-a277-1c814891b34a"],
+ ", ovvero un ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "32d4f913-7b6a-4890-ab2f-11f89664e56e"],
+ " che non risulti punto fisso di ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[{"f", "\[Mu]", "M"},
+    "Subsuperscript"], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"71bb371e-1320-4c51-a46b-3d0e8af7bb0f"],
+ " con ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"M", "<", 
+    SuperscriptBox["2", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "00e4d0ba-c95f-4f3c-aac9-75207192476f"],
+ " (e questi ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "9acade37-1a00-4de5-845d-2027a0f3965b"],
+ " sono abbastanza pochi da poterli trascurare), la distanza tra ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{"f", "\[Mu]", "N"},
+     "Subsuperscript"], "(", 
+    SubscriptBox["x", "0"], ")"}], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"b8c52259-7236-45cd-91ab-c9927720c973"],
+ " e ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{"f", "\[Mu]", 
+      RowBox[{"N", "+", 
+        SuperscriptBox["2", "n"]}]},
+     "Subsuperscript"], "(", 
+    SubscriptBox["x", "0"], ")"}], TraditionalForm]],
+  CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
+  ExpressionUUID->"b1080a06-5c2a-47e7-af2d-1d50cb98eeef"],
+ " \[EGrave] infinitesima con l\[CloseCurlyQuote]aumentare di ",
+ Cell[BoxData[
+  FormBox["N", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "56cd48ea-4928-46c1-9869-3d89caa98926"],
+ ". In particolare, se ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"N", "\[Element]", "\[DoubleStruckCapitalN]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3c4bf6f8-3d7d-43b1-888a-7fcc9273d4dd"],
+ " \[EGrave] sufficientemente grande, la distanza tra i due stadi dell\
+\[CloseCurlyQuote]orbita descritti prima \[EGrave] trascurabile. Creiamo, \
+dunque, dei grafici in cui confrontiamo ",
+ Cell[BoxData[
+  FormBox["\[Mu]", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "4318d660-ca35-4786-b60e-e1557e0423c6"],
+ " con il numero di punti"
+}], "Text",
+ CellChangeTimes->{{3.8068611862866354`*^9, 3.806861219340803*^9}, {
+  3.8068612931519976`*^9, 3.8068614736616573`*^9}, {3.8068615332563562`*^9, 
+  3.8068616278677144`*^9}, {3.8068620509382334`*^9, 3.8068620928705335`*^9}, {
+  3.8068630675859823`*^9, 3.8068630722178764`*^9}, {3.806864309671562*^9, 
+  3.8068643114373617`*^9}},ExpressionUUID->"1e57da3e-38dc-42ae-b9f2-\
+2e1e21f6b992"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowToolbars->"EditBar",
@@ -2224,15 +2387,23 @@ Cell[58604, 1715, 2968, 69, 228, "Input",ExpressionUUID->"c99f57b9-8b2d-45e5-946
 Cell[61575, 1786, 644, 16, 39, "Text",ExpressionUUID->"90231285-ac5e-43a1-ae6a-193f76e82cc8"],
 Cell[62222, 1804, 1735, 43, 56, "Input",ExpressionUUID->"bebb28fe-5541-4ab8-bc3c-f8ec2cada7d5"],
 Cell[63960, 1849, 1429, 34, 136, "Input",ExpressionUUID->"61d742ac-3295-4abd-b82a-b68d554fb861"],
-Cell[65392, 1885, 1373, 31, 38, "Input",ExpressionUUID->"a51c225a-356c-4310-9226-5d91ad447b37"],
-Cell[66768, 1918, 345, 7, 39, "Text",ExpressionUUID->"5fd49479-2688-45a4-a1ed-dce54f6e2854"],
-Cell[67116, 1927, 4483, 89, 90, "Input",ExpressionUUID->"c14cc0c0-50e0-4141-b426-3b13740c819a"],
-Cell[71602, 2018, 347, 7, 22, "Text",ExpressionUUID->"ed02da5b-d268-4ce6-9e04-2b826b0dc18e"],
-Cell[71952, 2027, 977, 24, 101, "Input",ExpressionUUID->"0c7fc5c4-7321-42ad-843a-0174c249bb6a"],
-Cell[72932, 2053, 1968, 42, 38, "Input",ExpressionUUID->"f2e9fbbd-3247-4dde-8f74-26aa6bbd7374"],
-Cell[74903, 2097, 627, 14, 22, "Text",ExpressionUUID->"f9ccfe0e-1072-4b45-8d78-1c3d1113f97d"]
+Cell[65392, 1885, 1593, 35, 38, "Input",ExpressionUUID->"a51c225a-356c-4310-9226-5d91ad447b37"],
+Cell[66988, 1922, 345, 7, 39, "Text",ExpressionUUID->"5fd49479-2688-45a4-a1ed-dce54f6e2854"],
+Cell[67336, 1931, 4482, 89, 90, "Input",ExpressionUUID->"c14cc0c0-50e0-4141-b426-3b13740c819a"],
+Cell[71821, 2022, 347, 7, 22, "Text",ExpressionUUID->"ed02da5b-d268-4ce6-9e04-2b826b0dc18e"],
+Cell[72171, 2031, 977, 24, 101, "Input",ExpressionUUID->"0c7fc5c4-7321-42ad-843a-0174c249bb6a"],
+Cell[73151, 2057, 1968, 42, 38, "Input",ExpressionUUID->"f2e9fbbd-3247-4dde-8f74-26aa6bbd7374"],
+Cell[75122, 2101, 627, 14, 22, "Text",ExpressionUUID->"f9ccfe0e-1072-4b45-8d78-1c3d1113f97d"]
 }, Open  ]],
-Cell[75545, 2114, 171, 3, 50, "Section",ExpressionUUID->"1f2a775a-ba8a-4fb9-86b9-97814482ab55"]
+Cell[CellGroupData[{
+Cell[75786, 2120, 171, 3, 50, "Section",ExpressionUUID->"1f2a775a-ba8a-4fb9-86b9-97814482ab55"],
+Cell[75960, 2125, 905, 21, 39, "Text",ExpressionUUID->"e33f7579-4ac3-4a20-93fb-9d3db9f19936"],
+Cell[CellGroupData[{
+Cell[76890, 2150, 898, 24, 23, "Item1Numbered",ExpressionUUID->"e40e36d0-d94b-4bb2-b342-57ebadafb69b"],
+Cell[77791, 2176, 449, 12, 17, "Item1Numbered",ExpressionUUID->"ba794b14-ef3a-43f0-aa26-9b0364925add"]
+}, Open  ]],
+Cell[78255, 2191, 3318, 88, 82, "Text",ExpressionUUID->"1e57da3e-38dc-42ae-b9f2-2e1e21f6b992"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
