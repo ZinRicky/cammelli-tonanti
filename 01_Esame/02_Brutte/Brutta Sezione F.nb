@@ -10,15 +10,15 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    247267,       4556]
-NotebookOptionsPosition[    240918,       4454]
-NotebookOutlinePosition[    241290,       4470]
-CellTagsIndexPosition[    241247,       4467]
+NotebookDataLength[    265747,       5085]
+NotebookOptionsPosition[    258137,       4962]
+NotebookOutlinePosition[    258509,       4978]
+CellTagsIndexPosition[    258466,       4975]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell["Sezione F:", "Subsubsection",
+Cell[TextData[StyleBox["Sezione F:", "Section"]], "Subsubsection",
  CellChangeTimes->{{3.8065783179253907`*^9, 
   3.806578319880396*^9}},ExpressionUUID->"d595f11a-745c-49ab-aa5c-\
 1b4287e22bb4"],
@@ -1078,22 +1078,19 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    RowBox[{"p", "\[Element]", 
-    SubscriptBox["J", "5"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["J", "5"]}], TraditionalForm]],ExpressionUUID->
   "f7c470f2-fda6-42d8-bf82-f416ce644ab6"],
  " che \[EGrave] punto di orbita 5, in quanto \[EGrave] punto fisso per la \
 quinta iterata di f (di nuovo per Brouwer).\np\[NotEqual]c poich\[EAcute] \
 f(p)=f(c)=a e, dato che solo ",
  Cell[BoxData[
   FormBox[
-   SuperscriptBox["f", "4"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SuperscriptBox["f", "4"], TraditionalForm]],ExpressionUUID->
   "cb1d6905-a23a-4124-a111-40bdebdf043a"],
  "permette di uscire da ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["I", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["I", "1"], TraditionalForm]],ExpressionUUID->
   "d11768a9-ed46-451d-9a3a-76f03af232fa"],
  " si avrebbe che n=2, indi c farebbe parte dell\[CloseCurlyQuote]orbita \
 2-periodica.\np\[NotEqual]b poich\[EAcute] ",
@@ -1105,9 +1102,7 @@ f(p)=f(c)=a e, dato che solo ",
     RowBox[{
      RowBox[{
       SuperscriptBox["f", "2"], "(", "b", ")"}], "=", "a"}]}], 
-   TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
-  "d7983dd0-9830-4fdc-a145-5defe78aca16"],
+   TraditionalForm]],ExpressionUUID->"d7983dd0-9830-4fdc-a145-5defe78aca16"],
  " porterebbe ad avere che p fa parte dell\[CloseCurlyQuote]orbita \
 3-periodica, ma abbiamo deciso a priori di escludere n=3\nquindi \
 p\[Element](b,c) = ma ",
@@ -1116,8 +1111,7 @@ p\[Element](b,c) = ma ",
    RowBox[{
     RowBox[{
      SuperscriptBox["f", "4"], "(", "p", ")"}], "\[Element]", 
-    SubscriptBox["I", "0"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["I", "0"]}], TraditionalForm]],ExpressionUUID->
   "e4495c3f-ea47-4091-aaea-0bcdc71224b1"],
  " \[Implies] ",
  Cell[BoxData[
@@ -1125,8 +1119,7 @@ p\[Element](b,c) = ma ",
    RowBox[{"p", "\[NotEqual]", 
     RowBox[{
      SuperscriptBox["f", "4"], "(", "p", ")"}]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
-  "61edfeab-7c6a-4ad9-b3fd-473c989657dd"],
+  ExpressionUUID->"61edfeab-7c6a-4ad9-b3fd-473c989657dd"],
  " (appartengono ad intervalli disgiunti) quindi p appartiene ad un\
 \[CloseCurlyQuote]orbita di periodo minimo strettamente maggiore di n-1, \
 quindi di periodo n"
@@ -1137,15 +1130,16 @@ quindi di periodo n"
 
 Cell["\<\
 si vede facilmente che questa dimostrazione non usa l\[CloseCurlyQuote]ordine \
-di Sharkovskiy, (in effetti dimostra che avere un orbita di periodo 3 implica \
-avere orbite di ogni periodo)
+di Sharkovskiy, (in effetti dimostra solo che avere un orbita di periodo 3 \
+implica avere orbite di ogni periodo)
 la dimostrazione completa del teorema di Sharkovskiy \[EGrave] pi\[UGrave] \
 complessa e non ho esattamente voglia di studiarla al momento, tuttavia \
 rimane interessante guardare una delle sue implicazioni nella nostra mappa \
 preferita\
 \>", "Text",
- CellChangeTimes->{{3.8068290561640964`*^9, 
-  3.8068291790290976`*^9}},ExpressionUUID->"e0a8969f-deab-4f65-aa11-\
+ CellChangeTimes->{{3.8068290561640964`*^9, 3.8068291790290976`*^9}, {
+  3.806904253819699*^9, 
+  3.8069042545416937`*^9}},ExpressionUUID->"e0a8969f-deab-4f65-aa11-\
 aaa7552ef600"],
 
 Cell[TextData[{
@@ -1207,7 +1201,7 @@ Cell[BoxData[
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`x$$], 0.000744161, 0.0028517330801713474`}}, 
-    Typeset`size$$ = {450., {142., 147.}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {450., {135., 142.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
     True, $CellContext`x$24412$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -1223,7 +1217,7 @@ Cell[BoxData[
          Range[200]]], 
       "Specifications" :> {{$CellContext`x$$, 0.000744161, 
          0.0028517330801713474`}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{511., {196., 203.}},
+     ImageSizeCache->{511., {190., 197.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -4450,6 +4444,520 @@ Cell["eh lol non lo trovo", "Text",
  CellChangeTimes->{{3.8068298280470977`*^9, 
   3.8068298362930965`*^9}},ExpressionUUID->"41d3f696-4a94-4d6e-b747-\
 8b9b4b873f05"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["The Full Proof", "Section"]], "Subsubsection",
+ CellChangeTimes->{{3.80690165873512*^9, 
+  3.8069016617481155`*^9}},ExpressionUUID->"053a953c-88a8-4644-8b2d-\
+0a0311bf2d52"],
+
+Cell["\<\
+la Dimostrazione del teorema di Sharkovskiy si pu\[OGrave] ricavare dai \
+seguenti tre punti:
+\[CenterDot](a)\[CenterDot] Se f ha un punto che genera una n-orbita per n>2, \
+allora possiede una 2-orbita
+\[CenterDot](b)\[CenterDot] Se f ha un punto che genera \
+un\[CloseCurlyQuote]orbita di periodo dispari m\[GreaterEqual]3 allora f \
+possiede una n-orbita per ogni n\[GreaterEqual]m+1
+\[CenterDot](c)\[CenterDot]  Se f ha un punto che genera \
+un\[CloseCurlyQuote]orbita di periodo dispari m\[GreaterEqual]3 allora f \
+possiede una n-orbita per ogni n pari.\
+\>", "Text",
+ CellChangeTimes->{{3.806901680522113*^9, 
+  3.8069019462781134`*^9}},ExpressionUUID->"ef067634-1c52-43fc-8daf-\
+e4bf5a386ce4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Dimostriamo a)", "Subsection",
+ CellChangeTimes->{{3.8069041342047*^9, 
+  3.806904137687694*^9}},ExpressionUUID->"d682f065-f4ed-47d4-980d-\
+f628dc112841"],
+
+Cell[TextData[{
+ StyleBox["usufruiremo dei seguenti Lemmi:", "Subsubsection"],
+ "\nLemma 1- siano k,m,n,s \[Element] \[DoubleStruckCapitalN]\ni) se y genera \
+una m-orbita di f, allora \[EGrave] un punto periodico di ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d5279d27-1e09-43b7-9920-05a00e1d6945"],
+ " di periodo ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["m", 
+    RowBox[{"GCD", "(", 
+     RowBox[{"m", ",", "n"}], ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "f5062e6b-1eff-4df3-9d40-d6cb73bcc92d"],
+ " \nii) se y \[EGrave] punto periodico di ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "18f3a124-0005-4e5b-a49d-142da18b8630"],
+ " di periodo k allora \[EGrave] punto periodico di periodo ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["kn", "s"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "9dc3a01f-5404-4d99-952d-db5003c6a2ec"],
+ "ove s|n, s e k coprimi\ndim - \nla dimostrazione \[EGrave] banale se \
+consideriamo che ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["f", "k"], "(", "y", ")"}], ":", 
+      RowBox[{"k", "\[LessEqual]", "n"}]}], "}"}], "\[TildeEqual]", 
+    SubscriptBox["C", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "444615b6-a46c-4e64-add5-7bf440f16fc9"],
+ " visto come gruppo secondo la composizione di funzioni (cristo quanto mi \
+sento il pisello lungo ad usare l\[CloseCurlyQuote]algebra per studiare i \
+punti orbitali delle funzioni)\n\nLemma 2- siano c,d\[Element]I t.c. f(d) \
+\[LessEqual] c < d \[LessEqual] f(c) allora f ha un punto periodico di \
+periodo 2\ndim- \nsia I=[a,b], ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"w", " ", "=", " ", 
+    RowBox[{
+     UnderscriptBox["min", 
+      RowBox[{
+      "c", " ", "\[LessEqual]", " ", "x", " ", "\[LessEqual]", "  ", "d"}]], 
+     "(", 
+     RowBox[{
+      RowBox[{"f", "(", "x", ")"}], "=", "x"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "9705a517-d03f-425c-a971-6d38af2919d1"],
+ " e v: f(v)=d, indi ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", "2"], "(", "v", ")"}], "=", 
+    RowBox[{"f", "(", "d", ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "7a1aea7f-48c7-443c-806c-29102d98b462"],
+ " \[LessEqual] c \[LessEqual] d\nSe f non ha punti fissi in [a,c] allora non \
+ne ha in [a,v]. Visto che ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e27a9390-2958-4fe7-aaea-ba9a14d28f23"],
+ "(a)\[GreaterEqual]a allora f ha un punto 2-periodico in [a,v].\nSe f invece \
+ha un punto fisso in [a,c] allora sia ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "=", 
+    UnderscriptBox["max", 
+     RowBox[{"a", " ", "\[LessEqual]", " ", "x", " ", "<", " ", "c"}]]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "36c4f357-af6d-4305-8260-845d8067755f"],
+ "(f(x)=x), in questo modo f non ha punti fissi in (t,v] . Sia ora u un punto \
+in [t,c] con f(u)=c, si ha che ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", "2"], "(", "u", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "5dc63413-8f63-4ce1-9d5a-a4a23d73a0b6"],
+ " = f(c) \[GreaterEqual] d \[GreaterEqual] u \nabbiamo quindi che ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["f", "2"], "(", "u", ")"}], "\[GreaterEqual]", " ", 
+     "u"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["f", "2"], "(", "v", ")"}], "\[LessEqual]", "v"}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3ec6ee21-d996-4d0a-a691-3054c0f6914a"],
+ " possiamo quindi concludere (per Weierstrass) che \[Exists] y \[Element] \
+[u,v] t.c. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", "2"], "(", "y", ")"}], "=", "y", " "}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c322a661-71fe-46a1-9d22-1b5ff5db38f4"],
+ "\ndal momento che f non ha punti fissi in [u,v] allora y \[EGrave] punto \
+2-periodico per f. "
+}], "Text",
+ CellChangeTimes->{{3.806902417717114*^9, 3.806903564801114*^9}, {
+  3.8069035959991145`*^9, 3.80690364487512*^9}, {3.8069040958076935`*^9, 
+  3.806904099148693*^9}},ExpressionUUID->"bfb97b4c-ac8c-481b-abb8-\
+3c768203fe55"],
+
+Cell[CellGroupData[{
+
+Cell["Dim-", "Subsubsection",
+ CellChangeTimes->{{3.8069036549211197`*^9, 
+  3.806903663327119*^9}},ExpressionUUID->"6122ead5-8498-4735-8770-\
+c56e4c746ce8"],
+
+Cell[TextData[{
+ "Sia ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"P", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["x", "i"], ":", "i"}], "=", 
+      RowBox[{
+       RowBox[{"1", "..."}], "m"}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "7d0e25d3-6a34-450e-9dff-91fd4ff74575"],
+ "} una m-orbita di f, ove ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", "i"], "<", " ", 
+     SubscriptBox["x", "j"]}], " ", "\[DoubleLeftRightArrow]", " ", 
+    RowBox[{"i", "<", "j"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "bf68b60b-4217-4e7b-9270-505c0e17fa65"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "1"], "<", 
+    RowBox[{"f", "(", 
+     SubscriptBox["x", "1"], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "54f936c1-f792-4b1e-9852-b6832385153a"],
+ " e ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     SubscriptBox["x", "m"], ")"}], "<"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "499b93fe-91ab-45a8-b71f-8a00102a9816"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "m"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "aac32403-5c5b-4c83-a7b9-9a7514d16258"],
+ " \[Implies] \[Exists]s\[Element]\[DoubleStruckCapitalN] t.c. 1 \[LessEqual] \
+s \[LessEqual] m-1 e ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "s"], " "}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "6cc5d94d-1af5-4541-8772-af0f50915744"],
+ "= ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["max", 
+     RowBox[{"x", "\[Element]", "P"}]], "(", 
+    RowBox[{"x", "<", 
+     RowBox[{"f", "(", "x", ")"}]}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "fd1e4e74-6227-41ca-9478-a21fae8c983f"],
+ " \nergo ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    SubscriptBox["x", 
+     RowBox[{"s", "+", "1"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "07fc36a3-0920-4336-ae12-07a530a3721b"],
+ ") \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "s"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3c391518-bd50-4279-b5db-f24dc216cc10"],
+ " <  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"s", "+", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "79187af9-8796-4969-a2cf-9815cade4eb1"],
+ " \[LessEqual] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{"f", "(", 
+     SubscriptBox["x", "s"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "64df145e-f8a4-41f3-883d-7f8837270d13"],
+ ")\nsi conclude dal Lemma 2"
+}], "Text",
+ CellChangeTimes->{{3.8069036690061154`*^9, 3.8069037825321207`*^9}, {
+  3.806903825580115*^9, 3.806903941064694*^9}, {3.8069040101046934`*^9, 
+  3.806904090553692*^9}},ExpressionUUID->"67a6750c-e965-4cb7-ac63-\
+91a55f1cfa4f"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Dimostriamo b e c)", "Subsection",
+ CellChangeTimes->{{3.8069041233076935`*^9, 3.8069041283936987`*^9}, {
+  3.806904323953699*^9, 3.806904332428694*^9}, {3.806906318166698*^9, 
+  3.8069063189826994`*^9}},ExpressionUUID->"ed57f266-0051-48be-a872-\
+860a790795bb"],
+
+Cell["\<\
+Abbiamo gi\[AGrave] dimostrato sopra che se f ha una 3-orbita allora ha una \
+n-orbita per ogni n;
+si pu\[OGrave] vedere  che l\[CloseCurlyQuote]ultimo passaggio di tale \
+dimostrazione pu\[OGrave] essere generalizzato a questo caso
+(not quite sure about this but I surely hope it\[CloseCurlyQuote]s true)\
+\>", "Text",
+ CellChangeTimes->{{3.8069020156781197`*^9, 3.8069020248441195`*^9}, {
+  3.8069020890961146`*^9, 3.80690230832012*^9}, {3.80690237241012*^9, 
+  3.8069023800971203`*^9}, {3.80690243687112*^9, 3.806902437844137*^9}, {
+  3.8069039842466993`*^9, 3.8069039968437*^9}, {3.8069063229146996`*^9, 
+  3.8069063585757*^9}, {3.8069064966306934`*^9, 
+  3.8069065016416993`*^9}},ExpressionUUID->"613fbb65-c3f4-4221-b8b5-\
+df0a34e2abab"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Conclusiva:", "Subsection",
+ CellChangeTimes->{{3.806905215557699*^9, 
+  3.806905235451699*^9}},ExpressionUUID->"b3633224-516b-493d-a513-\
+8cafc2f8830f"],
+
+Cell[TextData[{
+ "da b) e c) possiamo concludere 3\[Rule]5\[Rule]7\[Rule]...2*3\[Rule]2*5\
+\[Rule]...\nSe f ha punti 2m-periodici allora ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", "2"], " "}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "572c97d5-3696-404e-b467-9e3527841b4d"],
+ "ha punti di periodo m ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Implies]", 
+    RowBox[{"(", "b", ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "2c7d7f61-d37c-4ff4-946f-e9547147aebf"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    RowBox[{"2", " "}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "2d0252b4-166b-4ecb-894c-e76f9feca219"],
+ "ha punti (m+2)-periodici ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Implies]", 
+    RowBox[{"(", 
+     RowBox[{"L1", ".2"}], ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "284cf077-b693-4030-a417-2b3ae87100da"],
+ "f ha punti (m+2)-periodici o 2(m+2)-periodici ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Implies]", 
+    RowBox[{"(", "b", ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "be205937-cfe7-476a-80e2-5738a8b8a742"],
+ " in ogni caso f ha punti 2(m+2)-periodici \nd\[CloseCurlyQuote]altro canto ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Implies]", 
+    RowBox[{"(", "c", ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "2e8ef4b6-c74d-41aa-99bd-a8239e99f965"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", "2"], " "}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c4fe2bb8-19b4-4c82-a152-ec310cc71292"],
+ "ha punti 6-periodici ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Implies]", 
+    RowBox[{"(", 
+     RowBox[{"L1", ".2"}], ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "4eb915aa-c73b-40f5-a488-1561907c2f35"],
+ "f ha punti ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     SuperscriptBox["2", "2"], "\[CenterDot]", "3"}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "7a8e773d-b93e-4b32-aa3d-e28012111363"],
+ "-periodici\nOra, se f ha punti (",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "89b87205-2db2-4f77-9233-32336b3d9d06"],
+ "m)-periodici per m dispari \[GreaterEqual]3 per k\[GreaterEqual]2 allora ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    OverscriptBox["\[Implies]", 
+     RowBox[{"(", 
+      RowBox[{"L1", ".1"}], ")"}]], 
+    SuperscriptBox["f", 
+     SuperscriptBox["2", 
+      RowBox[{"k", "-", "1"}]]]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "8bb08d51-df77-4692-a094-fca0e576e1ae"],
+ " ha punti 2(m+2)-periodici\nquindi ripetendo il ragionamento ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    SuperscriptBox["2", 
+     RowBox[{"k", "-", "1"}]]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "2f65920c-e9a6-4fb9-acb7-f860a6b1bd7d"],
+ "ha punti 2(m+2) e ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "9b900bd5-bc2e-42ab-8e74-aa07d47e26ae"],
+ "\[CenterDot]3 - periodici\nquindi f ha punti di periodo ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["2", "k"], 
+    RowBox[{"(", 
+     RowBox[{"m", "+", "2"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c6856082-5377-4b55-8b60-cf9fbd444eae"],
+ " e ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", 
+    RowBox[{"k", "+", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "cb13d109-828d-4918-bb61-1d4bb93d0aa5"],
+ "\ndal momento che f ha punti di periodo ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "k"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "15bcdee6-acac-4d2e-b8fd-f2161d2bf187"],
+ "m allora ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    SuperscriptBox["2", "k"]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "33198103-c848-4ede-98cd-bb253c7bffdd"],
+ "ha punti di periodo m\n",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Implies]", 
+    RowBox[{"(", "b", ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c5dccca9-ef70-4ce2-bd3a-ce1c13a7dc7c"],
+ " f ha punti di periodo ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", 
+    RowBox[{"n", " "}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "cc8f8ff1-276c-415c-9d82-719b3128cc96"],
+ ">m ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Implies]", 
+    RowBox[{"L1", ".2"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d59f3777-1f1b-4e27-9951-e718172758a4"],
+ " f ha punti ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SuperscriptBox["2", 
+     RowBox[{"k", "+", "n"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "340d6409-5569-4372-88f6-6211f3c3b4f7"],
+ ") per ogni n t.c. ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", 
+    RowBox[{"n", ">", "m"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3fcee281-6bb5-42a4-b595-8dfa06ef9f51"],
+ "\n\nin fine se f ha punti di periodo ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "fa0b64eb-96af-46d2-9f1e-1e2398ca2a8a"],
+ " (i\[GreaterEqual]2) allora ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    RowBox[{"i", "-", "2"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "f141c9e1-fc08-41a6-84e1-b4ba6c4218d7"],
+ " ha punti di periodo 4 ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Implies]", 
+    RowBox[{"(", "a", ")"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e328f457-a05b-4e7f-8d1d-6039cbb006cc"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", 
+     SuperscriptBox["2", 
+      RowBox[{"i", "-", "2"}]]], " "}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "7e508850-b555-4779-93ad-5c6d386e1b63"],
+ "ha punti 2-periodici \[Implies] f ha punti ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", 
+    RowBox[{"i", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "674094ba-8548-45dc-8b4b-1c736bf9c010"],
+ "-periodici.\nquesto conclude la dimostrazione inducendo \
+l\[CloseCurlyQuote]ordine di Sharkovskiy sui punti orbitali."
+}], "Text",
+ CellChangeTimes->{{3.8069052423356996`*^9, 3.806905288207695*^9}, {
+  3.8069053377796955`*^9, 3.806905614220694*^9}, {3.806905654502699*^9, 
+  3.8069056740706935`*^9}, {3.806905720810693*^9, 3.8069058570836935`*^9}, {
+  3.806905890903694*^9, 3.806906040069694*^9}, {3.8069060730827045`*^9, 
+  3.8069062954266996`*^9}, {3.8069063712436943`*^9, 
+  3.806906493022699*^9}},ExpressionUUID->"e8ef6b63-5881-427b-92a0-\
+0c59b0d9a17b"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.806906256509699*^9, 
+  3.806906257361699*^9}},ExpressionUUID->"504428c9-bb8a-46b5-8276-\
+96d966a41e22"]
 }, Open  ]]
 },
 WindowSize->{958, 988},
@@ -4469,94 +4977,115 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 163, 3, 56, "Subsubsection",ExpressionUUID->"d595f11a-745c-49ab-aa5c-1b4287e22bb4"],
+Cell[558, 20, 194, 3, 69, "Subsubsection",ExpressionUUID->"d595f11a-745c-49ab-aa5c-1b4287e22bb4"],
 Cell[CellGroupData[{
-Cell[746, 27, 602, 9, 94, "Subsubsection",ExpressionUUID->"adbcdb08-9e16-483b-b3fd-9409a470a8df"],
-Cell[1351, 38, 2287, 68, 215, "Text",ExpressionUUID->"db30078f-2b87-420c-81b7-128ce1b115f7"],
-Cell[3641, 108, 392, 8, 71, "Text",ExpressionUUID->"2e1d5e1e-a1ac-47a0-8a88-e8776b127fef"],
-Cell[4036, 118, 438, 9, 71, "Text",ExpressionUUID->"e4f24a27-62a9-4233-b0f6-a69284a32716"],
-Cell[4477, 129, 859, 22, 127, "Text",ExpressionUUID->"4b629915-c316-4cb8-940c-60d013fee4c3"],
-Cell[5339, 153, 621, 17, 60, "Input",ExpressionUUID->"69b6a8b4-1045-4014-93f2-6118926d084b"],
+Cell[777, 27, 602, 9, 94, "Subsubsection",ExpressionUUID->"adbcdb08-9e16-483b-b3fd-9409a470a8df"],
+Cell[1382, 38, 2287, 68, 215, "Text",ExpressionUUID->"db30078f-2b87-420c-81b7-128ce1b115f7"],
+Cell[3672, 108, 392, 8, 71, "Text",ExpressionUUID->"2e1d5e1e-a1ac-47a0-8a88-e8776b127fef"],
+Cell[4067, 118, 438, 9, 71, "Text",ExpressionUUID->"e4f24a27-62a9-4233-b0f6-a69284a32716"],
+Cell[4508, 129, 859, 22, 127, "Text",ExpressionUUID->"4b629915-c316-4cb8-940c-60d013fee4c3"],
+Cell[5370, 153, 621, 17, 60, "Input",ExpressionUUID->"69b6a8b4-1045-4014-93f2-6118926d084b"],
 Cell[CellGroupData[{
-Cell[5985, 174, 333, 7, 35, "Input",ExpressionUUID->"8d1cbdc2-2593-4027-b7c8-aba39d42c770"],
-Cell[6321, 183, 276, 7, 40, "Output",ExpressionUUID->"4c7059ec-85cd-489c-8ea7-878a40602aa8"]
+Cell[6016, 174, 333, 7, 35, "Input",ExpressionUUID->"8d1cbdc2-2593-4027-b7c8-aba39d42c770"],
+Cell[6352, 183, 276, 7, 40, "Output",ExpressionUUID->"4c7059ec-85cd-489c-8ea7-878a40602aa8"]
 }, Open  ]],
-Cell[6612, 193, 453, 12, 48, "Text",ExpressionUUID->"b3aec05e-bfe7-4dc4-96e6-9ba1a8abb0a5"],
+Cell[6643, 193, 453, 12, 48, "Text",ExpressionUUID->"b3aec05e-bfe7-4dc4-96e6-9ba1a8abb0a5"],
 Cell[CellGroupData[{
-Cell[7090, 209, 394, 9, 52, "Input",ExpressionUUID->"47cfdb2a-3e2d-4959-b456-cc4677c6c4a1"],
-Cell[7487, 220, 196, 3, 54, "Output",ExpressionUUID->"2976ae03-eeb7-47b4-b233-732732bf1fc1"]
+Cell[7121, 209, 394, 9, 52, "Input",ExpressionUUID->"47cfdb2a-3e2d-4959-b456-cc4677c6c4a1"],
+Cell[7518, 220, 196, 3, 54, "Output",ExpressionUUID->"2976ae03-eeb7-47b4-b233-732732bf1fc1"]
 }, Open  ]],
-Cell[7698, 226, 594, 16, 48, "Text",ExpressionUUID->"60c2ce96-fa28-4570-9639-81ae44437b2a"],
-Cell[8295, 244, 1494, 36, 131, "Text",ExpressionUUID->"af5d2284-631c-4a1a-8c3a-34bb3e0cf9d1"],
-Cell[9792, 282, 459, 11, 60, "Input",ExpressionUUID->"906db3f8-d1d5-4b6f-907d-363337c0781e"],
+Cell[7729, 226, 594, 16, 48, "Text",ExpressionUUID->"60c2ce96-fa28-4570-9639-81ae44437b2a"],
+Cell[8326, 244, 1494, 36, 131, "Text",ExpressionUUID->"af5d2284-631c-4a1a-8c3a-34bb3e0cf9d1"],
+Cell[9823, 282, 459, 11, 60, "Input",ExpressionUUID->"906db3f8-d1d5-4b6f-907d-363337c0781e"],
 Cell[CellGroupData[{
-Cell[10276, 297, 395, 10, 35, "Input",ExpressionUUID->"1181680e-7f65-4dcf-8396-80a53e750f47"],
-Cell[10674, 309, 8522, 161, 298, "Output",ExpressionUUID->"3c05ea05-2143-41ed-9fbc-fb654d781959"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[19233, 475, 532, 11, 35, "Input",ExpressionUUID->"1efb4ac9-c23f-40de-aba1-558df9be7479"],
-Cell[19768, 488, 3080, 66, 310, "Output",ExpressionUUID->"236e3bba-3bad-477b-a250-adb5569c16fa"]
+Cell[10307, 297, 395, 10, 35, "Input",ExpressionUUID->"1181680e-7f65-4dcf-8396-80a53e750f47"],
+Cell[10705, 309, 8522, 161, 298, "Output",ExpressionUUID->"3c05ea05-2143-41ed-9fbc-fb654d781959"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22885, 559, 1034, 28, 108, "Input",ExpressionUUID->"eb401dc3-3dab-4e8c-a26e-b863f7fdf2e0"],
-Cell[23922, 589, 295, 7, 40, "Output",ExpressionUUID->"e8eb9357-9fe7-4cf6-8360-25e8755d98ef"]
-}, Open  ]],
-Cell[24232, 599, 243, 4, 43, "Text",ExpressionUUID->"32a5cd41-3ec6-4f48-8d0b-7ae2986c050a"],
-Cell[CellGroupData[{
-Cell[24500, 607, 445, 10, 35, "Input",ExpressionUUID->"8d9c2beb-f107-4faa-8272-eb97d169ad34"],
-Cell[24948, 619, 224, 4, 40, "Output",ExpressionUUID->"619c1670-bdd8-4e41-9c5a-545889ee62c5"]
-}, Open  ]],
-Cell[25187, 626, 1131, 32, 78, "Text",ExpressionUUID->"ec6bbc79-7b22-45d2-8d9f-d76e08e4607c"],
-Cell[CellGroupData[{
-Cell[26343, 662, 223, 4, 52, "Input",ExpressionUUID->"88035761-126a-4ccd-880a-0432dfeb56b2"],
-Cell[26569, 668, 169, 2, 40, "Output",ExpressionUUID->"5214b1a0-d96a-46b2-9e7c-71ed615a7580"]
-}, Open  ]],
-Cell[26753, 673, 226, 3, 43, "Text",ExpressionUUID->"d7efc879-714c-411f-a36e-560b44a61039"],
-Cell[26982, 678, 2297, 75, 182, "Text",ExpressionUUID->"82c15f22-b08d-4a54-9b32-b4bbf1734fa8"],
-Cell[29282, 755, 945, 26, 71, "Text",ExpressionUUID->"b9cbaa89-be67-41da-b326-657e97149a48"],
-Cell[CellGroupData[{
-Cell[30252, 785, 339, 8, 35, "Input",ExpressionUUID->"67c6658d-b58d-4872-a7ac-b1515ae91cc3"],
-Cell[30594, 795, 399, 9, 29, "Message",ExpressionUUID->"3dbf993d-8759-41dc-aa32-ed3ea66154f1"],
-Cell[30996, 806, 454, 10, 47, "Output",ExpressionUUID->"602663ec-9d28-4b91-bb39-2dde2203b1f6"]
-}, Open  ]],
-Cell[31465, 819, 300, 6, 71, "Text",ExpressionUUID->"a0cd7a0f-4f99-44d0-8c24-c6085f25161f"],
-Cell[CellGroupData[{
-Cell[31790, 829, 1110, 26, 156, "Input",ExpressionUUID->"0c46c7f6-51d5-4540-9273-8ac3156e738b"],
-Cell[32903, 857, 360, 8, 40, "Output",ExpressionUUID->"b38066ce-70c3-4971-a3d1-943dbda4dfad"],
-Cell[33266, 867, 360, 8, 40, "Output",ExpressionUUID->"5a2ea8cc-9bad-440c-b109-257658d1e6aa"],
-Cell[33629, 877, 361, 8, 40, "Output",ExpressionUUID->"9decba6a-3119-4297-b48a-7a0084e7c7e9"],
-Cell[33993, 887, 364, 8, 40, "Output",ExpressionUUID->"cf3003b1-f6cf-4074-b520-f3fbf131b273"],
-Cell[34360, 897, 367, 8, 40, "Output",ExpressionUUID->"cd606a80-7bf8-4c24-a8dd-8748105d6548"],
-Cell[34730, 907, 365, 8, 40, "Output",ExpressionUUID->"0c3b0062-18c0-4075-b9e6-8827ed96b0ea"]
+Cell[19264, 475, 532, 11, 35, "Input",ExpressionUUID->"1efb4ac9-c23f-40de-aba1-558df9be7479"],
+Cell[19799, 488, 3080, 66, 310, "Output",ExpressionUUID->"236e3bba-3bad-477b-a250-adb5569c16fa"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35132, 920, 814, 22, 35, "Input",ExpressionUUID->"007ec9ea-40d2-46c9-80aa-066884f902d8"],
-Cell[35949, 944, 3963, 82, 311, "Output",ExpressionUUID->"c5bb58f1-bf86-407f-94b6-35cefce34a94"]
+Cell[22916, 559, 1034, 28, 108, "Input",ExpressionUUID->"eb401dc3-3dab-4e8c-a26e-b863f7fdf2e0"],
+Cell[23953, 589, 295, 7, 40, "Output",ExpressionUUID->"e8eb9357-9fe7-4cf6-8360-25e8755d98ef"]
 }, Open  ]],
-Cell[39927, 1029, 343, 8, 71, "Text",ExpressionUUID->"443751f3-55b8-4158-9183-6e228c914f50"],
+Cell[24263, 599, 243, 4, 43, "Text",ExpressionUUID->"32a5cd41-3ec6-4f48-8d0b-7ae2986c050a"],
 Cell[CellGroupData[{
-Cell[40295, 1041, 557, 14, 35, "Input",ExpressionUUID->"4cfcfa06-9b6c-4810-bc04-83e2bf816fac"],
-Cell[40855, 1057, 176, 3, 40, "Output",ExpressionUUID->"cb6599a1-7ebf-45d6-a627-b1bc0f4b8e0a"]
+Cell[24531, 607, 445, 10, 35, "Input",ExpressionUUID->"8d9c2beb-f107-4faa-8272-eb97d169ad34"],
+Cell[24979, 619, 224, 4, 40, "Output",ExpressionUUID->"619c1670-bdd8-4e41-9c5a-545889ee62c5"]
 }, Open  ]],
-Cell[41046, 1063, 384, 10, 35, "Input",ExpressionUUID->"31155471-45fc-46f5-ae73-fe5fc73ad0ad"],
-Cell[41433, 1075, 2171, 60, 238, "Text",ExpressionUUID->"39280fb5-2d51-4a0c-bf02-5be9d7192e87"],
-Cell[43607, 1137, 581, 11, 154, "Text",ExpressionUUID->"e0a8969f-deab-4f65-aa11-aaa7552ef600"],
-Cell[44191, 1150, 479, 12, 71, "Text",ExpressionUUID->"d840147f-ef66-41e1-b5c1-5ce5614f2d22"],
+Cell[25218, 626, 1131, 32, 78, "Text",ExpressionUUID->"ec6bbc79-7b22-45d2-8d9f-d76e08e4607c"],
 Cell[CellGroupData[{
-Cell[44695, 1166, 205, 4, 35, "Input",ExpressionUUID->"1f5a9911-afa2-45db-aaa1-204840bf6b50"],
-Cell[44903, 1172, 245, 6, 40, "Output",ExpressionUUID->"c0e58256-d704-4d4e-a3eb-d1c8bebd74c2"]
+Cell[26374, 662, 223, 4, 52, "Input",ExpressionUUID->"88035761-126a-4ccd-880a-0432dfeb56b2"],
+Cell[26600, 668, 169, 2, 40, "Output",ExpressionUUID->"5214b1a0-d96a-46b2-9e7c-71ed615a7580"]
+}, Open  ]],
+Cell[26784, 673, 226, 3, 43, "Text",ExpressionUUID->"d7efc879-714c-411f-a36e-560b44a61039"],
+Cell[27013, 678, 2297, 75, 182, "Text",ExpressionUUID->"82c15f22-b08d-4a54-9b32-b4bbf1734fa8"],
+Cell[29313, 755, 945, 26, 71, "Text",ExpressionUUID->"b9cbaa89-be67-41da-b326-657e97149a48"],
+Cell[CellGroupData[{
+Cell[30283, 785, 339, 8, 35, "Input",ExpressionUUID->"67c6658d-b58d-4872-a7ac-b1515ae91cc3"],
+Cell[30625, 795, 399, 9, 29, "Message",ExpressionUUID->"3dbf993d-8759-41dc-aa32-ed3ea66154f1"],
+Cell[31027, 806, 454, 10, 47, "Output",ExpressionUUID->"602663ec-9d28-4b91-bb39-2dde2203b1f6"]
+}, Open  ]],
+Cell[31496, 819, 300, 6, 71, "Text",ExpressionUUID->"a0cd7a0f-4f99-44d0-8c24-c6085f25161f"],
+Cell[CellGroupData[{
+Cell[31821, 829, 1110, 26, 156, "Input",ExpressionUUID->"0c46c7f6-51d5-4540-9273-8ac3156e738b"],
+Cell[32934, 857, 360, 8, 40, "Output",ExpressionUUID->"b38066ce-70c3-4971-a3d1-943dbda4dfad"],
+Cell[33297, 867, 360, 8, 40, "Output",ExpressionUUID->"5a2ea8cc-9bad-440c-b109-257658d1e6aa"],
+Cell[33660, 877, 361, 8, 40, "Output",ExpressionUUID->"9decba6a-3119-4297-b48a-7a0084e7c7e9"],
+Cell[34024, 887, 364, 8, 40, "Output",ExpressionUUID->"cf3003b1-f6cf-4074-b520-f3fbf131b273"],
+Cell[34391, 897, 367, 8, 40, "Output",ExpressionUUID->"cd606a80-7bf8-4c24-a8dd-8748105d6548"],
+Cell[34761, 907, 365, 8, 40, "Output",ExpressionUUID->"0c3b0062-18c0-4075-b9e6-8827ed96b0ea"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45185, 1183, 661, 16, 35, "Input",ExpressionUUID->"7828c907-4f8b-49a4-889c-a07895897661"],
-Cell[45849, 1201, 1959, 40, 422, "Output",ExpressionUUID->"51ddf70a-7ac2-4932-b35b-649a39857bd6"]
+Cell[35163, 920, 814, 22, 35, "Input",ExpressionUUID->"007ec9ea-40d2-46c9-80aa-066884f902d8"],
+Cell[35980, 944, 3963, 82, 311, "Output",ExpressionUUID->"c5bb58f1-bf86-407f-94b6-35cefce34a94"]
 }, Open  ]],
-Cell[47823, 1244, 2092, 40, 92, "Input",ExpressionUUID->"8b47917e-3d91-4b20-99d0-3c5c44af66f5"],
-Cell[49918, 1286, 783, 18, 39, "Input",ExpressionUUID->"55d9301e-4ff9-4083-9a84-56e25e05e8b9"],
+Cell[39958, 1029, 343, 8, 71, "Text",ExpressionUUID->"443751f3-55b8-4158-9183-6e228c914f50"],
 Cell[CellGroupData[{
-Cell[50726, 1308, 222, 4, 35, "Input",ExpressionUUID->"280e4ec8-37e6-4ed0-820c-bcd7c40b6c4d"],
-Cell[50951, 1314, 189771, 3131, 308, "Output",ExpressionUUID->"fe194c00-7f4c-4931-bb80-a8d41be4c27c"]
+Cell[40326, 1041, 557, 14, 35, "Input",ExpressionUUID->"4cfcfa06-9b6c-4810-bc04-83e2bf816fac"],
+Cell[40886, 1057, 176, 3, 40, "Output",ExpressionUUID->"cb6599a1-7ebf-45d6-a627-b1bc0f4b8e0a"]
 }, Open  ]],
-Cell[240737, 4448, 165, 3, 43, "Text",ExpressionUUID->"41d3f696-4a94-4d6e-b747-8b9b4b873f05"]
+Cell[41077, 1063, 384, 10, 35, "Input",ExpressionUUID->"31155471-45fc-46f5-ae73-fe5fc73ad0ad"],
+Cell[41464, 1075, 1970, 53, 238, "Text",ExpressionUUID->"39280fb5-2d51-4a0c-bf02-5be9d7192e87"],
+Cell[43437, 1130, 637, 12, 154, "Text",ExpressionUUID->"e0a8969f-deab-4f65-aa11-aaa7552ef600"],
+Cell[44077, 1144, 479, 12, 71, "Text",ExpressionUUID->"d840147f-ef66-41e1-b5c1-5ce5614f2d22"],
+Cell[CellGroupData[{
+Cell[44581, 1160, 205, 4, 35, "Input",ExpressionUUID->"1f5a9911-afa2-45db-aaa1-204840bf6b50"],
+Cell[44789, 1166, 245, 6, 40, "Output",ExpressionUUID->"c0e58256-d704-4d4e-a3eb-d1c8bebd74c2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45071, 1177, 661, 16, 35, "Input",ExpressionUUID->"7828c907-4f8b-49a4-889c-a07895897661"],
+Cell[45735, 1195, 1959, 40, 410, "Output",ExpressionUUID->"51ddf70a-7ac2-4932-b35b-649a39857bd6"]
+}, Open  ]],
+Cell[47709, 1238, 2092, 40, 92, "Input",ExpressionUUID->"8b47917e-3d91-4b20-99d0-3c5c44af66f5"],
+Cell[49804, 1280, 783, 18, 39, "Input",ExpressionUUID->"55d9301e-4ff9-4083-9a84-56e25e05e8b9"],
+Cell[CellGroupData[{
+Cell[50612, 1302, 222, 4, 35, "Input",ExpressionUUID->"280e4ec8-37e6-4ed0-820c-bcd7c40b6c4d"],
+Cell[50837, 1308, 189771, 3131, 308, "Output",ExpressionUUID->"fe194c00-7f4c-4931-bb80-a8d41be4c27c"]
+}, Open  ]],
+Cell[240623, 4442, 165, 3, 43, "Text",ExpressionUUID->"41d3f696-4a94-4d6e-b747-8b9b4b873f05"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[240825, 4450, 197, 3, 69, "Subsubsection",ExpressionUUID->"053a953c-88a8-4644-8b2d-0a0311bf2d52"],
+Cell[241025, 4455, 711, 14, 182, "Text",ExpressionUUID->"ef067634-1c52-43fc-8daf-e4bf5a386ce4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[241773, 4474, 160, 3, 67, "Subsection",ExpressionUUID->"d682f065-f4ed-47d4-980d-f628dc112841"],
+Cell[241936, 4479, 4577, 123, 562, "Text",ExpressionUUID->"bfb97b4c-ac8c-481b-abb8-3c768203fe55"],
+Cell[CellGroupData[{
+Cell[246538, 4606, 157, 3, 56, "Subsubsection",ExpressionUUID->"6122ead5-8498-4735-8770-c56e4c746ce8"],
+Cell[246698, 4611, 3004, 98, 129, "Text",ExpressionUUID->"67a6750c-e965-4cb7-ac63-91a55f1cfa4f"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[249751, 4715, 267, 4, 67, "Subsection",ExpressionUUID->"ed57f266-0051-48be-a872-860a790795bb"],
+Cell[250021, 4721, 752, 13, 99, "Text",ExpressionUUID->"613fbb65-c3f4-4221-b8b5-df0a34e2abab"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[250810, 4739, 159, 3, 67, "Subsection",ExpressionUUID->"b3633224-516b-493d-a513-8cafc2f8830f"],
+Cell[250972, 4744, 6994, 210, 428, "Text",ExpressionUUID->"e8ef6b63-5881-427b-92a0-0c59b0d9a17b"],
+Cell[257969, 4956, 152, 3, 35, "Input",ExpressionUUID->"504428c9-bb8a-46b5-8276-96d966a41e22"]
 }, Open  ]]
 }
 ]
