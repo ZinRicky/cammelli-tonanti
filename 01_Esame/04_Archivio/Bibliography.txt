@@ -3,4 +3,4 @@ E:
 Ljapunov's Exponent - lecture 25/26 
 F:
 Proof of 3-period => n-period forall n 
-https://en.wikipedia.org/wiki/Sharkovskii%27s_theorem (i'm quite ashamed by this tho)
+https://it.wikipedia.org/wiki/Teorema_di_Sharkovsky (i'm quite ashamed by this tho)
