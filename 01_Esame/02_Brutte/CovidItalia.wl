@@ -10,8 +10,8 @@ CovidItalia::usage = "Il pacchetto CovidItalia reperisce \
 dati e crea grafici a partire dalle tabelle della \
 Protezione Civile sul nuovo Coronavirus."
 
-CovidPositivi::usage = "CovidPositivi[] restituisce una lista con\
-i numeri cumulati dei positivi a partire dal 24 febbraio 2020 fino\
+CovidPositivi::usage = "CovidPositivi[] restituisce una lista con \
+i numeri cumulati dei positivi a partire dal 24 febbraio 2020 fino \
 alla data corrente.
 CovidPositivi[n] restituisce una lista con i numeri cumulati \
 dei positivi a partire dal 24 febbraio 2020 e per n giorni.
