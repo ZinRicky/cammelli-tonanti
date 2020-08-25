@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     99068,       2634]
-NotebookOptionsPosition[     90669,       2511]
-NotebookOutlinePosition[     91188,       2529]
-CellTagsIndexPosition[     91145,       2526]
+NotebookDataLength[     99164,       2632]
+NotebookOptionsPosition[     90765,       2509]
+NotebookOutlinePosition[     91284,       2527]
+CellTagsIndexPosition[     91241,       2524]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2431,19 +2431,19 @@ Cell[BoxData[
        RowBox[{"Round", "[", 
         RowBox[{
          RowBox[{
-          RowBox[{"fn", "[", 
+          RowBox[{"fnC", "[", 
            RowBox[{"\[Mu]", ",", "0.4", ",", 
             RowBox[{"\[CapitalNu]", "+", "#"}]}], "]"}], "-", 
-          RowBox[{"fn", "[", 
+          RowBox[{"fnC", "[", 
            RowBox[{"\[Mu]", ",", "0.4", ",", "\[CapitalNu]"}], "]"}]}], ",", 
          "1"}], "]"}], "&"}], "/@", 
       RowBox[{"Range", "[", 
        SuperscriptBox["2", "n"], "]"}]}], "]"}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.8073769260444994`*^9, 3.8073769352374706`*^9}, {
   3.8073769976138315`*^9, 3.8073770111118736`*^9}, {3.8073781550573626`*^9, 
-  3.80737815742101*^9}, {3.8073782717734823`*^9, 
-  3.8073783063424697`*^9}},ExpressionUUID->"6761466d-4deb-4b45-ad3d-\
-3acce04e8db6"],
+  3.80737815742101*^9}, {3.8073782717734823`*^9, 3.8073783063424697`*^9}, {
+  3.807381222292409*^9, 3.8073812246091223`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"6761466d-4deb-4b45-ad3d-3acce04e8db6"],
 
 Cell[BoxData[
  RowBox[{
@@ -2496,16 +2496,14 @@ Cell[BoxData[
            "}"}]}], "}"}]}], ",", "1"}], "]"}]}], ";"}], "*)"}], 
   "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{
-    RowBox[{"deviazioni", "=", 
-     RowBox[{
-     "Import", "[", 
-      "\"\<https://raw.githubusercontent.com/ZinRicky/cammelli-tonanti/master/\
-01_Esame/03_Dati/D_deviazioni.csv\>\"", "]"}]}], ";"}], 
-   "\[IndentingNewLine]"}]}]], "Input",
+   RowBox[{"deviazioni", "=", 
+    RowBox[{
+    "Import", "[", 
+     "\"\<https://raw.githubusercontent.com/ZinRicky/cammelli-tonanti/master/\
+01_Esame/03_Dati/D_deviazioni.csv\>\"", "]"}]}], ";"}]}]], "Input",
  CellChangeTimes->{{3.8073783432789316`*^9, 3.8073784103346324`*^9}, 
-   3.8073785679381485`*^9},ExpressionUUID->"c7c3e608-5b2f-49cc-866d-\
-57781c0f19f2"]
+   3.8073785679381485`*^9, {3.807378755337254*^9, 3.8073787589530735`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"c7c3e608-5b2f-49cc-866d-57781c0f19f2"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -2632,8 +2630,8 @@ Cell[80227, 2234, 449, 12, 17, "Item1Numbered",ExpressionUUID->"ba794b14-ef3a-43
 }, Open  ]],
 Cell[80691, 2249, 3011, 78, 82, "Text",ExpressionUUID->"4e09147e-03e9-4f11-9c94-37424717517b"],
 Cell[83705, 2329, 3436, 83, 97, "Text",ExpressionUUID->"760758f9-5f29-4c9e-b85a-ffa4d8d45f36"],
-Cell[87144, 2414, 1252, 31, 67, "Input",ExpressionUUID->"6761466d-4deb-4b45-ad3d-3acce04e8db6"],
-Cell[88399, 2447, 2242, 60, 173, "Input",ExpressionUUID->"c7c3e608-5b2f-49cc-866d-57781c0f19f2"]
+Cell[87144, 2414, 1323, 31, 97, "Input",ExpressionUUID->"6761466d-4deb-4b45-ad3d-3acce04e8db6"],
+Cell[88470, 2447, 2267, 58, 156, "Input",ExpressionUUID->"c7c3e608-5b2f-49cc-866d-57781c0f19f2"]
 }, Open  ]]
 }, Open  ]]
 }
