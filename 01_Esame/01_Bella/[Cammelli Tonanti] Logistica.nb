@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     91763,       2450]
-NotebookOptionsPosition[     83656,       2330]
-NotebookOutlinePosition[     84175,       2348]
-CellTagsIndexPosition[     84132,       2345]
+NotebookDataLength[     96257,       2561]
+NotebookOptionsPosition[     87958,       2439]
+NotebookOutlinePosition[     88477,       2457]
+CellTagsIndexPosition[     88434,       2454]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2251,7 +2251,7 @@ Cell[TextData[{
 la ",
  Cell[BoxData[
   FormBox["n", TraditionalForm]],ExpressionUUID->
-  "9189ebae-2ce1-41d0-8d3d-22afe88339c4"],
+  "c9b1977f-ade0-4d95-8fac-8239035c0043"],
  "-esima biforcazione, scelto \[OpenCurlyDoubleQuote]un quasi qualunque\
 \[CloseCurlyDoubleQuote] ",
  Cell[BoxData[
@@ -2260,31 +2260,31 @@ la ",
     SubscriptBox["x", "0"], "\[Element]", 
     RowBox[{"(", 
      RowBox[{"0", ",", "1"}], ")"}]}], TraditionalForm]],ExpressionUUID->
-  "e2fdd7c8-5d2d-4876-a277-1c814891b34a"],
+  "c6bb968f-6972-4e6e-9f5f-8d9abb4a14e1"],
  ", ovvero un ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["x", "0"], TraditionalForm]],ExpressionUUID->
-  "32d4f913-7b6a-4890-ab2f-11f89664e56e"],
+  "3514f558-06c3-4eea-b40a-45254a20cb6d"],
  " che non risulti punto fisso di ",
  Cell[BoxData[
   FormBox[
    TemplateBox[{"f", "\[Mu]", "M"},
     "Subsuperscript"], TraditionalForm]],
   CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
-  ExpressionUUID->"71bb371e-1320-4c51-a46b-3d0e8af7bb0f"],
+  ExpressionUUID->"bab2adb2-296a-4378-8b25-76f3ca469add"],
  " con ",
  Cell[BoxData[
   FormBox[
    RowBox[{"M", "<", 
     SuperscriptBox["2", "n"]}], TraditionalForm]],ExpressionUUID->
-  "00e4d0ba-c95f-4f3c-aac9-75207192476f"],
+  "010706c0-ec1e-4fc9-b01f-6440912f5512"],
  " (e la scelta di ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["x", "0"], "=", "0.4"}], TraditionalForm]],ExpressionUUID->
-  "9acade37-1a00-4de5-845d-2027a0f3965b"],
+  "312c8a33-8b04-4367-a6ae-370c490e48f8"],
  " ci garantisce di non incontrare una tale eventualit\[AGrave]), la distanza \
 tra ",
  Cell[BoxData[
@@ -2294,7 +2294,7 @@ tra ",
      "Subsuperscript"], "(", 
     SubscriptBox["x", "0"], ")"}], TraditionalForm]],
   CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
-  ExpressionUUID->"b8c52259-7236-45cd-91ab-c9927720c973"],
+  ExpressionUUID->"cff5ee22-a80d-4dca-ba7e-3548f70c95b2"],
  " e ",
  Cell[BoxData[
   FormBox[
@@ -2305,16 +2305,15 @@ tra ",
      "Subsuperscript"], "(", 
     SubscriptBox["x", "0"], ")"}], TraditionalForm]],
   CellChangeTimes->{{3.8038983036146636`*^9, 3.803898307369625*^9}},
-  ExpressionUUID->"b1080a06-5c2a-47e7-af2d-1d50cb98eeef"],
+  ExpressionUUID->"3b421d95-a529-43b4-991c-b9f4a134fa74"],
  " \[EGrave] infinitesima con l\[CloseCurlyQuote]aumentare di ",
  Cell[BoxData[
   FormBox["N", TraditionalForm]],ExpressionUUID->
-  "56cd48ea-4928-46c1-9869-3d89caa98926"],
+  "065e5524-8745-4c66-8c1e-b2c4787442fd"],
  ". In particolare, se ",
  Cell[BoxData[
-  FormBox[
-   RowBox[{"N", "\[Element]", "\[DoubleStruckCapitalN]"}], TraditionalForm]],
-  ExpressionUUID->"3c4bf6f8-3d7d-43b1-888a-7fcc9273d4dd"],
+  FormBox["N", TraditionalForm]],ExpressionUUID->
+  "1a9bcc43-4421-4d32-8ae5-6a5f9c2fcdb5"],
  " \[EGrave] sufficientemente grande, la distanza tra i due stadi dell\
 \[CloseCurlyQuote]orbita descritti prima \[EGrave] trascurabile."
 }], "Text",
@@ -2322,9 +2321,119 @@ tra ",
   3.8068612931519976`*^9, 3.8068614736616573`*^9}, {3.8068615332563562`*^9, 
   3.8068616278677144`*^9}, {3.8068620509382334`*^9, 3.8068620928705335`*^9}, {
   3.8068630675859823`*^9, 3.8068630722178764`*^9}, {3.806864309671562*^9, 
-  3.8068643114373617`*^9}, {3.8072944369174795`*^9, 
-  3.807294498537421*^9}},ExpressionUUID->"1e57da3e-38dc-42ae-b9f2-\
-2e1e21f6b992"]
+  3.8068643114373617`*^9}, {3.8072944369174795`*^9, 3.807294498537421*^9}, {
+  3.8073733300644755`*^9, 3.8073733302102375`*^9}, {3.807374758740349*^9, 
+  3.8073747605955887`*^9}},ExpressionUUID->"4e09147e-03e9-4f11-9c94-\
+37424717517b"],
+
+Cell[TextData[{
+ "Alla luce di ci\[OGrave], fissiamo ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"N", "\[Element]", "\[DoubleStruckCapitalN]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c87f8c68-f557-4563-a87a-0c0bf0d29cf6"],
+ " abbastanza grande e registriamo quanti punti delle iterazioni di ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "\[Mu]"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e60c14c2-90ec-4e68-901c-7aea7029e417"],
+ " dalla ",
+ Cell[BoxData[
+  FormBox["N", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "53c93721-2655-408d-83d6-a6c791cca8c1"],
+ "-esima alla ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"N", "+", 
+     SuperscriptBox["2", 
+      RowBox[{"n", "'"}]]}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c9304889-3c69-4e13-a0a3-81ee9e6f9698"],
+ "-esima sono \[OpenCurlyDoubleQuote]non trascurabilmente diversi\
+\[CloseCurlyDoubleQuote]. Usiamo ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"n", "'"}], "\[GreaterEqual]", "n"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c47491d4-b3fe-49c1-9aaf-476ade46e320"],
+ ", ove ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "\[Element]", "\[DoubleStruckCapitalN]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "4f25d409-93eb-407f-91e1-02249464971e"],
+ " indica la biforcazione che stiamo cercando: se usassimo solo direttamente ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "675036b9-5f42-47f8-9a6e-c3e49b0b8f64"],
+ ", gli errori numerici porterebbero a considerare ",
+ Cell[BoxData[
+  FormBox["\[Mu]", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "b5946a85-1a03-4327-bad4-d1f3307a2293"],
+ " molto pi\[UGrave] piccoli del necessario, come mostrer\[AGrave] l\
+\[CloseCurlyQuote]esempio subito seguente l\[CloseCurlyQuote]implementazione; \
+ci\[OGrave] comporterebbe un allungamento dei tempi di computazione \
+\[LongDash] cosa che ovviamente vogliamo evitare. Per risparmiare ulteriore \
+tempo di computazione, restringiamo la ricerca ad intervalli specifici, \
+ovvero un intorno di ",
+ Cell[BoxData[
+  FormBox["3", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "7446ac7c-555f-4748-8803-dfc8bb556544"],
+ " e l\[CloseCurlyQuote]intervallo ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"1", "+", 
+      SqrtBox["6"]}], ",", "3.57"}], "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "8e4ae3c5-b3f4-4b02-875d-04a168f303ea"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.8068611862866354`*^9, 3.806861219340803*^9}, {
+  3.8068612931519976`*^9, 3.8068614736616573`*^9}, {3.8068615332563562`*^9, 
+  3.8068616278677144`*^9}, {3.8068620509382334`*^9, 3.8068620928705335`*^9}, {
+  3.8068630675859823`*^9, 3.8068630722178764`*^9}, {3.806864309671562*^9, 
+  3.8068643114373617`*^9}, {3.8072944369174795`*^9, 3.807294498537421*^9}, {
+  3.8073733300644755`*^9, 3.8073733302102375`*^9}, {3.807374758740349*^9, 
+  3.807374792078185*^9}, {3.80737484613175*^9, 3.807374884541969*^9}, {
+  3.807376303741707*^9, 3.8073765184496655`*^9}, {3.807376774640331*^9, 
+  3.80737679500319*^9}, {3.807376959172167*^9, 3.8073769904527197`*^9}, {
+  3.8073770219307165`*^9, 
+  3.807377120371081*^9}},ExpressionUUID->"760758f9-5f29-4c9e-b85a-\
+ffa4d8d45f36"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"conf", "[", 
+   RowBox[{"\[Mu]_", ",", "n_", ",", "\[CapitalNu]_"}], "]"}], ":=", 
+  RowBox[{"Length", "[", 
+   RowBox[{"Union", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Round", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"fn", "[", 
+          RowBox[{"\[Mu]", ",", "0.4", ",", 
+           RowBox[{"\[CapitalNu]", "+", "#"}]}], "]"}], "-", 
+         RowBox[{"fn", "[", 
+          RowBox[{"\[Mu]", ",", "0.4", ",", "\[CapitalNu]"}], "]"}]}], ",", 
+        "1"}], "]"}], "&"}], "/@", 
+     RowBox[{"Range", "[", 
+      SuperscriptBox["2", "n"], "]"}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8073769260444994`*^9, 3.8073769352374706`*^9}, {
+  3.8073769976138315`*^9, 
+  3.8073770111118736`*^9}},ExpressionUUID->"6761466d-4deb-4b45-ad3d-\
+3acce04e8db6"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -2430,7 +2539,7 @@ Cell[50984, 1529, 159, 3, 24, "QED",ExpressionUUID->"29f0cf41-e963-4ed8-a68a-efd
 Cell[51146, 1534, 3149, 74, 102, "Text",ExpressionUUID->"d33a4a00-4e80-474a-bb98-6af222445326"],
 Cell[54298, 1610, 5637, 138, 411, "Input",ExpressionUUID->"b8c600b2-36dd-442d-8a66-a985b50d13ef"],
 Cell[59938, 1750, 813, 18, 56, "Text",ExpressionUUID->"25fc600d-ad3d-433e-bb6f-8276a5b25a48"],
-Cell[60754, 1770, 3226, 71, 248, "Input",ExpressionUUID->"c99f57b9-8b2d-45e5-946a-5255de1b278b"],
+Cell[60754, 1770, 3226, 71, 228, "Input",ExpressionUUID->"c99f57b9-8b2d-45e5-946a-5255de1b278b"],
 Cell[63983, 1843, 644, 16, 39, "Text",ExpressionUUID->"90231285-ac5e-43a1-ae6a-193f76e82cc8"],
 Cell[64630, 1861, 1735, 43, 56, "Input",ExpressionUUID->"bebb28fe-5541-4ab8-bc3c-f8ec2cada7d5"],
 Cell[66368, 1906, 1429, 34, 136, "Input",ExpressionUUID->"61d742ac-3295-4abd-b82a-b68d554fb861"],
@@ -2449,7 +2558,9 @@ Cell[CellGroupData[{
 Cell[79298, 2207, 898, 24, 23, "Item1Numbered",ExpressionUUID->"e40e36d0-d94b-4bb2-b342-57ebadafb69b"],
 Cell[80199, 2233, 449, 12, 17, "Item1Numbered",ExpressionUUID->"ba794b14-ef3a-43f0-aa26-9b0364925add"]
 }, Open  ]],
-Cell[80663, 2248, 2965, 78, 82, "Text",ExpressionUUID->"1e57da3e-38dc-42ae-b9f2-2e1e21f6b992"]
+Cell[80663, 2248, 3011, 78, 82, "Text",ExpressionUUID->"4e09147e-03e9-4f11-9c94-37424717517b"],
+Cell[83677, 2328, 3436, 83, 97, "Text",ExpressionUUID->"760758f9-5f29-4c9e-b85a-ffa4d8d45f36"],
+Cell[87116, 2413, 814, 22, 32, "Input",ExpressionUUID->"6761466d-4deb-4b45-ad3d-3acce04e8db6"]
 }, Open  ]]
 }, Open  ]]
 }
