@@ -35,7 +35,8 @@ scegliDati[n_] := Drop[#[[n]]& /@ covidTabella, 1];
 CovidPositivi[] := scegliDati[12]
 CovidPositivi[n_/;(IntegerQ[n] && n > 0)] := scegliDati[12][[1;;n]]
 CovidPositivi[data_/;Or[DateObjectQ[data], StringQ[data]]] := 
-  scegliDati[12][[1;;First[DateDifference[DateObject["2020-02-24"], DateObject[data, "Day"]]]]]
+  scegliDati[12][[1;;First[DateDifference[DateObject["2020-02-24"],
+  DateObject[data, "Day"]]]]]
 
 End[];
 
