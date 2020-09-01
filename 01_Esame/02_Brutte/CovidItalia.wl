@@ -38,6 +38,10 @@ CovidPositivi::usage = "CovidPositivi restituisce il numero \
 delle persone registrate come positive nel giorno \
 CovidUltimaData.";
 
+CovidNuoviPositivi::usage = "CovidNuoviPositivi restituisce \
+il numero delle positive risultate positive nel giorno \
+CovidUltimaData rispetto al giorno precedente.";
+
 CovidDeceduti::usage = "CovidDeceduti resistuisce il numero dei\
 deceduti cumulati registrati nel giorno CovidUltimaData.";
 
@@ -77,6 +81,23 @@ di persone registrate come positive in un determinato \
 giorno, nel periodo tra il 24 febbraio 2020 e data. Se data \
 rappresenta una data nel futuro, il comando \[EGrave] equivalente a \
 CovidPositiviLista[].";
+
+CovidNuoviPositiviLista::usage = "CovidNuoviPositiviLista[] \
+restituisce una lista con \
+i numeri di persone registrate come positive in un determinato \
+giorno rispetto al precedente, a partire dal 24 febbraio 2020 \
+fino all'ultima data disponibile.
+CovidNuoviPositiviLista[n] restituisce una lista con i numeri \
+di persone registrate come positive in un determinato \
+giorno rispetto al precedente, \
+a partire dal 24 febbraio 2020 e per n giorni.
+CovidNuoviPositiviLista[data] restituisce una lista con \
+i numeri \
+di persone registrate come positive in un determinato \
+giorno rispetto al precedente, \
+nel periodo tra il 24 febbraio 2020 e data. Se data \
+rappresenta una data nel futuro, il comando \[EGrave] equivalente a \
+CovidNuoviPositiviLista[].";
 
 CovidDecedutiLista::usage = "CovidDecedutiLista[] \
 restituisce una lista con \
@@ -126,18 +147,36 @@ Se data \
 rappresenta una data nel futuro, il comando \[EGrave] equivalente a \
 CovidCasiTotaliSerie[].";
 
-CovidPositiviSerie::usage = "CovidCasiTotaliSerie[] \
+CovidPositiviSerie::usage = "CovidPositiviSerie[] \
 restituisce un oggetto TimeSeries con \
 i numeri di persone registrate come positive in un determinato \
 giorno a partire dal 24 febbraio 2020 \
 fino all'ultima data disponibile.
-CovidCasiTotaliSerie[n] restituisce un oggetto TimeSeries con \
+CovidPositiviSerie[n] restituisce un oggetto TimeSeries con \
 i numeri di persone registrate come positive in un determinato \
 giorno a partire dal 24 febbraio 2020 e per n giorni.
-CovidCasiTotaliSerie[data] restituisce un oggetto \
+CovidPositiviSerie[data] restituisce un oggetto \
 TimeSeries con \
 i numeri di persone registrate come positive in un determinato \
 giorno nel periodo tra il 24 febbraio 2020 e data. Se data \
+rappresenta una data nel futuro, il comando \[EGrave] equivalente a \
+CovidPositiviSerie[].";
+
+CovidNuoviPositiviSerie::usage = "CovidNuoviPositiviSerie[] \
+restituisce un oggetto TimeSeries con \
+i numeri di persone registrate come positive in un determinato \
+giorno rispetto al precedentea partire dal 24 febbraio 2020 \
+fino all'ultima data disponibile.
+CovidNuoviPositiviSerie[n] restituisce un oggetto TimeSeries \
+con i numeri di persone registrate come positive \
+in un determinato \
+giorno rispetto al precedente \
+a partire dal 24 febbraio 2020 e per n giorni.
+CovidNuoviPositiviSerie[data] restituisce un oggetto \
+TimeSeries con \
+i numeri di persone registrate come positive in un determinato \
+giorno rispetto al precedente \
+nel periodo tra il 24 febbraio 2020 e data. Se data \
 rappresenta una data nel futuro, il comando \[EGrave] equivalente a \
 CovidCasiTotaliSerie[].";
 
@@ -176,8 +215,66 @@ CovidTamponiSerie[].";
 (*Modellizzazioni sui dati*)
 
 
+(* ::Text:: *)
+(*Per mancanza di tempo non proponiamo modellizzazioni dei tamponi n\[EAcute] dei deceduti. Modellizziamo solo i casi totali e i nuovi positivi, perch\[EAcute] \[EGrave] facile inquadrarli con una logistica e la sua derivata \[LongDash] o con una somma di logistiche, visto che dai dati \[EGrave] evidente l'effetto "martello-danza" ipotizzato in questo articolo.*)
+
+
+CovidCasiTotaliListaStabilizza::usage = "
+CovidCasiTotaliListaStabilizza[x] restituisce una lista del \
+tipo CovidCasiTotaliLista[x] aggiustato con una media mobile \
+di cinque giorni.";
+
+CovidCasiTotaliSerieStabilizza::usage = "
+CovidCasiTotaliSerieStabilizza[x] restituisce un oggetto \
+TimeSeries del \
+tipo CovidCasiTotaliSerie[x] aggiustato con una media mobile \
+di cinque giorni.";
+
+CovidNuoviPositiviListaStabilizza::usage = "
+CovidNuoviPositiviListaStabilizza[x] restituisce una lista del \
+tipo CovidNuoviPositiviLista[x] aggiustato con una media mobile \
+di cinque giorni.";
+
+CovidNuoviPositiviListaStabilizza::usage = "
+CovidNuoviPositiviSerieStabilizza[x] restituisce un oggetto \
+TimeSeries del \
+tipo CovidNuoviPositiviSerie[x] aggiustato con una media mobile \
+di cinque giorni.";
+
+
+CovidCasiTotaliModello::usage = "CovidCasiTotaliModello \
+restituisce una funzione pura ottenuta applicando il modello \
+logistico a CovidCasiTotaliLista.";
+
+CovidNuoviPositiviModello::usage = "CovidNuoviPositiviModello \
+restituisce una funzione pura ottenuta derivando il modello \
+logistico CovidCasiTotaliModello.";
+
+
+CovidCasiTotaliModello2::usage = "CovidCasiTotaliModello2 \
+restituisce una funzione pura ottenuta applicando il modello \
+di somma di due logistiche a CovidCasiTotaliLista.";
+
+CovidNuoviPositiviModello2::usage = "CovidNuoviPositiviModello2 \
+restituisce una funzione pura ottenuta derivando il modello \
+di somma di due logistiche CovidCasiTotaliModello2.";
+
+
 (* ::Subsection:: *)
 (*Comandi grafici*)
+
+
+(* ::Text:: *)
+(*Assumendo che l'utente pu\[OGrave] accedere a liste e TimeSeries per creare i suoi grafici direttamente, prevediamo solo comandi grafici che aggreghino i dati, le medie mobili e i modelli.*)
+
+
+CovidItaliaPlot::usage = "CovidItaliaPlot[1] restituisce due \
+grafici con casi totali e nuovi positivi, completi di dati \
+grezzi, medie mobili e modellizzazione logistica.
+CovidItaliaPlot[2] restituisce due \
+grafici con casi totali e nuovi positivi, completi di dati \
+grezzi, medie mobili e modellizzazione come somma \
+di due logistiche.";
 
 
 (* ::Section:: *)
@@ -185,6 +282,10 @@ CovidTamponiSerie[].";
 
 
 Begin["`Private`"];
+
+
+(* ::Subsection::Closed:: *)
+(*Utilit\[AGrave]*)
 
 
 (* ::Text:: *)
@@ -209,7 +310,7 @@ dpc-covid19-ita-andamento-nazionale.csv",
 (* ::Program:: *)
 (*TableForm[*)
 (* {*)
-(*  Range[Length[tabellafull[[1]]]], tabellafull[[1]]*)
+(*  Range[Length[covidTabella[[1]]]], covidTabella[[1]]*)
 (* }\[Transpose],*)
 (* TableHeadings -> {None, {"n", "Descrizione"}}*)
 (*]*)
@@ -257,7 +358,16 @@ listaAdSerie[lista_, data_/;Or[DateObjectQ[data],
   ]
 
 
-(* ::Subsection:: *)
+(* ::Text:: *)
+(*Creiamo una funzione che lisci i dati dei casi totali e dei nuovi positivi facendo una media a cinque giorni.*)
+
+
+lisciaLista[lista_] := Join[
+  {0, 0, 0, 0}, MovingAverage[lista, 5]
+]
+
+
+(* ::Subsection::Closed:: *)
 (*Casi totali*)
 
 
@@ -277,7 +387,35 @@ CovidCasiTotaliSerie[x___] :=
   listaAdSerie[CovidCasiTotaliLista[], x]
 
 
-(* ::Subsection:: *)
+CovidCasiTotaliListaStabilizza[x___] :=
+  lisciaLista[CovidCasiTotaliLista[x]]
+
+CovidCasiTotaliSerieStabilizza[x___] :=
+  listaAdSerie[CovidCasiTotaliListaStabilizza[x]]
+
+
+CovidCasiTotaliModello := Function[
+  {y},
+  Normal[
+    NonlinearModelFit[
+      CovidCasiTotaliLista[], \[FormalK]/(1 + \[FormalQ] E^(-\[FormalR] x)), {\[FormalK], \[FormalQ], \[FormalR]}, x
+    ]
+  ] /. x :> y
+]
+
+
+CovidCasiTotaliModello2 := Function[
+  {y},
+  Normal[
+    NonlinearModelFit[
+      CovidCasiTotaliLista[],
+      \[FormalK]/(1 + \[FormalQ] E^(-\[FormalR] x)) + \[FormalH]/(1 + \[FormalP] E^(-\[FormalT] x)), {\[FormalK], \[FormalQ], \[FormalR], \[FormalH], \[FormalP], \[FormalT]}, x
+    ]
+  ] /. x -> y
+]
+
+
+(* ::Subsection::Closed:: *)
 (*Positivi*)
 
 
@@ -297,7 +435,43 @@ CovidPositiviSerie[x___] :=
   listaAdSerie[CovidPositiviLista[], x]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
+(*Nuovi positivi*)
+
+
+CovidNuoviPositiviLista[] := scegliDati[9]
+CovidNuoviPositiviLista[n_/;(IntegerQ[n] && n > 0)] := 
+  scegliDati[9][[1;;n]]
+CovidNuoviPositiviLista[data_/;Or[DateObjectQ[data],
+  StringQ[data]]] := 
+  scegliDati[9][[1;;Max[First[DateDifference[
+  DateObject["2020-02-24"], DateObject[data, "Day"]]],
+  Length[scegliDati[9]]]]]
+  
+CovidNuoviPositivi := CovidNuoviPositiviLista[] // Last
+
+
+CovidNuoviPositiviSerie[x___] :=
+  listaAdSerie[CovidNuoviPositiviLista[], x]
+
+
+CovidCasiTotaliSerie[x___] :=
+  listaAdSerie[CovidCasiTotaliLista[], x]
+
+
+CovidNuoviPositiviListaStabilizza[x___] :=
+  lisciaLista[CovidNuoviPositiviLista[x]]
+
+CovidNuoviPositiviSerieStabilizza[x___] :=
+  listaAdSerie[CovidNuoviPositiviListaStabilizza[x]]
+
+
+CovidNuoviPositiviModello := CovidCasiTotaliModello'
+
+CovidNuoviPositiviModello2 := CovidCasiTotaliModello2'
+
+
+(* ::Subsection::Closed:: *)
 (*Deceduti*)
 
 
@@ -317,7 +491,7 @@ CovidDecedutiSerie[x___] :=
   listaAdSerie[CovidDecedutiLista[], x]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Tamponi*)
 
 
@@ -337,7 +511,87 @@ CovidTamponiSerie[x___] :=
   listaAdSerie[CovidTamponiLista[], x]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
+(*Comandi grafici*)
+
+
+CovidItaliaPlot[1] := GraphicsRow[{
+  Show[
+    ListLinePlot[
+      CovidCasiTotaliLista[],
+      PlotStyle -> {Thick, Gray}
+    ],
+    ListLinePlot[
+      CovidCasiTotaliListaStabilizza[],
+      PlotStyle -> {Thick, Hue[0.5,0.59,0.84,0.84]}
+    ],
+    Plot[
+      Evaluate@CovidCasiTotaliModello[x],
+      {x, 0, Length[CovidCasiTotaliLista[]]},
+      PlotStyle -> {Red, Dashed, Thick}
+    ],
+    PlotRange -> Full,
+    PlotLabel -> "Casi totali"
+  ],
+  Show[
+    ListLinePlot[
+      CovidNuoviPositiviLista[],
+      PlotStyle -> {Gray, Thick}
+    ],
+    ListLinePlot[
+      CovidNuoviPositiviListaStabilizza[],
+      PlotStyle -> {Thick, Hue[0.5,0.59,0.84,0.84]}
+    ],
+    Plot[
+      Evaluate@CovidNuoviPositiviModello[x],
+      {x, 0, Length[CovidCasiTotaliLista[]]},
+      PlotStyle -> {Red, Dashed, Thick}
+    ],
+    PlotRange -> Full,
+    PlotLabel -> "Nuovi positivi"
+  ]
+}, ImageSize -> Full]
+
+
+CovidItaliaPlot[2] := GraphicsRow[{
+  Show[
+    ListLinePlot[
+      CovidCasiTotaliLista[],
+      PlotStyle -> {Thick, Gray}
+    ],
+    ListLinePlot[
+      CovidCasiTotaliListaStabilizza[],
+      PlotStyle -> {Thick, Hue[0.5,0.59,0.84,0.84]}
+    ],
+    Plot[
+      Evaluate@CovidCasiTotaliModello2[x],
+      {x, 0, Length[CovidCasiTotaliLista[]]},
+      PlotStyle -> {Red, Dashed, Thick}
+    ],
+    PlotRange -> Full,
+    PlotLabel -> "Casi totali"
+  ],
+  Show[
+    ListLinePlot[
+      CovidNuoviPositiviLista[],
+      PlotStyle -> {Gray, Thick}
+    ],
+    ListLinePlot[
+      CovidNuoviPositiviListaStabilizza[],
+      PlotStyle -> {Thick, Hue[0.5,0.59,0.84,0.84]}
+    ],
+    Plot[
+      Evaluate@CovidNuoviPositiviModello2[x],
+      {x, 0, Length[CovidCasiTotaliLista[]]},
+      PlotStyle -> {Red, Dashed, Thick}
+    ],
+    PlotRange -> Full,
+    PlotLabel -> "Nuovi positivi"
+  ]
+}, ImageSize -> Full]
+
+
+(* ::Subsection::Closed:: *)
 (*Fine dichiarazioni*)
 
 
