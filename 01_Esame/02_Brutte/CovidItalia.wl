@@ -270,10 +270,10 @@ di somma di due logistiche CovidCasiTotaliModello2.";
 
 CovidItaliaPlot::usage = "CovidItaliaPlot[1] restituisce due \
 grafici con casi totali e nuovi positivi, completi di dati \
-grezzi, medie mobili e modellizzazione logistica.
+grezzi e modellizzazione logistica.
 CovidItaliaPlot[2] restituisce due \
 grafici con casi totali e nuovi positivi, completi di dati \
-grezzi, medie mobili e modellizzazione come somma \
+grezzi e modellizzazione come somma \
 di due logistiche.";
 
 
