@@ -511,7 +511,7 @@ CovidTamponiSerie[x___] :=
   listaAdSerie[CovidTamponiLista[], x]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Comandi grafici*)
 
 
@@ -521,10 +521,10 @@ CovidItaliaPlot[1] := GraphicsRow[{
       CovidCasiTotaliLista[],
       PlotStyle -> {Thick, Gray}
     ],
-    ListLinePlot[
+    (*ListLinePlot[
       CovidCasiTotaliListaStabilizza[],
-      PlotStyle -> {Thick, Hue[0.5,0.59,0.84,0.84]}
-    ],
+      PlotStyle \[Rule] {Thick, Hue[0.5,0.59,0.84,0.84]}
+    ],*)
     Plot[
       Evaluate@CovidCasiTotaliModello[x],
       {x, 0, Length[CovidCasiTotaliLista[]]},
@@ -538,10 +538,10 @@ CovidItaliaPlot[1] := GraphicsRow[{
       CovidNuoviPositiviLista[],
       PlotStyle -> {Gray, Thick}
     ],
-    ListLinePlot[
+    (*ListLinePlot[
       CovidNuoviPositiviListaStabilizza[],
-      PlotStyle -> {Thick, Hue[0.5,0.59,0.84,0.84]}
-    ],
+      PlotStyle \[Rule] {Thick, Hue[0.5,0.59,0.84,0.84]}
+    ],*)
     Plot[
       Evaluate@CovidNuoviPositiviModello[x],
       {x, 0, Length[CovidCasiTotaliLista[]]},
@@ -559,10 +559,10 @@ CovidItaliaPlot[2] := GraphicsRow[{
       CovidCasiTotaliLista[],
       PlotStyle -> {Thick, Gray}
     ],
-    ListLinePlot[
+   (* ListLinePlot[
       CovidCasiTotaliListaStabilizza[],
-      PlotStyle -> {Thick, Hue[0.5,0.59,0.84,0.84]}
-    ],
+      PlotStyle \[Rule] {Thick, Hue[0.5,0.59,0.84,0.84]}
+    ],*)
     Plot[
       Evaluate@CovidCasiTotaliModello2[x],
       {x, 0, Length[CovidCasiTotaliLista[]]},
@@ -576,10 +576,10 @@ CovidItaliaPlot[2] := GraphicsRow[{
       CovidNuoviPositiviLista[],
       PlotStyle -> {Gray, Thick}
     ],
-    ListLinePlot[
+    (*ListLinePlot[
       CovidNuoviPositiviListaStabilizza[],
-      PlotStyle -> {Thick, Hue[0.5,0.59,0.84,0.84]}
-    ],
+      PlotStyle \[Rule] {Thick, Hue[0.5,0.59,0.84,0.84]}
+    ],*)
     Plot[
       Evaluate@CovidNuoviPositiviModello2[x],
       {x, 0, Length[CovidCasiTotaliLista[]]},
