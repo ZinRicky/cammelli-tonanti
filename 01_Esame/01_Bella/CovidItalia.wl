@@ -577,7 +577,8 @@ CovidItaliaPlot[2] := GraphicsRow[{
   Show[
     ListLinePlot[
       CovidNuoviPositiviLista[],
-      PlotStyle -> {Gray, Thick}
+      PlotMarkers -> None,
+      PlotStyle -> {Gray}
     ],
     (*ListLinePlot[
       CovidNuoviPositiviListaStabilizza[],
