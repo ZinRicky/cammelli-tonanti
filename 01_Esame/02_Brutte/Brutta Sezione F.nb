@@ -1388,7 +1388,7 @@ Cell[BoxData[
       "Body" :> $CellContext`aaaaaa[$CellContext`q$$], 
       "Specifications" :> {{$CellContext`q$$, 0, 0.01}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{321., {61., 68.}},
+     ImageSizeCache->{374., {65., 72.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2982,7 +2982,7 @@ Cell[53308, 1262, 711, 18, 108, "Input",ExpressionUUID->"69424dba-cbf6-4f27-a4a9
 Cell[54022, 1282, 2889, 72, 132, "Input",ExpressionUUID->"5a0ddb30-06bb-4666-9dee-ab5fc3918b41"],
 Cell[CellGroupData[{
 Cell[56936, 1358, 335, 8, 35, "Input",ExpressionUUID->"c451dd36-cbc5-4c17-9da7-f5e98cecbb5e"],
-Cell[57274, 1368, 1683, 35, 152, "Output",ExpressionUUID->"7905af4e-6abc-4fd8-9c67-de3349aae38a"]
+Cell[57274, 1368, 1683, 35, 160, "Output",ExpressionUUID->"7905af4e-6abc-4fd8-9c67-de3349aae38a"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[58994, 1408, 227, 4, 35, "Input",ExpressionUUID->"39da3ce0-c466-4b4f-92dd-b6b81dd8bbd9"],
