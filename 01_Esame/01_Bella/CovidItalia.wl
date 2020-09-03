@@ -24,7 +24,7 @@ dati e crea grafici a partire dalle tabelle della \
 Protezione Civile sul nuovo Coronavirus.";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Oggetti pseudo-atomici*)
 
 
@@ -50,7 +50,7 @@ tamponi eseguiti dall'inizio dell'epidemia fino al giorno \
 CovidUltimaData.";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Liste*)
 
 
@@ -128,7 +128,7 @@ data. Se data rappresenta una data nel futuro, il comando \[EGrave] \
 equivalente a CovidTamponiLista[].";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Serie temporali storiche*)
 
 
@@ -211,7 +211,7 @@ rappresenta una data nel futuro, il comando \[EGrave] equivalente a \
 CovidTamponiSerie[].";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Modellizzazioni sui dati*)
 
 
@@ -260,7 +260,7 @@ restituisce una funzione pura ottenuta derivando il modello \
 di somma di due logistiche CovidCasiTotaliModello2.";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Comandi grafici*)
 
 
@@ -519,7 +519,8 @@ CovidItaliaPlot[1] := GraphicsRow[{
   Show[
     ListLinePlot[
       CovidCasiTotaliLista[],
-      PlotStyle -> {Thick, Gray}
+      PlotMarkers -> None,
+      PlotStyle -> {Gray}
     ],
     (*ListLinePlot[
       CovidCasiTotaliListaStabilizza[],
@@ -536,7 +537,7 @@ CovidItaliaPlot[1] := GraphicsRow[{
   Show[
     ListLinePlot[
       CovidNuoviPositiviLista[],
-      PlotMarkers->None,
+      PlotMarkers -> None,
       PlotStyle -> {Gray}
     ],
     (*ListLinePlot[
