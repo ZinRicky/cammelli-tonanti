@@ -367,7 +367,7 @@ lisciaLista[lista_] := Join[
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Casi totali*)
 
 
@@ -409,7 +409,7 @@ CovidCasiTotaliModello2 := Function[
   Normal[
     NonlinearModelFit[
       CovidCasiTotaliLista[],
-      \[FormalK]/(1 + \[FormalQ] E^(-\[FormalR] x)) + \[FormalH]/(1 + \[FormalP] E^(-\[FormalT] x)), {\[FormalK], \[FormalQ], \[FormalR], \[FormalH], \[FormalP], \[FormalT]}, x
+      \[FormalK]/(1 + \[FormalQ] E^(-\[FormalR] (x - x0))) + \[FormalH]/(1 + \[FormalP] E^(-\[FormalT] (x - x1))), {\[FormalK], \[FormalQ], \[FormalR], \[FormalH], \[FormalP], \[FormalT], x0, x1}, x
     ]
   ] /. x -> y
 ]
@@ -511,7 +511,7 @@ CovidTamponiSerie[x___] :=
   listaAdSerie[CovidTamponiLista[], x]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Comandi grafici*)
 
 
