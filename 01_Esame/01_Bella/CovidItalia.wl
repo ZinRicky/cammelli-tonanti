@@ -398,7 +398,7 @@ CovidCasiTotaliModello := Function[
   {y},
   Normal[
     NonlinearModelFit[
-      CovidCasiTotaliLista[], \[FormalK]/(1 + \[FormalQ] E^(-\[FormalR] x)), {\[FormalK], \[FormalQ], \[FormalR]}, x
+      CovidCasiTotaliLista[], \[FormalK]/(1 + \[FormalQ] E^(-\[FormalR] (x - x0))), {\[FormalK], \[FormalQ], \[FormalR], x0}, x
     ]
   ] /. x :> y
 ]
